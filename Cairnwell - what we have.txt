@@ -1,4 +1,4 @@
-NORTHWIND TECHNOLOGIES
+CAIRNWELL TECHNOLOGIES
 What we have
 
 Prepared by:  Alice Chen
@@ -41,7 +41,7 @@ Marcus and Toby wrote this part and I have not softened it.
 
     **Running a dense room.**  Power, cooling, containment, airflow, thermal
     monitoring, capacity against a committed floor.  Two years of doing it
-    without an incident.  Northwind did not know any of this in 2013.
+    without an incident.  Cairnwell did not know any of this in 2013.
 
     **Remote hands at speed.**  Toby has done about four hundred and fifty
     physical interventions in eighteen months.  Racking, cabling, swaps,

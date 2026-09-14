@@ -1,4 +1,4 @@
-NORTHWIND TECHNOLOGIES
+CAIRNWELL TECHNOLOGIES
 The disk check that could not fail
 
 Prepared by:  Wes Okafor
@@ -73,7 +73,7 @@ HOW WE FOUND IT
 Not from an alert.  There cannot be an alert; that is the whole problem.
 
 web1.summit's /var was at 88% on 12 September and Priya had it written down.
-She expected it to cross 90 inside a month and went to nwtrend to see when it
+She expected it to cross 90 inside a month and went to cwtrend to see when it
 had first warned, so she could tell Summit how fast it was moving.
 
 It had never warned.  Not since 20 September -- never, in seven years.
@@ -147,17 +147,17 @@ written down and went to look at how fast it was moving.
 
 WHAT WE HAVE DONE
 
-**nwtry.**  Runs a check against one host of each operating system release we
+**cwtry.**  Runs a check against one host of each operating system release we
 actually manage -- six of them, CentOS 5.4 through Debian 8 -- and shows what
 each one returns.  It takes about four seconds.
 
     Eleven years of releases, and I had been testing on the newest one because
     it is the one in front of me.
 
-The rule: a change to a check gets run through nwtry and the output goes in the
+The rule: a change to a check gets run through cwtry and the output goes in the
 commit message.  Not a policy document.  Four seconds and a paste.
 
-**nwcheck keeps stderr apart from stdout**, and a check that exits 0 while the
+**cwcheck keeps stderr apart from stdout**, and a check that exits 0 while the
 shell is complaining is not OK.
 
     "[: Illegal number:" was in the output of every one of those runs.  We
@@ -167,7 +167,7 @@ shell is complaining is not OK.
 This is the one that would have caught it, on the first run, on 20 September.
 It is nine lines.
 
-**nwtrend --stale.**  Lists checks that have not reported anything other than OK
+**cwtrend --stale.**  Lists checks that have not reported anything other than OK
 for longer than they usually go, comparing each check against its own history.
 
     It would not have caught this.  web1.summit disk has never once been non-OK
@@ -190,5 +190,5 @@ WHAT I HAVE NOT DONE
 
 Anything about the stub tests.  They are good tests for what they test and I am
 not going to build a machine room of virtual CentOS 5 boxes for a six-person
-company.  nwtry against real hosts is the cheaper answer and it is honest about
+company.  cwtry against real hosts is the cheaper answer and it is honest about
 what it is.

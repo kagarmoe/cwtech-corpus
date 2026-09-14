@@ -1,4 +1,4 @@
-NORTHWIND TECHNOLOGIES
+CAIRNWELL TECHNOLOGIES
 The thing I have been calling a decision
 
 Prepared by:  Priya Raghunathan
@@ -111,13 +111,13 @@ WHAT CHANGES
     then ask, and the answer gets written into the record so that the next
     person does not have to.
 
-    I would rather be told afterwards than asked beforehand.  nwpush now writes
+    I would rather be told afterwards than asked beforehand.  cwpush now writes
     a line saying who pushed what and when, so being told afterwards is not a
     thing anybody has to remember to do.
 
 3.  The June review condition stays, with one change: it does not have to be
     me.  It has to be somebody who is not the author, and they have to run
-    nwtry and put the output in the commit, which is already the rule.
+    cwtry and put the output in the commit, which is already the rule.
 
     February and October both say the same thing about this.  Two people from
     the same small company reading the same change find the same things and

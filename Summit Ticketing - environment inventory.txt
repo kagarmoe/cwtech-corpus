@@ -1,4 +1,4 @@
-NORTHWIND TECHNOLOGIES
+CAIRNWELL TECHNOLOGIES
 Summit Ticketing -- environment inventory
 
 Prepared by:  Alice Chen
@@ -22,7 +22,7 @@ situation Summit was already in.
 We are renting a small virtual server from Front Range Systems. $28 a month.
 Hostname mon1. It runs the checks and nothing else.
 
-This is the first machine Northwind pays for. It is a cost against Summit but
+This is the first machine Cairnwell pays for. It is a cost against Summit but
 it is not Summit's machine, and if we take a second customer the checks for
 that customer run here too.
 
@@ -199,7 +199,7 @@ Recorded, with holders. Not the credentials themselves.
                             She located them.
     DNS host                separate from the registrar. Mark had these. Now
                             recorded and held by Laura as well.
-    Front Range Systems     mon1. Northwind's own account.
+    Front Range Systems     mon1. Cairnwell's own account.
     summit_prod database    application credentials live in the application
                             config on WEB1. Now also recorded off the machine,
                             which as of the restore test turns out to matter.

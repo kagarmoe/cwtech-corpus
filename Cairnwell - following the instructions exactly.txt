@@ -1,4 +1,4 @@
-NORTHWIND TECHNOLOGIES
+CAIRNWELL TECHNOLOGIES
 Following the instructions exactly
 
 Prepared by:  Wes Okafor
@@ -38,7 +38,7 @@ THINGS THE INSTRUCTIONS SAY THAT ARE NOT TRUE
     what everybody was.  It is in the README and I had not read the README
     because nothing told me to.
 
-5.  nwpush -n on brightwater prints DIFFERS for nw-cleanup on bw-web1.  I
+5.  cwpush -n on brightwater prints DIFFERS for cw-cleanup on bw-web1.  I
     thought I had broken something.  It is because Brightwater's copy was
     pushed in July and somebody edited it on the machine in August.  Nobody
     knows who.  I have left it alone and told Priya.

@@ -1,4 +1,4 @@
-NORTHWIND TECHNOLOGIES
+CAIRNWELL TECHNOLOGIES
 What I am worried about, and what I am not
 
 Prepared by:  Alice Chen
@@ -50,7 +50,7 @@ a business risk.  We have taken a bet, with a landlord as the counterparty.
 **Two.  Concentration.**
 
 If Halvard alone is a hundred kilowatts and our whole managed business is six,
-then within a year most of Northwind's revenue is one customer in one industry.
+then within a year most of Cairnwell's revenue is one customer in one industry.
 
 Summit, Clear Creek, Brightwater and Hartwell do not fail at the same time as
 each other.  Six mining customers do.  They all depend on the same number.

@@ -1,4 +1,4 @@
-NORTHWIND TECHNOLOGIES
+CAIRNWELL TECHNOLOGIES
 What is actually running on their machines
 
 Prepared by:  Alice Chen
@@ -21,18 +21,18 @@ WHAT IS THERE
 Scripts we have put on customer machines, not counting anything the customer or
 their developer wrote:
 
-    nw-cleanup      log and temp cleanup            on 7 of 10 machines
-    nw-backup       database dump and rotate        on 4
-    nw-diskreport   weekly mail of df output        on 3
+    cw-cleanup      log and temp cleanup            on 7 of 10 machines
+    cw-backup       database dump and rotate        on 4
+    cw-diskreport   weekly mail of df output        on 3
     (unnamed)       various one-off fixes           at least 5
 
-mon1's repository has none of these in it.  I versioned /usr/local/nwcheck last
+mon1's repository has none of these in it.  I versioned /usr/local/cwcheck last
 June and stopped there, because at the time the thing that kept getting lost was
-nwcheck.conf.  Everything we put on a customer machine has been copied there by
+cwcheck.conf.  Everything we put on a customer machine has been copied there by
 hand ever since and lives nowhere else.
 
 
-nw-cleanup, WHICH IS THE ONE THAT MATTERS
+cw-cleanup, WHICH IS THE ONE THAT MATTERS
 
 Seven copies.  Four distinct versions.
 
@@ -63,10 +63,10 @@ Summit's access logs and I found out by reading a cleanup script.
 
 WHAT ELSE THE CENSUS FOUND
 
-    nw-backup on ccweb1 has a retention of 30 days.  Everywhere else it is 19.
+    cw-backup on ccweb1 has a retention of 30 days.  Everywhere else it is 19.
     Nobody decided that.  I think I typed it.
 
-    nw-diskreport mails to alice@ on two machines and to my old IBM address on
+    cw-diskreport mails to alice@ on two machines and to my old IBM address on
     the third, which has not existed since 2010.  That report has been going
     nowhere for two years and nobody missed it, which is its own finding.
 
@@ -80,8 +80,8 @@ WHAT WE ARE DOING ABOUT IT
 The scripts go into mon1's repository, in customer-scripts/, one directory per
 customer, and we push from there.  We stop editing them in place.
 
-    nwpush <customer>        copy this customer's scripts to their machines
-    nwpush -n <customer>     show what would change and do nothing
+    cwpush <customer>        copy this customer's scripts to their machines
+    cwpush -n <customer>     show what would change and do nothing
 
 That is the whole of it.  It is scp in a loop with a diff first, and the diff
 first is the part that matters -- I want to see what is on the machine before I
@@ -98,7 +98,7 @@ people and the thing that went wrong was not knowing where a file was.
 
 WHAT I AM NOT FIXING TODAY
 
-Whether a machine has drifted from what we pushed.  nwpush -n tells you when
+Whether a machine has drifted from what we pushed.  cwpush -n tells you when
 you ask.  Nothing tells you when you do not ask.
 
 That is the same shape as the problem I found last July on Summit's web2 and

@@ -1,4 +1,4 @@
-NORTHWIND TECHNOLOGIES
+CAIRNWELL TECHNOLOGIES
 Summit Ticketing -- incident, Thursday 15 July 2010
 
 Prepared by:  Alice Chen
@@ -20,7 +20,7 @@ WHAT I CAN ESTABLISH
 
     19:22   First 500s on POST /order/confirm in WEB1's Apache log.
 
-    19:26   nwcheck: web1 mysql FAIL. Recovered 19:27. Failed again 19:29.
+    19:26   cwcheck: web1 mysql FAIL. Recovered 19:27. Failed again 19:29.
             Between 19:26 and 20:31 that check changed state 23 times and
             mailed me 23 times.
 
@@ -114,7 +114,7 @@ CHANGES MADE THIS MORNING
     That would have mailed me at about 19:24, two minutes before the first
     mysql failure and six minutes ahead of Laura's phone call.
 
-    nwcheck now suppresses repeat mail for a check that changes state more than
+    cwcheck now suppresses repeat mail for a check that changes state more than
     three times in fifteen minutes, and says so in the one mail it does send.
 
 Not done, deliberately:

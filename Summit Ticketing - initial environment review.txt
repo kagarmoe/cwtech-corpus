@@ -1,4 +1,4 @@
-NORTHWIND TECHNOLOGIES
+CAIRNWELL TECHNOLOGIES
 Summit Ticketing -- initial environment review
 
 Prepared by:  Alice Chen
@@ -126,7 +126,7 @@ and ZIP files.
 There is no source control system in use.
 
 That is an application-development problem rather than something
-Northwind needs to solve before taking over operations, except that we
+Cairnwell needs to solve before taking over operations, except that we
 need to know what version is actually running on each server.
 
 Deployments are manual.
@@ -227,7 +227,7 @@ Mark has the credentials.
 Laura believes she also has them but did not have them available during
 the meeting.
 
-Nothing to change now, but Northwind needs to know where these
+Nothing to change now, but Cairnwell needs to know where these
 credentials are if we are expected to respond to an outage involving
 DNS.
 
@@ -246,7 +246,7 @@ No restore test.
 Application files are not included because Mark considers his
 development copy the source.
 
-This is not sufficient if Northwind is going to accept responsibility
+This is not sufficient if Cairnwell is going to accept responsibility
 for recovery.
 
 DOCUMENTATION
@@ -302,13 +302,13 @@ Before I would call this a managed environment:
 
     2. Identify current user accounts and who still needs access.
 
-    3. Record the accounts and providers Northwind may need during an incident.
+    3. Record the accounts and providers Cairnwell may need during an incident.
 
     4. Put monitoring on the services we are agreeing to manage.
 
     5. Verify that the database can actually be restored from backup.
 
-    6. Agree with Mark on how Northwind learns about deployments and changes
+    6. Agree with Mark on how Cairnwell learns about deployments and changes
        that can affect production.
 
     7. Decide what happens when an alert arrives outside normal hours.

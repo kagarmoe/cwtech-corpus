@@ -1,4 +1,4 @@
-NORTHWIND TECHNOLOGIES
+CAIRNWELL TECHNOLOGIES
 Brightwater Supply -- incident, Tuesday 15 November 2011
 
 Prepared by:  Priya Raghunathan
@@ -40,7 +40,7 @@ WHOSE PROBLEM WAS IT
 
 The vendor's.  It was their code, their update, and their fix.
 
-Northwind spent three hours establishing that.  We could not have skipped the
+Cairnwell spent three hours establishing that.  We could not have skipped the
 three hours, because at 09:14 nobody on earth knew it was the vendor, and
 finding out is the thing we sell.
 

@@ -15,7 +15,7 @@ ABOUT THE ESTATE
     Eight, across four customers.  Nine if you count mon1, and you should.
 
 2.  Where is the authoritative list?
-    mon1:/usr/local/nwcheck/records, one file per customer.  Read the README
+    mon1:/usr/local/cwcheck/records, one file per customer.  Read the README
     first.
 
 3.  The records say what a machine is.  Where do I find out what to do when

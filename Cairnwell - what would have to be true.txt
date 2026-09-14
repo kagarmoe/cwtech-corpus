@@ -1,4 +1,4 @@
-NORTHWIND TECHNOLOGIES
+CAIRNWELL TECHNOLOGIES
 What would have to be true
 
 Prepared by:  Alice Chen
@@ -48,7 +48,7 @@ that I have changed it rather than pretend it still says what it said.
     March: a room we would still want if the machines went in a skip.
     Now:   a room somebody would still want.
 
-Three hundred kilowatts is more than Northwind's managed business will ever
+Three hundred kilowatts is more than Cairnwell's managed business will ever
 use.  I cannot claim otherwise.  What I can claim is that a power-dense suite
 in an established Denver facility, built to code, is a thing another tenant
 will take — a rendering shop, a research group, anybody with dense compute.

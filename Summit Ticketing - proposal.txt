@@ -1,4 +1,4 @@
-NORTHWIND TECHNOLOGIES
+CAIRNWELL TECHNOLOGIES
 Denver, Colorado
 
 
@@ -136,7 +136,7 @@ WHAT WE NEED FROM SUMMIT
     Your registrar, DNS and Mile High account details recorded somewhere we
     can reach during an outage.
 
-    Mark to send a short note to a Northwind address before he changes
+    Mark to send a short note to a Cairnwell address before he changes
     anything on either server. Not approval -- notice. If we spend time
     chasing a failure caused by a change we did not know about, that time is
     billable outside the monthly fee.
@@ -173,4 +173,4 @@ you rather than talk you into it.
 
 
 John Mercer
-Northwind Technologies
+Cairnwell Technologies

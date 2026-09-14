@@ -1,4 +1,4 @@
-NORTHWIND TECHNOLOGIES
+CAIRNWELL TECHNOLOGIES
 Who owns the tools
 
 Prepared by:  Alice Chen
@@ -17,8 +17,8 @@ was it to notice that a file had been growing for four years?
 
 It was nobody's.  It was everybody's, which is the same thing.
 
-Priya wrote nwcheck in 2010 because we needed it.  She wrote the history file in
-2012 because of Summit.  Alice wrote nwhosts in 2011.  Toby wrote the rotation
+Priya wrote cwcheck in 2010 because we needed it.  She wrote the history file in
+2012 because of Summit.  Alice wrote cwhosts in 2011.  Toby wrote the rotation
 this February.  Marcus wrote the temperature checks in 2014.  Five people, seven
 years, one directory, and not one of them was ever given the job.
 
@@ -34,7 +34,7 @@ Two jobs that have been one job.
 **Running the customers.**  The rota, escalations, whether we are meeting what
 we promised, onboarding, being the person a customer speaks to.
 
-**Keeping the tools.**  nwcheck, the checks, nwhosts, nwpush, nwtrend, mon1
+**Keeping the tools.**  cwcheck, the checks, cwhosts, cwpush, cwtrend, mon1
 itself, and knowing when one of them is quietly becoming a problem.
 
 Priya has done both since 2011.  She has done both well and she has been telling

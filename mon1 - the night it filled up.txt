@@ -1,4 +1,4 @@
-NORTHWIND TECHNOLOGIES
+CAIRNWELL TECHNOLOGIES
 mon1 -- the night it filled up
 
 Prepared by:  Toby Whelan
@@ -12,7 +12,7 @@ WHAT HAPPENED
 Alice's workstation mailed her at 04:51 on Saturday saying mon1 had not reported
 in for twenty minutes.  She rang me at 05:10 and I was on it by half past.
 
-mon1's disk was full.  nwcheck could not write its state files, could not write
+mon1's disk was full.  cwcheck could not write its state files, could not write
 the heartbeat, and had been failing quietly since about 02:00.
 
     For roughly three hours nothing was monitoring anything, for any customer,
@@ -26,7 +26,7 @@ in here is about things we got wrong and that one we got right six years ago.
 
 WHAT FILLED IT
 
-/var/lib/nwcheck/history.
+/var/lib/cwcheck/history.
 
 Priya added it in December 2012 after the Summit on-sale, when eleven warnings
 had arrived one at a time over two years and nobody had ever seen them together.
@@ -36,8 +36,8 @@ not a platform, it is a file you can grep.
 It was right then and it is still the right idea.  The arithmetic has just moved
 underneath it.
 
-    Checks in nwcheck.conf, December 2012      31
-    Checks in nwcheck.conf, this morning       67
+    Checks in cwcheck.conf, December 2012      31
+    Checks in cwcheck.conf, this morning       67
     Runs per day                              288
     Days since December 2012                1,536
 
@@ -73,7 +73,7 @@ Saturday morning.
 
 THE PART THAT IS EMBARRASSING
 
-mon1 is not in nwcheck.conf.
+mon1 is not in cwcheck.conf.
 
 It watches sixty-seven things across eight customers and a suite, and it does not
 watch itself.  There is no disk check on mon1.  We have had a disk check since
@@ -88,7 +88,7 @@ once been pointed at the machine that runs it.
 WHAT I DID AT SIX IN THE MORNING
 
 Compressed the history in place, which bought 1.6 gigabytes and took eleven
-minutes.  Started nwcheck.  Everything came back.  No customer noticed and
+minutes.  Started cwcheck.  Everything came back.  No customer noticed and
 nobody rang us.
 
 I did not delete anything.  Priya's rule about not deleting things you do not
@@ -97,7 +97,7 @@ understand has been on the wall since before I started.
 
 WHAT WE HAVE DONE SINCE
 
-**Rotation.**  history rotates monthly and gzips.  nwtrend reads the current
+**Rotation.**  history rotates monthly and gzips.  cwtrend reads the current
 file and, if you ask it to, the archives as well.  It is slower against the
 archives and that is fine because nobody looks at 2014 in a hurry.
 
@@ -118,7 +118,7 @@ kept working.
 
 WHAT WE ARE NOT DOING
 
-Replacing nwcheck.  Priya was clear about this and I agree with her.
+Replacing cwcheck.  Priya was clear about this and I agree with her.
 
 It runs sixty-seven checks across eight customers, it has caught real failures
 including one that had been silently broken for four nights, and the only thing
@@ -126,5 +126,5 @@ wrong with it this week was a disk.  Rewriting it because the company is bigger
 is how you spend three months and end up with something that does the same thing
 and is new.
 
-Not touching the records, not touching nwpush, not moving anything to a
+Not touching the records, not touching cwpush, not moving anything to a
 database.  One file rotated, one machine resized, one check added.

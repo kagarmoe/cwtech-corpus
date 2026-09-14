@@ -1,4 +1,4 @@
-NORTHWIND TECHNOLOGIES
+CAIRNWELL TECHNOLOGIES
 The mining question
 
 Prepared by:  John Mercer
@@ -11,7 +11,7 @@ WHERE THIS HAS GOT TO
 Since June I have had nine enquiries about hosting mining hardware.  Two were
 people Gary knows.  The rest found us some other way, and one of them said we
 were recommended on a forum, which is not a sentence anyone has ever said to me
-about Northwind before.
+about Cairnwell before.
 
 Of the nine:
 
@@ -27,7 +27,7 @@ and what happens on default before she asked me anything technical.
 
 She wants somewhere in the region of a hundred kilowatts.
 
-That is ten Lindqvists.  It is about sixteen times everything else Northwind
+That is ten Lindqvists.  It is about sixteen times everything else Cairnwell
 manages put together.
 
 

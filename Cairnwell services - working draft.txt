@@ -1,4 +1,4 @@
-NORTHWIND TECHNOLOGIES
+CAIRNWELL TECHNOLOGIES
 Services -- working draft
 
 Prepared by:  John Mercer
@@ -17,7 +17,7 @@ the company.
 
 WHO WE ARE
 
-Northwind Technologies. Denver, Colorado. Founded this month by John Mercer
+Cairnwell Technologies. Denver, Colorado. Founded this month by John Mercer
 and Alice Chen.
 
 Two people. We lease space and buy equipment as customer work justifies it.

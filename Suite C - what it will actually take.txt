@@ -1,4 +1,4 @@
-NORTHWIND TECHNOLOGIES
+CAIRNWELL TECHNOLOGIES
 Suite C -- what it will actually take
 
 Prepared by:  Marcus Reyes
@@ -48,7 +48,7 @@ In February 2014 I wrote: "Per-cabinet draw from the PDUs, plus suite total
 against the 180 kW floor and the 300 kW ceiling.  I want to know before the
 facility tells me."
 
-What we have is one line in nwcheck.conf:
+What we have is one line in cwcheck.conf:
 
     suite-c-pdu         cabinet_draw   209.0  15
 
@@ -63,10 +63,10 @@ noticed that I had asked for half of it.
 
     The check allows fifteen per cent either way, which is 178 to 240.  So it
     has been saying the room is wrong since some time in 2014, and because
-    nwcheck only mails when a check changes state, it said so once and has been
+    cwcheck only mails when a check changes state, it said so once and has been
     quiet ever since.
 
-I asked Wes how long.  He ran `nwtrend -a suite-c-pdu cabinet_draw` and read it
+I asked Wes how long.  He ran `cwtrend -a suite-c-pdu cabinet_draw` and read it
 back to me.  The last time that check passed was **11 July 2014**.
 
 Four years and one month of a red check that nobody has seen, in the room I
@@ -80,7 +80,7 @@ thing that told us.  It had already stopped being able to tell us anything.
 
 THE TEN RIGS
 
-While I was comparing what is in the room against what nwcheck.conf says is in
+While I was comparing what is in the room against what cwcheck.conf says is in
 the room, ten of Gary Lindqvist's rigs are still in the file.  gl-rig01 to
 gl-rig10, under the compute-hosting section, below a comment about Sightline's
 scratch disks.

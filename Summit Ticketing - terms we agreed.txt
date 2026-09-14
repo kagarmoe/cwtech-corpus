@@ -1,4 +1,4 @@
-NORTHWIND TECHNOLOGIES
+CAIRNWELL TECHNOLOGIES
 Summit Ticketing -- terms we agreed
 
 Prepared by:  John Mercer
@@ -118,7 +118,7 @@ access away would make us the problem.
 
 Agreed:
 
-    We ask Mark to send a note to a Northwind address before he changes
+    We ask Mark to send a note to a Cairnwell address before he changes
     anything on either server. Not approval. Notice.
 
     If he does not, and we spend time chasing a failure he caused, that time

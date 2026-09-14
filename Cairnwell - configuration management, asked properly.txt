@@ -1,4 +1,4 @@
-NORTHWIND TECHNOLOGIES
+CAIRNWELL TECHNOLOGIES
 Configuration management, asked properly
 
 Prepared by:  Wes Okafor
@@ -30,14 +30,14 @@ the time on one thing properly.
 
 THE PROBLEM IT WOULD SOLVE, WHICH IS REAL AND IS SEVEN YEARS OLD
 
-    Brightwater: bw-web1's nw-cleanup was   WO      Jan 2013    Nov 2012
+    Brightwater: bw-web1's cw-cleanup was   WO      Jan 2013    Nov 2012
       edited on the machine by unknown
-      nwpush -n still reports DIFFERS.
+      cwpush -n still reports DIFFERS.
 
 That is on the deferred list in Priya's handwriting and it has been there since
 before I could push to a customer machine.
 
-nwpush can see that a file on a customer's machine is not the file in our
+cwpush can see that a file on a customer's machine is not the file in our
 repository.  It has been able to see it since Alice wrote it in July 2012.  It
 cannot do anything about it unless a person runs it with the right argument and
 reads the output.
@@ -95,7 +95,7 @@ the calendar:
 
     **None of it needs a server.**  Since Chef 11 the client can run against a
     directory of cookbooks on the machine itself.  The way that directory
-    would get onto a machine is nwpush, which we have.
+    would get onto a machine is cwpush, which we have.
 
 So the honest table is not two of seven.  It is:
 
@@ -125,10 +125,10 @@ that was the edit we did not know about.  Their customers are on thirty days'
 notice, all four of them, and nobody has ever paid us to upgrade one.  The risk
 on those machines is the age of the operating system, and Chef does not touch
 that.  What it would converge is a handful of scripts and cron lines that
-nwdrift now looks at every Sunday.
+cwdrift now looks at every Sunday.
 
     To do it I would run three vintages of the tool and test every cookbook on
-    each, which is the nwtry lesson again with three axes instead of one.  And
+    each, which is the cwtry lesson again with three axes instead of one.  And
     installing an unsupported agent on an unsupported machine that belongs to a
     customer is a change, with notice, in Dale's windows, for a benefit no
     customer asked for.
@@ -145,7 +145,7 @@ them.  It says so on the customer page and Dinesh said it twice to John.
 **The machines that are ours, which I left out of my first draft and should
 not have.**  Fourteen genomics nodes.  We bought them, in two lots, and we run
 them -- "we run the machine, what it computes is theirs" is our own page.  They
-are not in nwtry.hosts, which says a new release goes in the same week.  They
+are not in cwtry.hosts, which says a new release goes in the same week.  They
 have no record; that has been on the deferred list since March 2018.  What
 release they run is written on them and nowhere else.
 
@@ -184,10 +184,10 @@ has to be put right.  It only has to be described.
 
 WHAT I AM DOING INSTEAD, AFTER GETTING IT WRONG ONCE
 
-I was going to add a --converge option to nwpush, so that where it prints
+I was going to add a --converge option to cwpush, so that where it prints
 DIFFERS it could put the file back.
 
-Then I read nwpush properly, which I should have done first.
+Then I read cwpush properly, which I should have done first.
 
 **It already does that.**  Alice wrote it in July 2012 and it has always worked
 that way: -n shows you the diff and changes nothing, and without -n it copies
@@ -201,11 +201,11 @@ cleanup script since 2012, so nobody has looked.
     That is a better answer than the one I was going to write and it is smaller.
     The tool is not missing a feature.  It is missing a reason to be run.
 
-nwdrift.  Twenty lines.  It runs nwpush -n for every customer, prints only what
+cwdrift.  Twenty lines.  It runs cwpush -n for every customer, prints only what
 differs, and says nothing at all when everything matches.  In cron on a Sunday,
 mailing Priya and me.
 
-    Silence when it is fine, which is the same rule as nwcheck and for the same
+    Silence when it is fine, which is the same rule as cwcheck and for the same
     reason: a weekly mail that is usually empty gets read, and a weekly mail
     that always has something in it does not.
 

@@ -1,4 +1,4 @@
-NORTHWIND TECHNOLOGIES
+CAIRNWELL TECHNOLOGIES
 Sightline -- the February trial
 
 Prepared by:  Priya Raghunathan
@@ -65,7 +65,7 @@ Four hundred gigabytes in, per job, over a VPN from an office on business
 broadband.  Eleven hours, sometimes fourteen.  His renders take four.
 
 Nothing about that is our fault and all of it is our problem, because from where
-he sits the slow part is "Northwind".  Marcus says the fix is a connection into
+he sits the slow part is "Cairnwell".  Marcus says the fix is a connection into
 the facility that costs more per month than Dev pays us.
 
 **We were one person deep.**

@@ -1,4 +1,4 @@
-NORTHWIND TECHNOLOGIES
+CAIRNWELL TECHNOLOGIES
 Prospect calls -- notes and what we learned
 
 Prepared by:  John Mercer
@@ -94,7 +94,7 @@ This is the hard part.
 
 If we say we manage the servers, customers hear:
 
-    "When something is broken, I call Northwind."
+    "When something is broken, I call Cairnwell."
 
 They do not care very much whether the cause turns out to be Apache, a
 switch, a disk, a database query, somebody's application release, or the

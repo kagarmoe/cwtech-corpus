@@ -1,4 +1,4 @@
-NORTHWIND TECHNOLOGIES
+CAIRNWELL TECHNOLOGIES
 What Lindqvist is actually asking for
 
 Prepared by:  Marcus Reyes
@@ -48,7 +48,7 @@ cannot do this inside the arrangements we have.**
 
 WHAT WE WOULD NEED
 
-If Northwind wanted to serve this customer properly:
+If Cairnwell wanted to serve this customer properly:
 
     Our own space.  Not a cabinet in somebody's room.  A room, or a cage with
     its own power feed, with a landlord who has agreed in writing what we may
@@ -79,7 +79,7 @@ He is a good customer for a facility and a bad customer for us as we are
 currently shaped.  He wants power, floor and silence.  He does not want
 managed infrastructure and he would not pay us for it.
 
-Everything Northwind is good at -- knowing what is on a machine, noticing a
+Everything Cairnwell is good at -- knowing what is on a machine, noticing a
 backup failed, answering the telephone at eleven at night -- is worth nothing
 to him.  His machines have no data on them.  If one dies he unplugs it.
 

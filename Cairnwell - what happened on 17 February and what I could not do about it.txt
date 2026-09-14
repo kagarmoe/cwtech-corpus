@@ -1,4 +1,4 @@
-NORTHWIND TECHNOLOGIES
+CAIRNWELL TECHNOLOGIES
 What happened on 17 February and what I could not do about it
 
 Prepared by:  Marcus Reyes
@@ -15,7 +15,7 @@ TIMELINE
                         nodes, Dr Ma's second grant.  Power, cross-connects,
                         burn-in started.  Photographs in the suite folder.
 
-    Fri 16 Feb, 21:15   Added the six to nwcheck.conf, one rig_alive line
+    Fri 16 Feb, 21:15   Added the six to cwcheck.conf, one rig_alive line
                         each, because a machine that is racked and not
                         watched is a machine nobody finds out about.  This
                         is what we have always done and I would do it again.
@@ -35,7 +35,7 @@ TIMELINE
 
     Sat 17 Feb, 03:10   Established what it is.  ssh says that line the
                         first time it sees a host.  It says it on stderr.
-                        Since November, nwcheck treats a check that exits
+                        Since November, cwcheck treats a check that exits
                         zero and writes to stderr as a failure.
 
                         The check was right.  The node is fine.  ssh made a
@@ -46,7 +46,7 @@ TIMELINE
                         I knew what it was inside thirty minutes and there
                         was nothing I was able to do about it.
 
-                        The fix is nine lines in nwcheck.  nwcheck is Wes's.
+                        The fix is nine lines in cwcheck.  cwcheck is Wes's.
                         It was a quarter past three on a Saturday.  I was
                         not going to telephone him to have him edit a file
                         so I could go back to bed, and I was not going to
@@ -55,7 +55,7 @@ TIMELINE
 
     Sat 17 Feb, 03:25   So I did the only thing available to me, which was
                         the wrong one.  Commented the six lines out of
-                        nwcheck.conf.  The mails stopped.
+                        cwcheck.conf.  The mails stopped.
 
     Sat 17 Feb, 03:30   Wrote the note below and went to bed.
 
@@ -69,7 +69,7 @@ TIMELINE
 
 THE NOTE I LEFT
 
-    gc-node09..14 commented out of nwcheck.conf 03:25 17 Feb.
+    gc-node09..14 commented out of cwcheck.conf 03:25 17 Feb.
     NOT because anything is wrong with them.
     Because ssh's first-contact warning now criticals and I cannot stop it.
     THESE SIX MACHINES ARE NOT WATCHED UNTIL SOMEBODY UNCOMMENTS THEM.
@@ -93,14 +93,14 @@ later the only tool the man on watch had was to switch six checks off.
 WHAT I AM NOT SAYING
 
 I am not saying the November change was wrong.  It caught a real class of thing
-and I would keep it.  Wes ran it past everybody, ran his new nwtry, and pasted
+and I would keep it.  Wes ran it past everybody, ran his new cwtry, and pasted
 the output in the commit, and none of that was ever going to find this, because
 this needs a host ssh has not seen before and every host in his test had been
 seen a thousand times.
 
 I am not saying anybody should have foreseen it.  I racked six machines on a
 Friday night.  That is the first time we have added six hosts at once since
-Gary's rigs in 2013, and in 2013 nwcheck did not care about stderr.
+Gary's rigs in 2013, and in 2013 cwcheck did not care about stderr.
 
 I am saying that the person holding the telephone at three in the morning could
 see the problem, could name the problem, and had no legal move except the one
@@ -117,7 +117,7 @@ Two things.
 One: something the man on watch can edit.  If the fix is "ignore this exact
 sentence from ssh", that should be a line in a file, with a date on it and a
 reason, not nine lines in somebody's shell script.  I can write a line in a
-file at three in the morning.  I should not be editing nwcheck at three in the
+file at three in the morning.  I should not be editing cwcheck at three in the
 morning and I am not going to.
 
 Two: whoever wrote the change should be on the telephone rota.  I have said

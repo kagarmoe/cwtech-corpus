@@ -1,0 +1,41 @@
+From: Mark Ellis <mark.ellisdev@gmail.com>
+To: Alice Chen <alice@cairnwelltech.com>
+Date: Fri, 16 Apr 2010 15:52:11 -0600
+Subject: Re: getting you onto the boxes before Monday
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+
+
+Alice,
+
+Added your key to root's authorized_keys on both boxes. That was faster
+than setting you up a separate account and I'll pull it once you're
+done. I know that's probably not how you'd want it done. If it matters
+I can do it properly Monday morning before you get there instead, just
+say so.
+
+Two boxes, since Summit doesn't call them anything. Mile High's names
+for them are on the invoice, and that's what you'll see in their
+control panel:
+
+  srv4471 - the main one. App and the database are both on this one.
+
+  srv4502 - the one we added last August.
+
+The addresses are in the DNS for the ticketing site and the login
+details Laura has for Mile High's panel; I'd rather not put them in an
+email either.
+
+If you need the mysql root password for anything it's sitting in a file
+called .m in my home directory on the main one. Didn't want to put it
+in an email. It's nothing clever, happy to change it after you're through if
+that would make you feel better about it.
+
+Let me know if the key doesn't work, I typed it in by hand off your
+message because whatever your mail client did to your signature broke
+when I tried to paste it directly.
+
+See you Monday.
+
+Mark

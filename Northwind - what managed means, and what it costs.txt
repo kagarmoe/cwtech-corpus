@@ -1,0 +1,105 @@
+NORTHWIND TECHNOLOGIES
+What "managed" means, and what it costs
+
+Prepared by:  John Mercer
+Reviewed by:  Alice Chen, Priya Raghunathan
+Date:         9 January 2012
+Status:       Internal.  Basis for the 2012 agreements.
+
+
+WHY
+
+Two things happened last year that were the same thing.
+
+In July, Alice spent three days on Summit's web2 establishing what Mark had
+deployed in 2009 and 2010.  In November, Priya spent three hours on Brightwater
+establishing that a vendor we have never spoken to had broken a checkout page at
+two in the morning.
+
+Both were our work.  Both were correctly our work.  Neither was infrastructure,
+and we billed for neither.
+
+Four customers, nine machines, three people.  The fee covers running the
+servers.  It has quietly also been covering an unlimited amount of finding out
+whose fault something is, and finding out is the expensive part.
+
+
+WHAT WE ARE NOT CHANGING
+
+The sentence.  "We run your infrastructure so you don't have to hire someone to
+do it."  It is why all four of them bought, it is still true, and I am not
+narrowing it because it has become inconvenient.
+
+The rule.  Application correctness is not ours.  When nobody knows what it is,
+it is ours until we know, and then it goes where it belongs.  Alice wrote that
+in April 2010 and it has survived every incident since including both of these.
+Priya's words about November: "the arrangement working exactly as John described
+it and I do not think anybody should change it."
+
+What a customer hears when they telephone us.  Nobody is going to be asked to
+diagnose their own problem before we will look at it.
+
+
+WHAT WE ARE CHANGING
+
+One thing.  The far side of the boundary gets a bill.
+
+    We investigate anything, at any hour, as now.
+
+    When the cause turns out to be application code or a third party, the
+    first hour is included.  Beyond that we tell you we have passed it, what
+    we think it is, and what further investigation will cost.  Then you
+    decide.
+
+    We tell you before we bill, not after.
+
+That last line is not new.  Laura's attorney asked for it in May 2010 about
+Mark's undisclosed changes, I agreed it was fair, and I wrote at the time that I
+should have offered it.  It has been in Summit's agreement for eighteen months.
+We are giving the other three the same terms rather than inventing new ones.
+
+The first hour is deliberate.  Most of these end inside an hour, nobody gets a
+bill, and nobody starts hesitating before telephoning us -- which is the thing
+that would actually damage this business.
+
+
+WHAT THIS MEANS PER CUSTOMER
+
+    Summit          Mark deploys without telling us properly.  Already
+                    covered by the existing clause.  This extends it from
+                    changes he makes to causes that turn out to be his.
+
+    Brightwater     The catalogue vendor.  We have no relationship with them
+                    and cannot get one.  Dale has to be the one who telephones
+                    them and now he knows that.
+
+    Clear Creek     Ruth already understands this better than we do.  She is
+                    also the only route to her own hosting provider and that
+                    remains untested.
+
+    Hartwell        The CMS is unmaintained and two versions behind.  We put
+                    that in writing in January 2011.  When it breaks, and it
+                    will, this is the clause that decides who pays for the
+                    afternoon.
+
+
+WHAT ALICE AND PRIYA ASKED FOR AND DID NOT GET
+
+A list of what is in and out per customer, maintained.  Alice's argument is that
+ambiguity is what costs us, not generosity.
+
+I said no for now.  Four customers is not enough to need a catalogue and I do
+not want to be the company whose answer to a telephone call is that it depends
+what you bought.  Ask me again at eight customers, or the first time this clause
+causes an argument with somebody, whichever comes first.
+
+Alice's reply, recorded because she was right to make me write it down: "Then
+write down that I asked, and when."
+
+
+STILL NOT SETTLED
+
+Pricing.  Four customers, four numbers, four different ways of arriving at
+them, and now an hourly rate for investigation that I have set at $95 by
+looking at what I used to charge in 2009 and adding nothing.  This is the third
+year I have written that we need a rule.

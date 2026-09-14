@@ -1,0 +1,118 @@
+NORTHWIND TECHNOLOGIES
+Summit Ticketing -- WEB2, before the August on-sales
+
+Prepared by:  Alice Chen
+Date:         July 25, 2011
+Status:       Internal
+
+Laura asked on the 18th whether WEB2 was ready to take traffic for the August
+run.  Routine question, asked in good time, and the honest answer took three
+days to produce.
+
+
+WHAT WE EXPECTED TO FIND
+
+From the environment review of April 2010, and unchanged in the record since:
+
+    A second copy of part of the application.  Eleven files behind WEB1.
+    Mark updates WEB1 first and WEB2 later if he expects to use it.
+
+That is what the record says.  Nobody has looked at it since I wrote it, which
+is fifteen months.
+
+
+WHAT IS ACTUALLY THERE
+
+Not eleven files behind.  Not behind in any consistent way.
+
+    Of 214 application files on WEB2:
+
+        168  identical to WEB1
+         31  older than WEB1
+          9  NEWER than WEB1
+          6  present on WEB2 and not on WEB1 at all
+
+The nine newer files are the interesting ones.  Mark pushed to WEB2 during the
+Red Rocks run last August, in a hurry, and pushed to WEB1 afterward -- but not
+all of it.  Two of those nine are in the order path.
+
+The six that exist only on WEB2 are older than that.  Four are from a
+contractor who worked on the payment integration in 2009; the other two Mark
+does not recognise.
+
+
+WHAT THE EVIDENCE ACTUALLY SUPPORTS
+
+I want to be careful here because the evidence is weak and it would be easy to
+write a confident story.
+
+    Established.  The files differ, in the counts above, as of 22 July 2011.
+    That is a direct comparison and it is not in doubt.
+
+    Established.  Mark deployed to WEB2 on or about 12 August 2010.  He
+    remembers doing it and the Apache logs for that week show WEB2 serving
+    order traffic, which it otherwise never does.
+
+    Not established.  Which specific files went in that deployment.  I have
+    modification times and nothing else.  There is no source control at Summit
+    and there never has been.  An mtime tells me when a file was last written
+    and not what was in it or who wrote it, and several of these files have
+    mtimes that cannot be right -- three claim to predate the server they are
+    on, which happens when files are copied without preserving times, which is
+    exactly how Mark deploys.
+
+    Not established.  Whether the two newer files in the order path ever ran
+    against real customers.  If WEB2 took order traffic in August 2010 then
+    probably yes.  Probably is not a finding.
+
+    Unknown, and likely to stay unknown.  What the two unrecognised files do.
+    Mark did not write them and the contractor who might have is not
+    contactable.  They are not referenced from anything I can find.  That is
+    not the same as being unused.
+
+
+WHAT I DID NOT DO
+
+I did not make WEB2 match WEB1.
+
+That was my first instinct and it is wrong.  Two of the newer files are in the
+order path, which means WEB1 may be the one that is behind, and overwriting
+them would be destroying the only copy of a change Mark made under pressure a
+year ago and has not thought about since.  I am not doing that during selling
+season on the strength of a file comparison.
+
+I did not delete the six orphans either, for the reason we have now learned
+twice -- once with the summitftp account and once with Mark's deploy key.
+Nobody knowing what something is for is not the same as nothing using it.
+
+
+WHAT WE DID
+
+Told Laura WEB2 can take overflow traffic for images and static content, which
+is what it actually does for her during a run, and that we are not confident
+enough in the application copy to send order traffic to it.
+
+She asked whether that was a change.  It is not.  It has been true since at
+least August 2010 and nobody knew.
+
+Mark has the file list.  He is going to reconcile the nine and the six after
+the season, which is the right time to do it and also the time at which people
+stop caring.  I have put a note in the record with a date on it.
+
+
+WHAT THIS SAYS ABOUT US
+
+The record said eleven files.  It said eleven files in April 2010 because that
+was true in April 2010, and it went on saying eleven files for fifteen months
+because a record that nobody reads against the system is a record of what
+somebody once saw.
+
+LAST REVIEWED exists in these files for exactly this reason and I put it there
+myself.  Summit's said 20 April 2011, three months ago, and it was still wrong,
+because reviewing a record is not the same as checking it against the machine
+and I have not been honest with myself about the difference.
+
+I am not proposing a process.  I am proposing that when a file says something
+specific and checkable about a system -- a file count, a version, a threshold --
+somebody checks it, and that the checkable things are marked so we know which
+they are.

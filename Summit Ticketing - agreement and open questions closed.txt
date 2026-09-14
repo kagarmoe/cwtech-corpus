@@ -1,0 +1,82 @@
+NORTHWIND TECHNOLOGIES
+Summit Ticketing -- agreement signed, open questions answered
+
+Prepared by:  John Mercer
+Date:         May 26, 2010
+Status:       Internal
+
+Telephone call with Laura on the 19th, agreement signed today, monthly service
+starts June 1. Writing down what I actually told her so that Alice knows what
+we are now on the hook for and so that I remember it myself.
+
+
+WHAT I TOLD HER ABOUT AFTER HOURS
+
+She asked what happens at eleven o'clock on a Friday night in July. I gave her
+the true answer rather than a clause.
+
+The number rings Alice's mobile. There is no rota and there is no second
+person. If Alice is asleep the phone wakes her. If she is somewhere without
+signal, it does not, and Laura will not know the difference until Alice calls
+back.
+
+What we will do is call back and tell her what we know, including when what we
+know is nothing yet.
+
+What we will not do is promise that someone is awake and looking within any
+number of minutes, because I would be inventing the number.
+
+I also told her the part I did not have to. When we take more customers this
+arrangement stops working, and we will tell her when we change it rather than
+letting her find out during an incident.
+
+She said she would rather have that than a better-sounding promise from a
+company that would not keep it. I think she meant it, and I also think she will
+feel differently at eleven o'clock on a Friday night in July. Both can be true.
+
+
+WHAT I TOLD HER ABOUT A THIRD SERVER
+
+The honest answer is that we do not have a pricing rule and I said so.
+
+What I told her we would do: work out what it costs us to watch and maintain
+the machine, and add that. For another web server much like WEB2, in the region
+of two hundred a month. A database server would be more, because it is more
+work and more risk, and I would want Alice to look at it before I quoted
+anything.
+
+She said that was a more useful answer than a number would have been. I am not
+sure she is right, but it was the answer I had.
+
+This is now the second customer conversation where the lack of a pricing rule
+has cost me something. It has not cost us a deal yet. It will.
+
+
+THE AGREEMENT
+
+Signed today. Her attorney read it. Three changes:
+
+    Thirty days' notice either way rather than sixty. She wanted to be able to
+    leave. I would rather she can leave and does not.
+
+    Liability capped at three months of fees. Their suggestion, and reasonable
+    for what we are charging.
+
+    The clause about Mark's undisclosed changes being billable is in, but she
+    asked that we tell her before we bill for it rather than after. That is
+    fair and I should have offered it.
+
+Nothing in it contradicts what Alice and I agreed in April.
+
+
+WHERE WE ARE
+
+Summit is a customer. Monthly service starts June 1 at $1,200. The initial
+engagement is invoiced and paid.
+
+Alice's list of things she would fix if asked is still a list of things nobody
+has asked her to fix. I have not raised it with Laura because none of it is
+urgent and I did not want the first month of a monthly agreement to open with
+an invoice for extra work.
+
+I am aware that is a reason and not a good one.

@@ -1,0 +1,99 @@
+NORTHWIND TECHNOLOGIES
+Denver, Colorado
+
+
+May 17, 2010
+
+Laura Bennett
+Owner, Summit Ticketing
+
+
+Laura,
+
+The initial engagement is complete. Alice worked on your systems from May 10 to
+May 14. This is what we found and what is now in place.
+
+The short version: your systems are in better shape than I expected and your
+backups are in worse shape than you believed. Nothing is on fire.
+
+
+WHAT IS NOW IN PLACE
+
+You have an inventory. Before this there was not one. We know what is on both
+machines, what runs on them, what depends on what, and who has access.
+
+You have monitoring. Since May 13 we have been checking both servers every five
+minutes -- disk space, the database, your home page, and whether last night's
+backup actually appeared. Alerts come to us, not to Mark's personal email.
+
+You have a restore that somebody has actually performed.
+
+Access is tidied. Eleven accounts existed across the two machines. One belonged
+to a contractor who finished in early 2009 and still had administrative access;
+that is disabled, with your agreement. The rest we identified and left alone,
+including two that looked disposable and were not.
+
+
+THE THREE THINGS WORTH YOUR TIME
+
+**Your backups run, and a restore works.** Alice restored your May 11 database
+onto a separate machine on May 13 and the data was all there. That is genuinely
+good news and it is more than most companies your size can say.
+
+**Restoring gives you your data but not your passwords.** The nightly dump does
+not include the database's own user accounts. In a real recovery somebody would
+restore everything successfully and then find the application unable to log in
+to its own database, at the worst possible moment. We have now recorded those
+credentials off the machine. The permanent fix is a one-line change to the
+backup and I would like to make it.
+
+**A full recovery takes about forty minutes.** That is the first real number
+anybody has for how long Summit is offline in the worst case. It may be better
+than that on your own hardware. I mention it because "we have backups" and "we
+are back in forty minutes" are different promises and you should be making the
+second one to your venues, not the first.
+
+
+SOMETHING WE GOT WRONG IN APRIL
+
+In Alice's first review she described WEB2 as doing four unrelated jobs and
+suggested it was partly spare capacity. Having now looked properly, that is not
+right.
+
+WEB2 serves your images and stylesheets, and the application on WEB1 links to
+them directly. WEB2 is not a spare. If it goes down during an event, WEB1 keeps
+serving pages and they come out without images.
+
+It also has no RAID, and it holds the only off-machine copy of your backups.
+
+We are not proposing to change any of that this month, and none of it is
+urgent. But you asked in April what WEB2 was for, and the honest answer is
+different from the one we gave you.
+
+
+YOUR SEASON
+
+You asked for this done before the season was properly underway. We started
+May 10 and finished May 14, which is inside the window but not early in it. If
+we do this for you again next year it should happen in March.
+
+
+THE TWO THINGS STILL OPEN
+
+The services agreement is with our attorney and I will send it this week. I
+have not forgotten it and I am not going to ask you to sign a monthly
+commitment without it.
+
+You asked what actually happens at eleven o'clock on a Friday night in July. I
+owe you a straight answer rather than a clause, and I would rather give it to
+you on the telephone than in a letter. Can we speak this week? I would also
+like to answer your question about a third server at the same time, because the
+honest answer is that we do not have a pricing rule yet and I would rather tell
+you how we would work it out than invent one.
+
+Alice's full inventory runs to several pages and is yours whenever you want it.
+I have kept this to what changes your decisions.
+
+
+John Mercer
+Northwind Technologies

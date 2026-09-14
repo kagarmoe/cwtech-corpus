@@ -1,0 +1,194 @@
+NORTHWIND TECHNOLOGIES
+The disk check that could not fail
+
+Prepared by:  Wes Okafor
+Reviewed by:  Priya Raghunathan
+Date:         13 November 2017
+Status:       Internal
+
+This one is mine.  I am writing it a month late, with the fix already in, because
+I wanted to be able to say what we had done about it rather than what we were
+going to.  The process we agreed in June worked exactly as designed and did not
+help.
+
+
+WHAT I CHANGED
+
+On 20 September I changed two things in check_disk.
+
+The first: df -P columns move when a device name is long enough that df wraps
+the line, and we read column 5.  I asked df for the fields instead --
+--output=pcent,size -- so the percent is always field 1.  Tidy.  Since the field
+can then never be missing, I took the empty case out of the guard below it.
+
+The second was a real bug and older than me.  The line read
+
+    line=`ssh host "df -P $mount" | tail -1` || { cannot reach; exit 2; }
+
+and the status of that is tail's status.  tail does not fail.  That || has never
+fired once since Alice wrote it in 2010.  I moved the tail to the far side of
+the ssh so that what we test is ssh.
+
+That second change is correct.  I would make it again.
+
+
+WHAT HAPPENED
+
+df --output arrived in coreutils 8.21, in February 2013.  We manage six
+operating system releases and four of them are older than that:
+
+    CentOS 5.4     no        CentOS 5.5     no
+    Debian 5       no        Ubuntu 8.04    no
+    Ubuntu 14.04   yes       Debian 8       yes
+
+On the four, df printed its usage to stderr and exited 1.  Here is the rest of
+it, and every step is something I did on purpose:
+
+    df exits 1                  but it is now piped to tail on the far side,
+                                and what ssh reports back is tail's status, 0
+    so ssh returns 0            and the || does not fire.  I moved that pipe.
+    stderr is 2>/dev/null       so the usage message is gone
+    awk over nothing            so the percent is the empty string
+    case "" in *[!0-9]*         does not match.  I removed the '' case in the
+                                same change, because --output made it impossible
+    [ "" -ge 90 ]               is not false.  It is an error.
+    and `if` reads an error     as false, so we skip the critical branch
+    the last line is echo       and echo exits 0
+
+    OK.
+
+The fix I was proudest of is the one that carried it.  Moving the tail to the
+far side was right, and it moved the mask one hop instead of removing it.
+
+    From 20 September to 12 October, every disk check on web1.summit,
+    web2.summit, ccweb1, ccdata1, ccdata2, bw-web1, bw-db1 and hr-www
+    reported OK.  Every single run.  Whatever the disk was doing.
+
+That is eight hosts and sixteen checks, green for twenty-two days, on the oldest
+and most important customers we have.
+
+
+HOW WE FOUND IT
+
+Not from an alert.  There cannot be an alert; that is the whole problem.
+
+web1.summit's /var was at 88% on 12 September and Priya had it written down.
+She expected it to cross 90 inside a month and went to nwtrend to see when it
+had first warned, so she could tell Summit how fast it was moving.
+
+It had never warned.  Not since 20 September -- never, in seven years.
+
+    She asked me when I had last touched check_disk.  I said 20 September.
+
+Then she ran it by hand and got `/ % full`, and a complaint from the shell about
+an illegal number, and an exit status of zero.
+
+Nothing bad happened in the twenty-two days.  We got lucky and I want that
+written down as luck and not as mitigation.
+
+
+THE PART THAT BOTHERS ME
+
+Priya's condition from June is that I do not change a check that is currently
+catching something without telling her first.
+
+**I told her.**  She read it.  We both looked at it and neither of us thought
+about coreutils 8.21, because both of us do our thinking on machines that are
+younger than it.
+
+The review worked.  The reviewer and the author had the same blind spot, which
+is what happens when two people from the same small company review each other,
+and no amount of telling each other first fixes it.
+
+The tests are worse than that, and this is the part I have thought about most.
+
+They did not pass.  Three of them failed.
+
+The stub that stands in for ssh matched on the literal string "df -P /var" and
+my new command no longer said that, so I changed the stub to dispatch on the
+mountpoint.  The canned df output was two lines, a header and a row, and the
+tail now runs on the far side where the stub does not honour it, so I made the
+canned output the one line tail would have returned.  And I rewrote those lines
+into the layout --output=pcent,size produces.
+
+Then sixty-three tests passed and I committed it.
+
+I want to be accurate about what I did there.  I did not ignore a failing test.
+I did the thing that looked like maintenance: the command changed, so the
+fixture changed.  It is the same edit you make when you rename a field.  The
+difference is that a fixture is a claim about what the world returns, and I had
+just changed my claim about the world to agree with a command I had only ever
+run on one machine.
+
+The suite now asserted that every host we manage prints a percent and a size
+and nothing else.  Four of the six do not print anything at all.  No test could
+have known, because every machine in the suite is a file I wrote.
+
+One of the three was "unreachable host fails", written by Alice in 2010 for a
+reason that has nothing to do with any of this, and it failed for exactly the
+right reason: with the empty case gone from the guard, a host that answers with
+nothing now returns OK.  I read that failure, understood it as the stub being
+out of date, and edited the stub.
+
+It was not the stub being out of date.  It was the test telling me.
+
+
+THE OLDER PROBLEM THIS IS
+
+In April 2011, in her first month, Priya asked: "What happens if a check is
+wrong and reports OK forever?"
+
+The answer she got, and wrote down, was: "Nothing.  We would not know."
+
+That has been in the file for six years.  Nobody solved it because it never
+happened, and then it happened, and we found out because one person had a number
+written down and went to look at how fast it was moving.
+
+
+WHAT WE HAVE DONE
+
+**nwtry.**  Runs a check against one host of each operating system release we
+actually manage -- six of them, CentOS 5.4 through Debian 8 -- and shows what
+each one returns.  It takes about four seconds.
+
+    Eleven years of releases, and I had been testing on the newest one because
+    it is the one in front of me.
+
+The rule: a change to a check gets run through nwtry and the output goes in the
+commit message.  Not a policy document.  Four seconds and a paste.
+
+**nwcheck keeps stderr apart from stdout**, and a check that exits 0 while the
+shell is complaining is not OK.
+
+    "[: Illegal number:" was in the output of every one of those runs.  We
+    captured it.  We wrote it to the history file.  We filed it under OK and
+    nobody ever read it, because nothing we have ever shows you an OK line.
+
+This is the one that would have caught it, on the first run, on 20 September.
+It is nine lines.
+
+**nwtrend --stale.**  Lists checks that have not reported anything other than OK
+for longer than they usually go, comparing each check against its own history.
+
+    It would not have caught this.  web1.summit disk has never once been non-OK
+    in seven years, so there is no cadence to compare it against and --stale
+    skips it.  It answers Priya's question for a check that used to be right and
+    stopped.  For a check that has never once fired, we are where we were in
+    2011, and I would rather write that down than let the entry in deferred look
+    tidier than it is.
+
+    Twenty lines of awk, six years late, and a partial answer.
+
+**Reverted the rest of the change.**  check_disk counts columns out of df -P
+again, which is what I was trying to get away from and which works everywhere.
+The tail stays on the far side; that part was right.  The comment above the line
+says why, at length, so that the next person who finds it untidy reads the
+reason before they fix it.
+
+
+WHAT I HAVE NOT DONE
+
+Anything about the stub tests.  They are good tests for what they test and I am
+not going to build a machine room of virtual CentOS 5 boxes for a six-person
+company.  nwtry against real hosts is the cheaper answer and it is honest about
+what it is.

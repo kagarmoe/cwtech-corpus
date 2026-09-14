@@ -1,0 +1,103 @@
+NORTHWIND TECHNOLOGIES
+Lindqvist -- ten machines at Alder Street
+
+Prepared by:  Marcus Reyes
+Reviewed by:  John Mercer
+Date:         10 June 2013
+Status:       Internal
+
+
+HOW THIS HAPPENED
+
+In March we told Gary no.  The reasons were the load, the facility and the
+building argument, and none of them have changed.
+
+What changed is the size.  His landlord gave him notice in April.  He has sold
+fourteen rigs, kept seven in Boulder where the supply can carry them, and asked
+whether we could take ten.
+
+Ten rigs is about 9 kW with cooling.  That is a high-density cabinet, not a
+room.  Alder Street will do one at 10 kW, metered, with a demand charge I have
+now seen in writing.  I got that price in April doing the work John asked for
+in March, which is the only reason we could answer him in two days instead of a
+fortnight.
+
+So the answer this time is yes, and it is yes for the same reasons March was
+no.  The arithmetic moved, not the principle.
+
+
+WHAT IS DIFFERENT ABOUT THESE MACHINES
+
+I have written this out because everyone here has spent three years learning
+one set of instincts and most of them are wrong for this cabinet.
+
+    They are never idle.  Every other machine we manage has a night.  A web
+    server at four in the morning is doing nothing and the cooling has a rest.
+    These draw the same at four in the morning as at four in the afternoon,
+    forever.  Design for the peak and then remember there is no trough.
+
+    Heat is the whole job.  On a normal cabinet the thermal problem is a
+    consequence of the computing.  Here it is the product.  Every watt that
+    goes in comes out as heat six inches away.
+
+    Downtime is arithmetic, not embarrassment.  When Summit is down, Laura is
+    upset and we do not know what it cost her.  When this cabinet is down,
+    Gary knows what it cost to the cent before we have finished apologising.
+    He will not be angrier than Laura.  He will be more specific.
+
+    A dead machine is not an incident.  A GPU dies, he unplugs it and plugs in
+    another.  There is nothing on it.  No backup, no restore, no data, no
+    migration.  Three years of everything we know about hardware failure is
+    irrelevant here, and the temptation is to apply it anyway.
+
+    Nothing is production in the sense we mean.  There is no user waiting.  If
+    a machine is off for an hour it has lost an hour of arithmetic, and that
+    is all that has happened.
+
+
+WHAT WE AGREED TO DO
+
+    The cabinet, its power and its cooling.
+    Telling him when a machine stops.
+    Remote hands -- reseating, swapping a card he has couriered over.
+    Talking to Alder Street, because he is not their customer and we are.
+
+WHAT WE DID NOT AGREE TO DO
+
+    Anything about the mining software.  He runs it, he configures it, he
+    decides what it points at.  We do not touch it and we do not advise on it.
+
+    Anything about whether it is worth doing.  Not our business, and if it
+    stops being worth doing that is between him and the arithmetic.
+
+    Buying hardware.  His machines, his money, his choice.  We rack what he
+    sends.
+
+
+WHAT WE ARE WATCHING, AND WHY IT IS NOT WHAT WE USUALLY WATCH
+
+The cabinet has a metered PDU.  Alder Street gives us a reading.  Total draw
+tells us more than any single machine does: if it falls by roughly a tenth,
+one has stopped, and we do not need to know which to telephone him.
+
+Priya has added two checks.  One reads the cabinet draw and alerts on a step
+change.  One asks each rig what it is doing, over ssh, because they run Linux
+like anything else.
+
+We are not monitoring hash rate as a performance measure.  We are using it to
+tell whether a machine is alive, which is the only thing we have agreed to
+tell him.
+
+    That distinction matters and I want it written down before somebody blurs
+    it.  The moment we report on how well he is mining, we have opinions about
+    his business, and then we own something we did not agree to own.  We have
+    been here before with Mark and with a catalogue vendor.
+
+
+ONE THING I AM UNEASY ABOUT
+
+We are one cabinet into this and it is nine kilowatts of a ten kilowatt
+allowance.  There is no room to grow inside this arrangement, and if Gary asks
+for five more machines the answer is another cabinet or another building.
+
+I would rather say that now than discover it when he asks.

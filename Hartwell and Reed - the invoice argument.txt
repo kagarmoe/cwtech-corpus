@@ -1,0 +1,95 @@
+NORTHWIND TECHNOLOGIES
+Hartwell & Reed -- the invoice argument
+
+Prepared by:  John Mercer
+Date:         23 April 2012
+Status:       Internal
+
+
+WHAT HAPPENED
+
+17 April, Cheryl telephones: the web site is showing an error and the partners
+have noticed.
+
+Priya spends four hours.  The CMS has stopped rendering the project pages after
+a plugin update that Cheryl authorised in March through the firm that does
+their marketing.  It is the CMS, it is not the server, and the server never
+went down.
+
+We invoiced three hours at $95 on the 20th, correctly, with notice first, per
+the January terms.
+
+Cheryl replied on the 23rd.  I am quoting it because paraphrasing it would let
+me off:
+
+    "I am confused and I would rather ask than assume.  We pay Northwind
+    every month to look after the website.  The website was broken and
+    Northwind fixed it.  I do not understand what the extra invoice is for.
+    Please do not think I am refusing to pay it.  I would just like to be
+    able to explain it to Mr Reed."
+
+
+SHE IS NOT WRONG
+
+We do not look after the website.  We look after the machine the website is on.
+That distinction is in her record, it is in the agreement she signed, and Alice
+put the CMS on the known-problems list in January 2011 and we told them in
+writing that nobody was maintaining it.
+
+None of that is the same as Cheryl understanding it.
+
+What she has is a conversation with me in January 2011, in which I said we
+would look after their server, and fifteen months of us doing exactly that
+without her ever needing to know where the line was.  The line only becomes
+visible when it costs her money.
+
+I predicted this in January.  I wrote that when the Hartwell CMS broke, "this
+is the clause that decides who pays for the afternoon."  I was pleased with the
+sentence.  I did not think about who would be reading the invoice.
+
+
+THE GENERAL PROBLEM
+
+Alice and Priya have both said a version of this and I have twice said no.
+
+Four customers -- six now -- and every one of them has a different
+understanding of what they are buying, because every one of them got a
+different conversation.
+
+    Laura knows exactly where the line is.  She has been on the wrong side of
+    an outage and she reads what Alice sends her.
+
+    Ruth knows better than we do and tells us when we are wrong.
+
+    Dale believes nothing before seven in the morning is urgent.  That is his
+    view and not the agreement, and it is written in his record as his view,
+    and if something breaks at five he is going to be surprised.
+
+    Cheryl believed we look after her website.
+
+    Larkspur Vineyards and Cortez Brothers Paving both signed in March on
+    language I wrote fresh each time because I was in a hurry.
+
+That last one is the part that is my fault and not anybody's misunderstanding.
+
+
+WHAT WE ARE DOING
+
+Not a service catalogue.  I have said no to that twice and I still think a
+company our size answering the telephone with "it depends what you bought" is
+worse than the problem.
+
+One page per customer, in their words, saying what we do and what we do not,
+sent to them, signed off by them.  Not a contract -- the agreements stand.  A
+page they can put in a drawer and hand to the person who asks.
+
+Alice's summary when I finally agreed: "So you have said yes to writing it down
+for the customer and no to writing it down for us, which is an interesting
+order to do it in."
+
+She is right and I am doing it in that order anyway, because the customer
+misunderstanding is the one costing us money this month.
+
+We are not billing Hartwell for the three hours.  Not because the invoice was
+wrong.  Because Cheryl asked a fair question and the answer is that we never
+gave her a way to know.

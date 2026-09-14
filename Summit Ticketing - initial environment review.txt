@@ -1,0 +1,352 @@
+NORTHWIND TECHNOLOGIES
+Summit Ticketing -- initial environment review
+
+Prepared by:  Alice Chen
+Date:         April 19, 2010
+Status:       Internal working notes
+
+PURPOSE
+
+Initial review of Summit Ticketing's production environment following
+the April 15 meeting with Laura Bennett and Mark Ellis.
+
+This is not a migration plan.
+
+John wants to know what is there, what we would be taking responsibility
+for, and whether I think we can manage it without first rebuilding it.
+
+PEOPLE
+
+Laura Bennett
+Owner, Summit Ticketing
+
+Primary business contact. Handles customer and venue relationships and
+most of the administrative side of the business.
+
+Mark Ellis
+Contract developer
+
+Built most of the current application and has been maintaining the
+servers because there was nobody else to do it.
+
+Mark wants to continue application development but does not want
+responsibility for production operations.
+
+There is no other technical staff.
+
+HOSTING
+
+Both production servers are leased dedicated servers at Mile High
+Hosting.
+
+Summit pays Mile High directly.
+
+Mile High provides:
+
+    - physical servers
+    - network connection
+    - public IP addresses
+    - hardware replacement if a server fails
+    - remote reboot on request
+
+They do not administer the operating system or Summit's application.
+
+No reason I can see to move either server immediately.
+
+SERVERS
+
+I am using WEB1 and WEB2 below. Summit and Mark do not currently have
+consistent names for them.
+
+WEB1
+
+Older of the two servers.
+
+Linux.
+
+Runs:
+
+    - Apache
+    - PHP application
+    - MySQL
+    - scheduled jobs related to ticket orders and reporting
+
+This is the production system.
+
+The application and database are on the same server.
+
+Mark deploys application changes directly to this machine.
+
+Disk space is not currently a problem.
+
+Memory is tighter than I would like during busy periods but I do not
+have enough data yet to say whether it is causing a production problem.
+
+WEB2
+
+Added last year after performance problems during a large event.
+
+Linux.
+
+Runs:
+
+    - Apache
+    - second copy of part of the application
+    - some static content
+    - reporting scripts
+    - database backup files
+
+Mark redirects some traffic to WEB2 manually for larger events.
+
+This is not load balancing in any useful sense.
+
+The two application copies are not always identical. Mark normally
+updates WEB1 first and WEB2 later if he expects to use it.
+
+WEB2 is also being used as the destination for database backups from
+WEB1.
+
+I asked whether anything else depends on it. Mark said "I don't think
+so."
+
+Need a better answer before we change it.
+
+APPLICATION
+
+Custom PHP application.
+
+Mark is the primary developer. There have been other contractors.
+
+Source code exists on Mark's development machine and on the production
+servers.
+
+Mark says he has "most versions" of the application in local directories
+and ZIP files.
+
+There is no source control system in use.
+
+That is an application-development problem rather than something
+Northwind needs to solve before taking over operations, except that we
+need to know what version is actually running on each server.
+
+Deployments are manual.
+
+Mark copies changed files to the production server over SSH/SCP and
+makes database changes manually when a release requires them.
+
+There is no written deployment procedure.
+
+DATABASE
+
+MySQL on WEB1.
+
+The database contains event, venue, customer, order and ticketing data.
+
+I have not reviewed the schema beyond confirming that the application is
+using the local database.
+
+Mark occasionally runs SQL directly against production to fix data or
+answer questions.
+
+Backups are created nightly by a cron job and copied to WEB2.
+
+The files exist.
+
+I have not restored one.
+
+Until somebody restores one, we have backup files, not a verified
+backup.
+
+MONITORING
+
+Mile High monitors whether the servers respond to ping.
+
+Mark has a free external service checking the home page periodically.
+Notifications go to his personal email address.
+
+There is no monitoring of:
+
+    - database availability
+    - disk space
+    - backup completion
+    - application errors
+    - scheduled jobs
+
+Laura assumed Mile High was monitoring more than they are.
+
+This probably explains some of the confusion during last month's outage.
+
+LAST MONTH'S OUTAGE
+
+I do not have enough evidence to determine the cause.
+
+What I know:
+
+    - Customers reported that they could not complete purchases.
+    - Mile High confirmed that both servers were reachable.
+    - Laura could load at least one page in her browser.
+    - Mark was away and did not respond for several hours.
+    - The problem was gone by the time he investigated it.
+
+Mark thinks MySQL may have stopped responding or reached its connection
+limit.
+
+That is plausible but not established.
+
+There are no logs preserved specifically for the incident and nobody
+recorded times carefully enough to reconstruct it now.
+
+Do not turn "probably MySQL" into the explanation for this outage.
+
+ACCESS
+
+Mark has root access to both servers.
+
+Mile High has whatever access they require for hardware support.
+
+I now have temporary root access for this review.
+
+Laura does not know who else may still have accounts from previous
+contract work.
+
+I found several user accounts that need to be identified before we
+remove anything.
+
+Do not disable accounts until Mark has reviewed the list. One of them
+may belong to a script or old deployment process.
+
+DNS
+
+The Summit Ticketing domain is registered through a registrar account
+controlled by Laura.
+
+DNS is hosted separately.
+
+Mark has the credentials.
+
+Laura believes she also has them but did not have them available during
+the meeting.
+
+Nothing to change now, but Northwind needs to know where these
+credentials are if we are expected to respond to an outage involving
+DNS.
+
+BACKUPS
+
+Nightly MySQL dump from WEB1 to local disk, then copied to WEB2.
+
+Several weeks of files are present.
+
+No documented retention policy.
+
+No off-site copy that I found.
+
+No restore test.
+
+Application files are not included because Mark considers his
+development copy the source.
+
+This is not sufficient if Northwind is going to accept responsibility
+for recovery.
+
+DOCUMENTATION
+
+Almost none.
+
+Mark was able to explain most of the environment from memory.
+
+There is a text file in his home directory on WEB1 containing commands
+he uses occasionally. Some are deployment commands and some are
+administrative notes.
+
+There are comments in the crontab explaining most scheduled jobs.
+
+Mile High has the original server order information.
+
+Laura has invoices and account information in email.
+
+There is no current system inventory.
+
+WHAT I THINK WE CAN TAKE RESPONSIBILITY FOR
+
+The environment is small enough to understand.
+
+I do not think Summit needs a migration before we can manage it.
+
+I would be comfortable taking responsibility for:
+
+    - operating system administration on WEB1 and WEB2
+    - Apache
+    - MySQL availability and basic administration
+    - storage and disk-space monitoring
+    - backup operation and restore testing
+    - system and service monitoring
+    - coordinating hardware issues with Mile High
+    - first response when Summit reports that the service is unavailable
+
+I would not accept responsibility for application correctness.
+
+If the application is running but producing the wrong ticket price, that
+belongs to Mark.
+
+If customers cannot buy tickets and we do not know why, that belongs to
+us until we determine whether the failure is infrastructure or
+application. We cannot tell Laura to decide which one it is before she
+calls.
+
+WHAT HAS TO HAPPEN FIRST
+
+Before I would call this a managed environment:
+
+    1. Inventory both servers and what runs on them.
+
+    2. Identify current user accounts and who still needs access.
+
+    3. Record the accounts and providers Northwind may need during an incident.
+
+    4. Put monitoring on the services we are agreeing to manage.
+
+    5. Verify that the database can actually be restored from backup.
+
+    6. Agree with Mark on how Northwind learns about deployments and changes
+       that can affect production.
+
+    7. Decide what happens when an alert arrives outside normal hours.
+
+None of this requires rebuilding the application or moving the servers.
+
+ONE THING I WOULD CHANGE SOON
+
+WEB2 is doing too many unrelated jobs badly.
+
+It is part spare capacity, part second application server, part
+reporting machine and part backup destination.
+
+I am not proposing that we redesign it before taking Summit on.
+
+I am saying we should not add anything else to it until we understand
+which of those jobs Summit actually needs.
+
+QUESTIONS FOR JOHN
+
+We can manage this.
+
+Now we need to decide what we are selling when we say that.
+
+Specifically:
+
+    - Are the initial inventory and backup test part of onboarding or separately
+      billed project work?
+
+    - Does "first response" mean somebody responds at any hour?
+
+    - Are we promising to investigate application failures even though we are
+      not responsible for fixing the application?
+
+    - Does the monthly fee include routine changes, and if so, what counts as
+      routine?
+
+    - What happens when Mark changes production without telling us and it
+      breaks?
+
+Do not promise Laura anything on those points until we agree.

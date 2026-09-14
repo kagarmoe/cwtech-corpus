@@ -1,0 +1,112 @@
+NORTHWIND TECHNOLOGIES
+The hardware question, answered
+
+Prepared by:  Alice Chen
+Reviewed by:  John Mercer, Marcus Reyes, Priya Raghunathan
+Date:         16 May 2016
+Status:       Internal
+
+
+THE QUESTION
+
+Since 2010 we have owned no hardware of consequence.  I have written down three
+times that this is why our bad year was uncomfortable and not fatal, and I meant
+it every time.
+
+Since October Priya has twice said the hardware question was not hers to answer,
+which was a polite way of saying it was mine.
+
+Dev wants twelve machines and will not buy them.  Dr Ma cannot buy them.  Two
+more people have asked the same thing since February.  That is four, which is
+not opportunistic any more.
+
+
+WHAT I HAVE DECIDED
+
+We buy hardware, under the same rule we already use for power.
+
+    **We do not buy beyond the contracts behind it.**
+
+That is the rule John and I agreed in November 2013 about the cage and it has
+held for three years through the worst of this.  I am not inventing a new
+principle.  I am applying the one that worked to the thing we kept saying no to.
+
+In practice: a machine gets bought when a customer has signed a term that covers
+its cost, with margin, and not before.  Nobody speculates on a rack of GPUs
+because somebody might want them.
+
+    First tranche: fourteen nodes against Dev's twelve-machine autumn commitment
+    and Dr Ma's grant, which runs to September 2018.
+
+
+WHAT MADE THIS AFFORDABLE, WHICH IS NOT A COMFORTABLE STORY
+
+The GPU market is full of second-hand cards from people who were mining and
+stopped.
+
+We paid about forty per cent of new for hardware that is two years old and has
+been run flat out in somebody's garage, and Marcus tested every one of them for
+a week before it went in a rack.  Eleven of the sixty cards we bought were dead
+or dying.  We knew that going in and priced for it.
+
+In 2014 Gary Lindqvist asked whether we would buy his rigs and we said no.  That
+was the right answer in 2014 — we had no customer for them and no reason to own
+anything.
+
+It is a strange feeling to build the next part of the company out of the wreckage
+of the last part, and I would rather write that down than pretend the symmetry
+has not occurred to me.
+
+
+WHAT WE ARE NOT DOING
+
+**Not renting compute by the hour.**  Several people have asked.  That is a
+different business with a different billing system and a different kind of
+customer, and we have neither.
+
+**Not buying ahead of demand.**  The whole rule.
+
+**Not touching the customer's work.**  Same line we have held since April 2010.
+We run the machine.  What it computes is theirs.
+
+**Not renaming anything.**  See below, because Priya was firm about it.
+
+
+THE THING PRIYA WAS FIRM ABOUT
+
+Our check for whether a machine is doing work is called `rig_alive`.  It was
+written in June 2013 for Gary's mining rigs.  It now runs against Dev's render
+nodes and Dr Ma's analysis boxes.
+
+I suggested renaming it.  Priya said no, and her reasons were better than mine:
+
+    It would be an afternoon of work across four customers' configs to change a
+    word, and every one of those edits is a chance to break something that
+    currently works.
+
+    Anybody reading the file learns something true from the old name — that we
+    got into this through mining, and that the thing we check has not actually
+    changed.
+
+    "We would be tidying the history to make ourselves look like we planned
+    this."
+
+So it stays `rig_alive`.  The config still has a section header that says
+Lindqvist (mining) with nothing at all under it.  Gary has been gone since
+January 2015 and Marcus left the header there deliberately when he moved the
+last of it, with a note underneath saying that this is where the check came
+from and where we learned to watch a room.
+
+An empty heading in a config file is a strange thing to keep on purpose.  It is
+also the only place in that file that records where any of this started.
+
+
+WHAT THIS COSTS US IF I AM WRONG
+
+Forty-one thousand dollars of hardware against contracts worth about ninety
+over their terms.
+
+If both customers vanished tomorrow we would have a rack of two-year-old GPUs
+and a suite with room in it.  That is a bad month, not a bad year, and it is the
+first time since 2013 that I can write a sentence like that about a decision of
+mine without checking it twice.

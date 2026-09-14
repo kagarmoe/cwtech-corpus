@@ -1,0 +1,145 @@
+NORTHWIND TECHNOLOGIES
+Summit Ticketing -- incident, Thursday 15 July 2010
+
+Prepared by:  Alice Chen
+Date:         July 16, 2010
+Status:       Internal. Written the morning after.
+
+Customers could not reliably complete purchases between roughly 19:20 and
+20:34 on Thursday evening. Both servers were up throughout. Our monitoring
+did not tell us.
+
+
+WHAT I CAN ESTABLISH
+
+    18:47   Mark mailed ops@ -- "pushing a change to the confirmation page
+            tonight, nothing big". That is the whole message.
+
+    19:0x   Summit opened sales for a Boulder Theater on-sale. I have this
+            from Laura, not from a system.
+
+    19:22   First 500s on POST /order/confirm in WEB1's Apache log.
+
+    19:26   nwcheck: web1 mysql FAIL. Recovered 19:27. Failed again 19:29.
+            Between 19:26 and 20:31 that check changed state 23 times and
+            mailed me 23 times.
+
+    19:41   Laura called John. Customers were mailing her. John called me.
+
+    19:55   I was on WEB1.
+
+    19:57   SHOW PROCESSLIST. Captured, see below.
+
+    20:11   I called Mark.
+
+    20:29   Mark replaced the confirmation page with the previous copy from
+            his machine.
+
+    20:34   Purchases completing normally. No further alerts.
+
+Roughly seventy minutes. I cannot say how many purchases failed. The
+application does not record a failed order anywhere I can find, which is its
+own finding.
+
+
+WHAT THE PROCESSLIST SHOWED
+
+Sixty-one connections. Fifty-three of them in state "Locked", all of them
+INSERT or UPDATE against summit_prod.orders. One connection running, held for
+41 seconds at the time I looked:
+
+    SELECT o.*, e.name FROM orders o JOIN events e ON e.id = o.event_id
+    WHERE o.email = '...' ORDER BY o.created DESC LIMIT 5
+
+orders is MyISAM. MyISAM locks the whole table. A SELECT that takes forty
+seconds holds a read lock on orders for forty seconds, and every purchase in
+that window queues behind it. When the queue got long enough we ran out of
+connections -- /var/log/mysqld.log has "Too many connections" from 19:31
+onward, max_connections is 100.
+
+EXPLAIN on that query this morning: no index on orders.email. 1.9 million rows,
+full table scan. On a quiet evening it returns in under a second because the
+table is in the key cache and nobody else is writing. Under an on-sale it is
+forty.
+
+That is the mechanism. I am confident about it because I watched it happening.
+
+
+WHAT I CANNOT ESTABLISH
+
+Whether that query is new.
+
+The file mtime on confirm.php is 18:44 yesterday, which matches Mark's mail.
+Mark says he added the recent-orders block to the confirmation page last night
+and that it was not there before. There is no source control, so his word and
+the mtime are what exist. Both are consistent and neither is proof.
+
+I have no evidence at all about how the query performed before last night,
+because there is no slow query log and there never has been.
+
+
+ON THE MARCH OUTAGE
+
+This looks like March. Customers could not buy, the servers were up, somebody
+could load a page, and it went away.
+
+It is not evidence about March. Nothing was preserved from March. A mechanism
+that explains this incident does not establish that it explains that one, and
+I am writing this down because the temptation to close March on the strength of
+tonight is going to be strong and it should be resisted.
+
+
+WHAT OUR MONITORING DID AND DID NOT DO
+
+It told us MySQL was intermittently unreachable. That is true and it is nearly
+useless -- by the time the database stops accepting connections, customers have
+been failing for five minutes.
+
+It did not tell us purchases were failing. We check that the home page contains
+the word "Summit". The home page was fine for the entire incident. We were
+green on the thing the customer cares about and red on a symptom.
+
+The state-change mail was worse than useless. I built it so a stuck failure
+mails once instead of every five minutes. A flapping check does the opposite:
+23 mails in an hour, which is the thing I was trying to avoid, arriving by the
+mechanism I built to avoid it. I did not think about flapping.
+
+
+CHANGES MADE THIS MORNING
+
+    Slow query log enabled on WEB1, long_query_time 2. This should have been
+    on since May and the only reason it was not is that nobody asked.
+
+    New check, mysql_threads: warns at 60 connections in use, criticals at 85.
+    That would have mailed me at about 19:24, two minutes before the first
+    mysql failure and six minutes ahead of Laura's phone call.
+
+    nwcheck now suppresses repeat mail for a check that changes state more than
+    three times in fifteen minutes, and says so in the one mail it does send.
+
+Not done, deliberately:
+
+    No index on orders.email. Adding an index to a 1.9 million row MyISAM table
+    locks it for the duration. Not during selling season. It goes on the list.
+
+    No check that actually completes a purchase. It is the right check and I do
+    not have a safe way to do it against production without creating real
+    orders. I have asked Mark whether there is a test event we could use.
+
+
+WHAT THIS SAYS ABOUT THE ARRANGEMENT
+
+The responsibility line held. Nobody argued about whose problem it was. We
+investigated, established it was the application, and handed it to Mark, and
+he fixed it. That is what John sold Laura in April and it is what happened.
+
+The notice we asked Mark for is technically what we got. "Nothing big" told me
+nothing. I do not think he was being careless -- he genuinely does not know
+which of his changes can affect the database under load, and asking him to
+know that is asking him to be a different kind of engineer. Asking him to tell
+us which files he touched would cost him nothing and would have saved me
+fifteen minutes last night.
+
+John spent twenty minutes on the phone with Laura while I worked, and told me
+afterward he had nothing to say to her except that I was looking at it. He is
+right that this is a problem.

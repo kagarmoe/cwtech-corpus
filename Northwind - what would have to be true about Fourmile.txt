@@ -1,0 +1,172 @@
+NORTHWIND TECHNOLOGIES
+What would have to be true about Fourmile
+
+Prepared by:  Alice Chen
+Date:         10 December 2018
+Status:       Internal
+Read by:      John, Marcus, Priya, Wes, Toby
+
+
+I wrote a document like this in January 2014 before we signed Suite C, and I
+have reread it, and the thing I got right was the format and not all of the
+answers.
+
+The format is: say what would have to be true, and say how we would find out we
+were wrong.  If I cannot write the second part the first part is a hope.
+
+Six things.
+
+
+1.  THAT WE CAN SELL WHAT WE HAVE GOT
+
+We hold Suite C to 31 March 2020.  Fourmile want three years and would take
+five.
+
+    We cannot sell a term we do not hold.  That is the rule we have applied to
+    customers since the cage in 2013 and to hardware in 2016, and this is the
+    first time we have had to apply it to ourselves, and we are failing it.
+
+I want that sentence read slowly, because it is not a lease problem.  For four
+years we have been careful to match every commitment to the commitment behind
+it, and the whole time the commitment underneath all of them -- the room -- was
+in a folder that the man who sells for us could not find.
+
+    HOW WE FIND OUT WE ARE WRONG: we are already wrong.  This is not a risk,
+    it is a finding.  What is open is what we do about it.
+
+2.  THAT THE OPTION IS EXERCISABLE
+
+Five years from April 2020, at market rate, notice by 30 September 2019.
+
+We do not know the price.  Marcus has deliberately not asked, and he is right
+not to have: the moment we ask, Renata knows we need it.
+
+    So the honest shape of any Fourmile deal is that we are selling them a term
+    that depends on an option we have not priced, and we have nine months to
+    decide whether to exercise it.
+
+    HOW WE FIND OUT WE ARE WRONG: we ask in the spring, and the market rate has
+    moved against us, and we have already promised Fourmile five years.
+
+3.  THAT EIGHTY-TWO THOUSAND IS RECOVERABLE
+
+Marcus prices the work to 200 kW at $82,200.  About thirty of that is PDUs,
+which travel.  Fifty stays in Alder Street's building.
+
+Fourmile at seventy kilowatts is materially more than any customer we have had
+except Halvard.  On any term of three years or more the work pays for itself
+comfortably.  On sixteen months it does not.
+
+    So the money follows the term and not the customer, which is the same thing
+    I wrote about the suite in January 2014 and did not expect to be writing
+    again.
+
+    HOW WE FIND OUT WE ARE WRONG: we spend it, Fourmile give notice at
+    twenty-four months, and we are holding fifty thousand of somebody else's
+    electrical work and a room we have not renewed.
+
+4.  THAT MARCUS CAN DO THIS AND EVERYTHING ELSE
+
+Thirteen racks, live, at night, one at a time, over six to eight weeks, in a
+room that also has to keep running.  Plus Fourmile's fourteen machines coming
+in and more arriving during the term.  Plus the rota.  Plus whatever else
+happens between now and February.
+
+Toby can do the hands and does them better than Marcus.  Toby cannot negotiate
+with Renata, cannot judge whether a rack fed for twelve will take twenty, and
+cannot price an option.
+
+    Marcus has written that sentence in one form or another in February 2014,
+    September 2014, November 2014, June 2017 and August 2018.  I have written
+    the reply each time and the reply has been that I know.
+
+    HOW WE FIND OUT WE ARE WRONG: it is February, the electrician is in the
+    room, Fourmile's machines are on a lorry, and Marcus is ill.
+
+5.  THAT WE UNDERSTAND WHAT WE ARE AGREEING TO
+
+They want hands at night, replacement, monitoring of power and temperature, and
+a connection.  They do not want us near the work.
+
+We have done all of that before, for Dev and for Dr Ma, at a fifth of the size.
+
+    What we have not done before is put a future capacity number in a contract.
+    Ellen wants to know what more she can have, when, and at what price, in
+    writing, for years.  We have never sold that and I am not sure we should
+    learn to on the largest deal we have been offered.
+
+    HOW WE FIND OUT WE ARE WRONG: we write a schedule into a contract and then
+    a thing we did not think of -- the facility, the electrician, an existing
+    customer growing -- makes us unable to deliver it, and it is a breach and
+    not an apology.
+
+6.  THAT WE ARE NOT DOING THIS BECAUSE IT IS EXCITING
+
+John wrote that this is the most money anybody has offered us in one
+conversation, and then wrote that he is the wrong person to judge it.  He is
+right on both counts and I am grateful for the second one.
+
+    HOW WE FIND OUT WE ARE WRONG: we would have said yes to this at fifty
+    kilowatts on a rolling arrangement, and we would not have had to think about
+    any of the above, and it would have been a smaller and duller and better
+    piece of business.
+
+
+WHAT I AM PROPOSING
+
+Not a yes and not a no.  Three things in an order.
+
+    FIRST.  We go back to Fourmile with what is true.  Fifty kilowatts from
+    February, on the racks we have, at a price John can write down.  A first
+    term to 31 March 2020, which is sixteen months, and I will not pretend it is
+    a number chosen for them.
+
+    We tell them why.  Ellen has been let down by a supplier who promised what
+    he could not deliver, and the way not to be that supplier is to say the
+    awkward thing in the first meeting rather than the third.
+
+    SECOND.  We ask Renata what the option costs.  Not in the spring.  Now,
+    before we owe Fourmile anything, so that if the answer is bad we have lost
+    a negotiating position and not a customer.
+
+    Marcus is right that asking tells her something.  She is going to find out
+    anyway the moment we order thirteen racks of circuits.
+
+    THIRD.  We do not spend the eighty-two thousand until we know the answer to
+    the second thing.
+
+If the option is affordable we go back to Fourmile with a real term and the
+seventy kilowatts they asked for, and we spend the money against a signed
+contract, which is the rule and has been since 2013.
+
+If it is not, we have sold them sixteen months of fifty kilowatts honestly, and
+we have a year to decide what Northwind does about a room it cannot afford to
+keep -- which is a question I would rather answer without a customer's machines
+in it.
+
+
+WHAT I AM NOT PROPOSING
+
+Another building.  Buying anything.  Borrowing anything.  A second suite.
+Hiring.
+
+    I looked at all of them for a week.  Every one of them is a bigger decision
+    than the one in front of us, and the reason to take a bigger decision is
+    never that the smaller one is uncomfortable.
+
+    -- AC
+
+
+MARCUS'S NOTE
+
+    Agreed, with one change I have argued for and lost.
+
+    I wanted to ask Renata about the option after we had Fourmile signed,
+    because we ask from a stronger place with seventy kilowatts of new load
+    behind us.  Alice's answer is that we would then be asking with a promise
+    already made, and that a strong position you cannot walk away from is not a
+    strong position.
+
+    She is right and I would still have done it my way.  Writing that down.
+
+    On point four: I did not raise it this time.  She did.  -- MR

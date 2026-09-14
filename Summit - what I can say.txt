@@ -1,0 +1,82 @@
+SUMMIT TICKETING -- WHAT I CAN SAY
+
+John Mercer. Started 16 July 2010, after the night of the 15th.
+One page. Keep it one page.
+
+I spent twenty minutes on the telephone with Laura on Thursday and the only
+true thing I could tell her was that Alice was looking at it. That is not
+enough and it is not Alice's job to fix it while she is fixing the server.
+
+This is not Alice's inventory. Hers is nine pages and organised by machine.
+This is the six things I need in my hand when the phone rings.
+
+
+WHO AND WHAT
+
+Laura Bennett owns it. Mark Ellis wrote the software and is a contractor, not
+her employee. Seven staff. Selling season May to September.
+
+
+THE TWO MACHINES
+
+WEB1 is the one that matters. The site and the database are both on it.
+WEB2 does the images, the nightly reports, and holds a copy of the backups.
+WEB2 is not a spare. If WEB2 goes, the site stays up without pictures.
+
+Both are leased from Mile High. Mile High replaces hardware and reboots on
+request. They do not touch the operating system or the software.
+
+
+WHAT WE ARE RESPONSIBLE FOR
+
+The machines, the operating system, Apache, the database staying up, disk,
+backups, monitoring, and first response.
+
+Not whether the software is correct. That is Mark.
+
+When nobody knows which it is, it is ours until we know. Then it goes where it
+belongs. That is the sentence. Use it.
+
+
+WHAT I CAN PROMISE ON THE PHONE
+
+That we are looking, and what we know so far, including when that is nothing.
+
+Not when it will be fixed. Ever. At any hour.
+
+Out of hours the number rings Alice. There is no second person. Laura knows
+this and I told her myself.
+
+
+WHAT TO ASK ALICE FOR, IN THIS ORDER
+
+    Is it up or is it down?
+    Can people buy tickets? (Not the same question. 15 July.)
+    Is it ours or Mark's, or do we not know yet?
+    What do you need from Mark or from Laura?
+    When should I call her back?
+
+That last one is the only commitment I should make without checking.
+
+
+WHAT I MUST NOT DO
+
+Guess at a cause on the telephone. On the 15th it would have been reasonable
+to say "sounds like the database" and I would have been half right in a way
+that turned out to matter, because the database was the symptom and not the
+problem.
+
+Say anything about March. We do not know what happened in March. Alice has
+written this down twice now.
+
+
+WHAT IS ON THE LIST AND NOT DONE
+
+Alice's cheap fixes from May: the backup takes no lock, the backup leaves out
+the database passwords, the application files are not backed up at all. WEB2
+has no RAID and holds the only off-site copy. None of it is urgent. All of it
+is on a list Laura has not seen because I decided not to open the first month
+of a monthly agreement with an invoice.
+
+If Laura ever asks me whether there is anything I have not told her, the answer
+is yes and this is it.

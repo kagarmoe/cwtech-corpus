@@ -1,0 +1,100 @@
+NORTHWIND TECHNOLOGIES
+What I am worried about, and what I am not
+
+Prepared by:  Alice Chen
+Date:         21 October 2013
+Status:       Internal
+
+John asked for this in writing.  Marcus has read it and disagrees with one part,
+which I have marked.
+
+
+WHAT I AM NOT WORRIED ABOUT
+
+The work.  A room with power and cooling is a solved problem and Marcus has
+solved it before.  I am not nervous about our ability to run it.
+
+The customers being strange.  They are less strange than Mark Ellis.  They want
+one thing, they know what it costs them per hour, and they tell us when it is
+broken.  Lindqvist has been the easiest four months we have had.
+
+The hardware changing.  This is the one everybody keeps raising and I think it
+is the weakest objection.  If their GPUs are replaced by machines that do only
+mining, we are still selling power and floor and cooling.  The load might go up
+per cabinet, which is a design problem and not an existential one.  A rack does
+not care what is in it.
+
+    Marcus disagrees.  His point: denser machines mean more kilowatts in the
+    same floor, and a room designed for 8 kW a cabinet is not a room designed
+    for 20.  If we build for what exists now and the machines double, we have
+    built the wrong room.  I think he is right about the engineering and I do
+    not think it changes the decision, but it should be in here in his words
+    and not mine.
+
+
+WHAT I AM WORRIED ABOUT
+
+**One.  The power commitment outlives the customer commitment.**
+
+This is the whole thing and everything else is smaller.
+
+A lease with a power feed is three years, probably five.  Petra has not offered
+us three years.  Nobody in this business has offered anybody three years.  These
+are people whose own revenue depends on a price that moved from ninety dollars
+to a hundred and thirty in eight weeks, and if it moves the other way they will
+not be paying anybody.
+
+If we sign five years of power against one year of customers, we have not taken
+a business risk.  We have taken a bet, with a landlord as the counterparty.
+
+**Two.  Concentration.**
+
+If Halvard alone is a hundred kilowatts and our whole managed business is six,
+then within a year most of Northwind's revenue is one customer in one industry.
+
+Summit, Clear Creek, Brightwater and Hartwell do not fail at the same time as
+each other.  Six mining customers do.  They all depend on the same number.
+
+That is not a reason to refuse.  It is a reason to know what percentage we are
+willing to be, before we are it, rather than discovering it afterwards.
+
+**Three.  We have never been the landlord.**
+
+Everything we have ever sold has been our attention.  A room is not our
+attention.  If the room is half empty we pay for it anyway, and there is no
+version of working harder that fixes an empty cage.
+
+I am not saying that is bad.  I am saying it is a different company and we
+should say so out loud rather than arriving there.
+
+
+WHAT I ACTUALLY THINK WE SHOULD DO
+
+I said in March that I would do this with a room that is still worth having if
+the machines go in a skip.  I meant it and I still mean it.
+
+So: take the space if two things are true.
+
+    The power commitment does not exceed the customer commitment behind it.
+    If Petra will sign two years, we will take two years.  If she will sign
+    one, we take one, or we take a smaller room.
+
+    The room is somewhere we would put ordinary customers.  Not a shed on a
+    ranch with a substation.  A facility we would be willing to move Summit
+    into, if it came to that.
+
+If both are true I am for it, and I will say so to John in those words.
+
+If the only room available is one we can only fill with mining, then we are not
+taking a room, we are entering a different business, and that decision deserves
+more than a fortnight and a good quarter.
+
+
+WHAT I AM NOT DOING
+
+Predicting.  I do not know whether this lasts, and I have read enough of what
+the people in it write to be confident that they do not either.
+
+I am also not going to pretend the cautious answer is the wise one.  If this
+runs for five years and we sat it out, that will also have been a decision, and
+nobody will write it down because nothing will have happened.

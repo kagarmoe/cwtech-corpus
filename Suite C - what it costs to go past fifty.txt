@@ -1,0 +1,119 @@
+NORTHWIND TECHNOLOGIES
+Suite C -- what it costs to go past fifty
+
+Prepared by:  Marcus Reyes
+Date:         20 November 2018
+Status:       Internal
+
+John asked for the price of the thing I said in August I could price and nobody
+had asked me to.  Here it is.
+
+It took a fortnight and it is not the number I expected to be writing about.
+
+
+THE WORK ITSELF
+
+To recap what I wrote in August.  The room is 44 racks.  29 are occupied and 26
+of those hold something that is still a customer.  Measured draw 147 kW.  We
+designed for 12 kW a rack in 2014 and machines people buy now want 17 to 20.
+
+So we have floor we cannot power and power we cannot put anywhere.
+
+Fifty kilowatts is what I can give somebody today in racks that are already fed.
+Past that, every rack needs more circuit than it has.
+
+    Thirteen racks brought from 12 kW to 20 kW
+      New PDUs, two per rack, metered              $11,400
+      Circuits and whips, thirteen racks           $23,800
+      Panel work and a subpanel in C               $18,500
+      Electrician, permit, inspection              $14,200
+      Containment adjustment where racks change     $3,600
+      Contingency, fifteen per cent                $10,700
+
+      Total                                        $82,200
+
+Six to eight weeks from order, and that assumes the electrical contractor I have
+used twice can start when he says he can.  Two of those weeks are the facility's
+and not mine -- the feed into C comes off their distribution and they have to do
+their side before I can do mine.
+
+That buys us to about 200 kW.  Not 300.  300 is the number in the lease and it
+has never been a real number for the hardware people actually buy.
+
+    Done live, around customers who are paying, at night, one rack at a time.
+    I have done this before in somebody else's room and it is slow and it is
+    not dangerous if you do not hurry it.
+
+
+AND THEN JOHN ASKED ME HOW LONG WE HAVE GOT THE ROOM FOR
+
+I could not answer that either, which I did not expect, and it is the reason
+this document is late.
+
+The 2014 agreement is three years from 1 April 2014.  That is in "the suite,
+what we signed" and I wrote it.  It ran out on 31 March 2017 and we have been in
+the room for twenty months since.
+
+I telephoned Alder Street and asked what they think we are on.  Their property
+manager is a woman called Renata Kovac who has been there longer than we have.
+She read it to me off her file and sent it over the same afternoon.
+
+Alice then found our copy, in the filing cabinet, in the folder marked 2017.
+
+    First renewal, signed 19 January 2017.
+    Three years from 1 April 2017, ending 31 March 2020.
+    Committed floor unchanged at 180 kW.  Ceiling unchanged at 300 kW.
+    One option to extend, five years, at market rate, exercisable by written
+    notice not later than 30 September 2019.
+
+So we have sixteen months of certainty and an option nobody has priced.
+
+Alice remembers signing it.  She says the reason it was three and not five was
+that in January 2017 we had lost Vail and Gary, Crestone were using a third of
+what they paid for, and she did not want to be holding a five-year floor into a
+room she was not sure we could fill.  That was the right call with what she knew
+and it is the call that is now in our way.
+
+    I want to be plain about my own part.  I negotiated that renewal with Renata
+    and I did not put the term in any document anybody here reads.  It went in a
+    folder.  When John went looking in November he could not find it, and he is
+    the one who has to sell against it.
+
+    Twenty months.  Nobody asked and I did not say.
+
+
+WHAT THAT DOES TO THE FOURMILE QUESTION
+
+Fourmile want three years and would take five.  Three years from, say, February
+2019 runs to February 2022.
+
+We hold the room to 31 March 2020.
+
+    Sixteen months of what they want to buy, and then an option at a price
+    nobody has quoted, which we must decide about by 30 September 2019.
+
+I am not the person to say what to do about that.  What I can say is the part
+that is mine:
+
+    Eighty-two thousand and six to eight weeks gets us to 200 kW.
+    Fifty kilowatts is available now without spending anything.
+    Neither number is affected by the lease.  The spending is.
+
+Eighty-two thousand of PDUs, circuits and panel work goes into a room we hold
+for sixteen more months.  The PDUs come out and travel.  The circuits, the
+subpanel and the containment do not.  Call it thirty thousand that walks and
+fifty that stays in somebody else's building.
+
+That is not my decision and I am not going to dress it up as an engineering
+question.  It is Alice's.
+
+
+WHAT I HAVE NOT DONE
+
+Not ordered anything.  Not asked Renata what the option costs, because asking
+puts us on a clock I have not been authorised to start.
+
+Not looked at whether there is space elsewhere in that building.  John asked and
+I said I would not go looking until we know what we are doing, because Renata
+will hear about it the same week and I would rather negotiate from where we are
+than from where she thinks we might be going.

@@ -1,0 +1,113 @@
+NORTHWIND TECHNOLOGIES
+Everything we learned is upside down
+
+Prepared by:  Priya Raghunathan
+Reviewed by:  Alice Chen, Marcus Reyes
+Date:         19 October 2015
+Status:       Internal
+
+Two of the eleven are still talking to us.  I have spent six weeks finding out
+what they actually need and it is not what I expected, so I am writing it down
+before we design anything.
+
+
+THE TWO
+
+**Dr Ma**, the genomics core at the university.  Sequencers producing more data
+than she can process.  Some of her analysis runs a great deal faster on GPUs.
+She cannot buy hardware because a capital request takes eleven months and
+usually fails.
+
+**Dev Arora**, Sightline Post.  Twelve people, commercials and corporate video.
+Eight workstations that render overnight, where overnight is sometimes four
+hours because a client moved a deadline.
+
+
+WHAT THEY HAVE IN COMMON
+
+They want dense power and cooling, and they do not want to own the machines.
+
+That is the entire overlap.
+
+
+WHERE MINING TAUGHT US THE WRONG LESSONS
+
+This is the part I want on the record, because for two and a half years we have
+been getting very good at a set of assumptions that are all false here.
+
+    **Mining:** flat load, forever.
+    **These two:** Dr Ma runs for four days and then nothing for two weeks.
+    Dev is dead in March and on fire in February.  Marcus designed our cooling
+    for a load that never varies.  A room that swings from 20 kW to 140 kW and
+    back is a different thermal problem and he says it is a harder one.
+
+    **Mining:** no data.  A dead machine is unplugged and replaced.
+    **These two:** the data is the entire point.  Dr Ma's runs are irreplaceable
+    for the fortnight it would take to redo them, and Dev's rushes are
+    irreplaceable full stop.  If we lose a machine mid-render for Dev we have
+    not lost a machine, we have lost his week.
+
+    **Mining:** nobody is waiting.
+    **These two:** somebody is always waiting, and for Dev the waiting is
+    contractual.
+
+    **Mining:** bandwidth is trivial.
+    **These two:** Dev has to get four hundred gigabytes in and eighty out, per
+    job, and the getting it there is the part he complains about first.
+
+    **Mining:** we do not understand the workload and do not need to.
+    **These two:** we still do not need to understand it — but we need to know
+    when it has failed, and neither of them can tell us that from outside.  A
+    render that dies at 60 per cent looks exactly like a render that is at 60
+    per cent.
+
+So the thing we have got good at — watching liveness, power and temperature
+while knowing nothing — covers about a third of what these two need.
+
+
+WHAT ACTUALLY TRANSFERS
+
+The building capability transfers completely.  Dense power, containment,
+cooling, remote hands, dealing with a facility.  That is real and it is four
+years of work and neither of them can buy it anywhere convenient.
+
+The operating model does not transfer at all.  What these two need is closer to
+what we do for Summit than what we did for Halvard: know what is on the machine,
+notice when it broke, have an opinion about backups, answer the telephone to
+somebody with a deadline.
+
+    **We did not learn a new business in the suite.  We learned a new building.
+    The business we need is the one we already had.**
+
+I have been trying to write that sentence for a month and I want to be careful
+that it is not too neat.  It is not entirely true — remote hands is genuinely
+new, and so is operating at this density, and so is Marcus.  But the shape of
+the customer relationship is our old shape and we spent three years thinking we
+had moved on from it.
+
+
+THE THING NOBODY HAS AN ANSWER TO
+
+Neither of them will buy hardware.
+
+Dr Ma cannot.  Dev could and will not, because his utilisation is 15 per cent
+and he knows it.
+
+Every customer this company has ever had has owned their own machines or leased
+them from a facility.  We have never owned hardware.  Alice has said several
+times, in writing, that this is why the bad year was uncomfortable rather than
+fatal.
+
+If we want either of these customers we have to answer a question we have
+avoided since 2010, and I do not think it is my question to answer.
+
+
+WHAT I SUGGEST
+
+One of them, small, paid, for three months, on hardware we do not buy.
+
+Dev has four machines he would ship us tomorrow and a February coming.  Let us
+find out whether we can run a bursty, data-carrying, deadline-driven workload in
+that suite before we decide what any of this is.
+
+Not a product.  A trial with an end date.

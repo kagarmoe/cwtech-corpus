@@ -1,0 +1,109 @@
+NORTHWIND TECHNOLOGIES
+Sightline -- the February trial
+
+Prepared by:  Priya Raghunathan
+Contributions from: Toby Whelan, Marcus Reyes
+Date:         22 February 2016
+Status:       Internal
+
+Three months, four of Dev's machines, ended 19 February.  This is what we found
+out, including the parts that do not flatter us.
+
+
+WHAT WE DID
+
+Four render nodes, his hardware, couriered in November.  Racked in Suite C
+alongside Halvard.  He pushes jobs to them over a VPN from his office and pulls
+the output back.
+
+We agreed: the machines, the power, the cooling, remote hands, and telling him
+when something has stopped.  Not the render software, not the jobs, not the
+network at his end.
+
+Paid: $1,100 a month, which Marcus costed and which is roughly break-even before
+anybody's time.
+
+
+WHAT WORKED
+
+The building.  Never in question and never a problem.  Power, cooling and
+containment did not notice four more machines, and the thermal swing Marcus was
+worried about did not materialise at this scale.  It would at forty machines.
+
+Remote hands.  Toby swapped a failed drive in eleven minutes on a Saturday in
+January and Dev's job finished on time.  That is the single thing Dev has
+mentioned to other people.
+
+Our records.  Dev's four machines got a record, checks and an entry in the
+deferred list like any customer, and it took Toby about an hour because we have
+been doing this for six years.
+
+
+WHAT DID NOT WORK
+
+**We could not tell him when a render had failed.**
+
+Our checks say the machine is up, drawing power, at temperature and reachable.
+All four were green for eleven hours on 3 February while a job had died at
+about 40 per cent because his software ran out of scratch space.
+
+He found out in the morning.  He was decent about it and he was also quite
+clear that this is the thing he is paying for.
+
+    We have no honest way to check that from outside.  The failure was inside
+    his application, on a disk we do not monitor, in software we agreed not to
+    touch.  I could watch disk on those machines — that is trivial and I have
+    now done it — but the next failure will be a different one.
+
+    This is the same wall we hit at Summit in 2010 and never got past: nothing
+    checks that a customer can complete a purchase.  Six years later I am
+    writing the same sentence about renders.
+
+**The data transfer is his whole experience of us.**
+
+Four hundred gigabytes in, per job, over a VPN from an office on business
+broadband.  Eleven hours, sometimes fourteen.  His renders take four.
+
+Nothing about that is our fault and all of it is our problem, because from where
+he sits the slow part is "Northwind".  Marcus says the fix is a connection into
+the facility that costs more per month than Dev pays us.
+
+**We were one person deep.**
+
+Toby did every physical thing.  When he was away in December, Marcus did it, and
+Marcus was at Alder Street four times that week for Halvard as well.  At four
+machines this is fine.  At forty it is not, and we already knew that and wrote
+it down in February 2014.
+
+
+WHAT DEV SAID
+
+He wants to continue.  He would take twelve machines rather than four for his
+autumn, and he asked what it would cost for us to hold capacity he does not
+always use, which is a question nobody has asked us before and which I do not
+think we have an answer to.
+
+He also said, and I am quoting because John will want it: "I do not want to run
+a machine room.  I have tried and I am bad at it and it is not what I am for."
+
+
+WHAT I THINK THIS MEANS
+
+Not a service yet.  We have one customer, one shape of workload, one trial, and
+three problems we have not solved.
+
+What I would say is that none of the three problems is about the building, and
+the building was the thing we were unsure about.
+
+    The failure-visibility problem is a service-definition problem.  Either we
+    get inside the workload, which we have refused to do for everybody since
+    2010, or we tell customers plainly that we do not watch their jobs and mean
+    it.
+
+    The data problem is a money problem with a known price.
+
+    The depth problem is a hiring problem we identified two years ago.
+
+I am not recommending anything.  I said in October that I did not think the
+hardware question was mine to answer and it still is not, and Dev has now asked
+a harder version of it — what does it cost to reserve capacity nobody is using.

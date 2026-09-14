@@ -1,0 +1,82 @@
+NORTHWIND TECHNOLOGIES
+Who answers the telephone now
+
+Prepared by:  Alice Chen
+Date:         12 November 2012
+Status:       Internal
+
+
+THE CHANGE
+
+From 1 December the out-of-hours number stops ringing my mobile.
+
+It rings whoever is on the rota that week.  Priya, Marcus, or me.  Wes is not on
+it yet and will not be until he has sat with each of us through a real one.
+
+I have been the number since May 2010.  John and I both wrote at the time that
+it was not a rota and it was not a plan, and that it would be the first thing
+to break if we took a second customer.  We took five more.  It did not break so
+much as quietly cost me every evening for two and a half years, which is a
+slower and less obvious way for a thing to fail.
+
+
+WHAT I AM KEEPING
+
+Architecture.  What we build and how.
+
+Escalation.  If the person on the rota does not know, they telephone me, at any
+hour, and I would rather be woken for something small than not woken.
+
+Laura, Ruth and Dale.  Not because the others cannot handle them -- Priya has
+handled Dale better than I do for a year -- but because those three took a
+chance on a two-person company and they should be able to reach the person who
+looked at their systems in the first place.
+
+
+WHAT I AM NOT KEEPING
+
+First response.  Onboarding.  Writing every script.  Being the only person who
+knows where anything is.
+
+That last one has been the actual problem since 2011 and everything we have
+written down since has been an attempt at it.
+
+
+WHO DOES WHAT NOW
+
+This is not an organisation chart.  We are five people and I do not want one.
+It is a list of who to ask.
+
+    Priya       Operations.  The rota, the alerts file, the checks, whether we
+                are meeting what we promised.  She has been doing this since
+                she arrived and I am writing it down rather than changing it.
+
+    Marcus      Facilities and hardware.  Providers, cross-connects, power,
+                anything that involves a person standing in a cold aisle.  He
+                has done that job from the other side, and before that in the
+                Navy where there was no other side to telephone.
+
+    Wes         Routine administration.  The queue of small things.  Not on the
+                rota yet.
+
+    Alice       Architecture, escalation, the three customers above.
+
+    John        Customers, contracts, money, and now hiring, which he has
+                discovered he is worse at than he expected.
+
+
+WHAT MARCUS FOUND IN HIS FIRST MONTH
+
+Worth recording separately because it is the thing I would not have found.
+
+We have no hardware relationship with three of our six providers.  We have
+names of account managers for two of them, both of which are people who have
+left.  Clear Creek's ccweb1 sits at Cheyenne Mountain, where we have no account
+at all, and the plan if its hardware fails is to telephone Ruth and ask her to
+telephone them.  I wrote that down in January 2011 and wrote "still never
+tested" and it is still true and it is now two years old.
+
+Marcus's view, which I am quoting because it is shorter than mine: "You have
+been lucky.  Not wrong.  Lucky."
+
+He is fixing it.  That is what he is for.

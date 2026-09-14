@@ -1,0 +1,188 @@
+NORTHWIND TECHNOLOGIES
+The option is not optional
+
+Prepared by:  Alice Chen
+Date:         19 March 2019
+Status:       Internal
+Read by:      John, Marcus, Priya, Wes, Toby
+
+
+I asked Priya what was behind the floor.  The answer is nothing, and I have
+spent three weeks being wrong about what that means.
+
+
+WHAT I THOUGHT THE DECISION WAS
+
+Alder Street want five years at a hundred and thirty-six a kilowatt with three
+per cent a year.  A hundred and eighty kilowatts, payable whether we sell it or
+not.  About three hundred thousand a year and about one and a half million over
+the term.
+
+Priya's census says we have nothing committed past 31 March 2020.  Halvard
+expires on 29 February, one month before the new term would start.  Crestone
+are monthly.  Sightline is undated.  Dr Ma's grant ended in September and
+nobody asked her what happens next.  The managed four are thirty days.
+
+So the decision looked like: do we commit a million and a half against nothing.
+And the rule says no.  We do not commit longer than the commitment behind it.
+
+I was going to write that memo.  I had most of it.
+
+
+WHAT THE DECISION ACTUALLY IS
+
+Marcus asked me what we do on 1 April 2020 if we do not exercise.
+
+We move.
+
+    Halvard's ninety-four kilowatts.  Eleven racks of ASIC hardware belonging
+    to somebody who signed with us because we could hold power.
+
+    Crestone's twenty-three.  Sightline's twelve machines.  Dr Ma's fourteen
+    nodes, which are ours.  Our own four racks, including mon1, which is the
+    machine every customer's monitoring runs on.
+
+    Twenty-nine racks.  A hundred and forty-seven kilowatts.  A room we spent
+    ninety-four thousand dollars electrifying in 2014, which stays behind.
+
+    With six people, one of whom knows how a room works, in twelve months,
+    while continuing to run everything.
+
+There is space in Denver.  Renata as good as told us so when she quoted us
+below what we pay.  Somebody would take us.
+
+    That is not the question.  The question is whether this company can
+    execute a move of that size without dropping something, and I do not think
+    it can, and I do not think anybody here thinks it can.
+
+So the five-year option is not a thing we are choosing to take.  It is a thing
+we will take because the alternative is worse, and I would rather write that
+down in plain words than dress it up as a strategy.
+
+    I signed a three-year renewal in January 2017 to avoid committing to five.
+    What I actually did was buy twenty-six months of the same decision and
+    make it in a worse position, because the room now has a hundred and
+    forty-seven kilowatts in it instead of eighty-eight.
+
+    The rule protects you from commitments you can walk away from.  It has
+    nothing to say about the one you cannot.
+
+That is the thing I did not understand about term matching and have not
+understood since 2013.
+
+
+WHAT MARCUS SAID, WHICH I AM NOT GOING TO SOFTEN
+
+He does not accept that we cannot move.
+
+    "It is a hundred and forty-seven kilowatts and twenty-nine racks.  I have
+    moved more than that twice.  It would be six months of my life and it
+    would cost us a customer, probably Crestone, and I would want Toby full
+    time on it and somebody covering him.  It is not impossible.  It is
+    expensive and horrible and I would want to be paid for it."
+
+I asked him whether he would recommend it.
+
+    "No.  But you asked whether we can, and we can, and I do not want the
+    answer written down as we cannot when what we mean is we would rather
+    not.  Those are different and the second one is honest."
+
+He is right and I have changed the sentence above.  We would rather not.
+
+
+WHAT I AM DECIDING NOW
+
+**One.  We are going to exercise, unless something changes.**
+
+I am not signing anything in March.  Notice is due 30 September and I want the
+months.  But I am telling everybody now what I expect to do, because Fourmile
+need to know, Halvard's renewal needs to be negotiated by somebody who knows,
+and I do not want John selling against a decision I have not told him about.
+
+**Two.  Petra first, and now.**
+
+Halvard expires 29 February 2020.  Ninety-four of our hundred and forty-seven
+kilowatts.  Nobody has spoken to her about renewal.
+
+    In September 2014 Marcus wrote: "Talk to Crestone before their renewal and
+    not at it.  They have a grievance that is not with us and they will bring
+    it to us anyway."
+
+    We wrote that down, we did not do it with Crestone, and here we are four
+    and a half years later about to not do it with Halvard.
+
+John goes to Petra in April.  Not to renew -- to ask what she wants, a year
+out, while we still have something to offer her.
+
+    What I want to know is whether she intends to be in that room in 2021.  I
+    do not need a signature in April.  I need to not be surprised in December.
+
+**Three.  Dr Ma, this month.**
+
+Her funding ended in September.  She has paid five months against nothing and
+nobody has asked.  That is not a commercial problem yet and it is exactly the
+kind of thing that becomes one.  Priya is doing it.
+
+**Four.  Crestone, before June.**
+
+John is to find the 2015 settlement or establish that there is not one.
+Twenty-three kilowatts on terms nobody can produce.
+
+**Five.  We are not spending the eighty-two thousand.**
+
+Unchanged from December.  Fourmile is the only reason to spend it and Fourmile
+have told us what they need and it is not fifty kilowatts for sixteen months.
+
+    If we exercise in September and Fourmile are still interested, we spend it
+    then, against their signature, which is the rule and has been since 2013.
+
+
+FOURMILE
+
+Dinesh's letter is the best thing that has happened to us this year and it does
+not contain a sale.
+
+    "Come back to us when you know about 2020... we would not go out to the
+    market first.  We are not going to wait past then."
+
+We told them a smaller true number instead of a larger one we could not
+deliver, and they have given us until the autumn and first refusal.  That is
+what honesty bought and it is worth more than sixteen months of revenue.
+
+It also means our September decision has a customer attached to it, which is
+either useful discipline or pressure I have just invited onto myself.  I think
+the first.  John thinks I am fooling myself and has said so.
+
+
+WHAT I AM NOT DOING
+
+Looking at other buildings.  Marcus's point stands -- we can move -- and I am
+not going to spend his spring proving it while there is a renewal to negotiate
+and a customer waiting.  If Petra says she is leaving, that changes.
+
+Hiring.  Raising money.  A second suite.  Buying anything.
+
+And configuration management, which Wes has written up separately.  I asked him
+to look at it because I noticed I was about to say no for the third time and
+could not remember what my reasons had been.  His first draft said it could not
+run on our machines and I would have signed that.  His second says it can, and
+that the question is what it would be for.  Where he has landed -- nothing we
+run for other people, everything we build for ourselves, once somebody has
+signed for it -- is not a no, and it is not something I am doing before
+September either.  It is on the list with his name on it.
+
+
+WHAT I HAVE NOT SOLVED
+
+Marcus.  Sixth time.
+
+If we sign five years we are saying that one man's knowledge of one room is
+load-bearing until 2025.  He has said so, I have agreed each time, and the
+agreeing has become a ritual.
+
+    I am not going to pretend this memo addresses it.  It does not.  It is on
+    the deferred list with my name on it and a date, and that was true in 2014
+    and 2017 and it is true now, and at some point writing it down stops being
+    honesty and starts being an alibi.
+
+    -- AC

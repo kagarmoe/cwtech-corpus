@@ -1,0 +1,268 @@
+NORTHWIND TECHNOLOGIES
+Configuration management, asked properly
+
+Prepared by:  Wes Okafor
+Date:         4 March 2019
+Status:       Internal
+
+
+If we sign five years we are saying we will run this with six people until
+2025.  I asked what that costs and this is the part of the answer that is mine.
+
+Alice asked me to look at configuration management, which she has turned down
+twice, and to do it without either of us leaning on the fact that she turned it
+down.  Her words: "I said no in 2013 and 2015 and neither of those is a reason
+in 2019.  Go and find out."
+
+
+WHAT I LOOKED AT
+
+Chef.  I looked at Puppet and Ansible enough to know what they are and then
+stopped, because if we do this it is going to be Chef and I would rather spend
+the time on one thing properly.
+
+    Why Chef and not the others is not a long argument.  It is Ruby, Priya and
+    I both read Ruby, the run model is a thing that converges a machine to a
+    described state and reports what it changed, and it is the one I have
+    actually used.  Wes at a previous employer is not a recommendation but it
+    is not nothing either.
+
+
+THE PROBLEM IT WOULD SOLVE, WHICH IS REAL AND IS SEVEN YEARS OLD
+
+    Brightwater: bw-web1's nw-cleanup was   WO      Jan 2013    Nov 2012
+      edited on the machine by unknown
+      nwpush -n still reports DIFFERS.
+
+That is on the deferred list in Priya's handwriting and it has been there since
+before I could push to a customer machine.
+
+nwpush can see that a file on a customer's machine is not the file in our
+repository.  It has been able to see it since Alice wrote it in July 2012.  It
+cannot do anything about it unless a person runs it with the right argument and
+reads the output.
+
+    Somebody edited a file on bw-web1 in November 2012.  We have known ever
+    since.  It is still different.
+
+That is the argument for convergence and it is ours, not an industry's.
+
+
+WHAT I GOT WRONG BEFORE I STARTED
+
+I sat down to write that Chef will not run on most of our machines, because
+most of our machines are out of support, and I had the table half typed before
+I checked it.
+
+    web1.summit     CentOS 5.4      out of support March 2017
+    web2.summit     CentOS 5.3      out of support March 2017
+    bw-web1         CentOS 5.5      out of support March 2017
+    bw-db1          CentOS 5.5      out of support March 2017
+    ccdata1         Debian 5        out of support February 2012
+    ccdata2         Debian 5        out of support February 2012
+    ccweb1          Debian 5        out of support February 2012
+    hr-www          Ubuntu 8.04     out of support May 2013
+    mon1            Debian 8
+    sl-node01       Ubuntu 14.04    Dev's; we have a login for the scratch disk
+
+Out of support is a fact about the vendor.  Whether a program runs on a machine
+is a fact about the machine.  They are not the same fact and I had let the
+first one stand in for the second because it did not need an argument.
+
+What I found when I read the download site and the documentation instead of
+the calendar:
+
+    **The Chef package brings its own Ruby.**  It does not use the one on the
+    machine.  So "these machines have never had the Ruby it wants" is not a
+    reason for anything.  The only question is whether a package was built for
+    the release.
+
+    **Chef 14**, this year's, is built for Debian 8 and Ubuntu 14.04.  That is
+    mon1, and Dev's two scratch nodes, which are not ours to configure.  So the
+    "two of seven" I was about to write was one.
+
+    **CentOS 5** is gone from the current list.  It is on the 2017 list.  Chef
+    12 was built for it, the last 12 came out in May of last year, and the
+    packages are still on their site.  Nobody at Chef will answer a question
+    about it.  It installs.
+
+    **Debian 5 and Ubuntu 8.04.**  No package I can find, of any version.  The
+    older Chefs, 10 and 11, were ordinary Ruby gems that ran on Ruby 1.8.7,
+    which is what lenny ships.  Hardy ships 1.8.6, so hr-www would want a Ruby
+    built by hand first.  Chef 11 has been dead for four years and 10 for
+    longer.  I have not tried either and I am not going to try them on a
+    customer's machine.  I believe they would run.
+
+    **None of it needs a server.**  Since Chef 11 the client can run against a
+    directory of cookbooks on the machine itself.  The way that directory
+    would get onto a machine is nwpush, which we have.
+
+So the honest table is not two of seven.  It is:
+
+    mon1                                  Chef 14          supported
+    web1, web2, bw-web1, bw-db1           Chef 12          unsupported since last year; installs
+    ccdata1, ccdata2, ccweb1              Chef 10 or 11    dead upstream; a gem on the stock Ruby; untried
+    hr-www                                the same         after building a Ruby
+
+Three Chefs, ten years apart at the ends, on nine machines.  It runs.  "It will
+not run" was the wrong reason, and I want that on paper because I expect
+somebody to reach for it again, possibly me.
+
+I tried the one that cost nothing.  On Friday afternoon I put Chef 14 on mon1
+in local mode with a cookbook that manages one file.  It converged, it said
+what it changed, and it took under two hours including the reading.  It is
+still there.  I have not committed the cookbook, because it manages one file
+that says hello and a cookbook in the repository would look like a decision.
+
+
+WHAT THE ANSWER ACTUALLY TURNS ON
+
+The question I should have started with: converge what, for whom.
+
+**The eight we manage for other people.**  They have not changed since 2012.
+Brightwater's cleanup script is the most recent thing anybody edited on one and
+that was the edit we did not know about.  Their customers are on thirty days'
+notice, all four of them, and nobody has ever paid us to upgrade one.  The risk
+on those machines is the age of the operating system, and Chef does not touch
+that.  What it would converge is a handful of scripts and cron lines that
+nwdrift now looks at every Sunday.
+
+    To do it I would run three vintages of the tool and test every cookbook on
+    each, which is the nwtry lesson again with three axes instead of one.  And
+    installing an unsupported agent on an unsupported machine that belongs to a
+    customer is a change, with notice, in Dale's windows, for a benefit no
+    customer asked for.
+
+That is a no.  It is not "cannot".  It is "could, for nothing".
+
+**The machines that are not ours.**  Dev's, and Fourmile's if we get Fourmile.
+We rack them and power them and put hands on them and we do not configure
+them.  It says so on the customer page and Dinesh said it twice to John.
+
+    Configuration management for machines we are contractually not allowed to
+    configure is not a small version of the project.  It is not the project.
+
+**The machines that are ours, which I left out of my first draft and should
+not have.**  Fourteen genomics nodes.  We bought them, in two lots, and we run
+them -- "we run the machine, what it computes is theirs" is our own page.  They
+are not in nwtry.hosts, which says a new release goes in the same week.  They
+have no record; that has been on the deferred list since March 2018.  What
+release they run is written on them and nowhere else.
+
+    This is the only thing in the company that looks like a fleet: a number of
+    machines that are supposed to be the same.  That is what the tool is for,
+    and the eleven-hosts-with-shell-scripts argument was never about the
+    eleven.  It was about these.
+
+And then Alice's rule, which is the one I keep coming back to: do not commit
+longer than the commitment behind it.  Dr Ma's grant ended in September.  She is
+paying month to month and Alice is talking to her this month.  Rebuilding
+fourteen nodes under a tool is a commitment of my time to machines that may not
+have a customer in April.
+
+
+SO, THIS YEAR
+
+No, for the estate we manage for other people -- on the ground that it would
+cost three vintages of the tool to converge machines nobody has changed in
+seven years, for customers who can leave in thirty days.  Not on the ground
+that it cannot be done.
+
+Nothing, for machines that are not ours.
+
+Yes, the size of what we own, when there is a term behind it.  mon1 already,
+as a trial.  The genomics nodes the month Dr Ma signs, if she signs, and they
+are the first real job.  And every machine we buy from now on under "our
+machines" gets built from a cookbook in this repository rather than converged
+to one afterwards, because a machine we are building is the one time nothing
+has to be put right.  It only has to be described.
+
+    That is not adoption and I am not going to call it adoption.  It is a
+    trigger with a name on it, on the list, so that the day somebody signs the
+    question has already been answered.
+
+
+WHAT I AM DOING INSTEAD, AFTER GETTING IT WRONG ONCE
+
+I was going to add a --converge option to nwpush, so that where it prints
+DIFFERS it could put the file back.
+
+Then I read nwpush properly, which I should have done first.
+
+**It already does that.**  Alice wrote it in July 2012 and it has always worked
+that way: -n shows you the diff and changes nothing, and without -n it copies
+the file.  A push to Brightwater any time in the last seven years would have
+put bw-web1 right.
+
+So the gap is not that the tool cannot fix drift.  The gap is that **nobody runs
+it unless they are changing something**, and we have not changed Brightwater's
+cleanup script since 2012, so nobody has looked.
+
+    That is a better answer than the one I was going to write and it is smaller.
+    The tool is not missing a feature.  It is missing a reason to be run.
+
+nwdrift.  Twenty lines.  It runs nwpush -n for every customer, prints only what
+differs, and says nothing at all when everything matches.  In cron on a Sunday,
+mailing Priya and me.
+
+    Silence when it is fine, which is the same rule as nwcheck and for the same
+    reason: a weekly mail that is usually empty gets read, and a weekly mail
+    that always has something in it does not.
+
+    We have known since 2011 that a check nobody acts on is not monitoring.
+    This is not monitoring either -- it is a reminder to look -- and I would
+    rather say what it is.
+
+bw-web1 is fixed.  Seven years.  I read the diff first and it was a debug line
+somebody added and forgot, and it had been doing nothing at all.
+
+That is most of what Chef would have given us on the managed eight, for two
+days instead of two months, on a machine from 2009.
+
+
+WHAT WOULD CHANGE THE ANSWER
+
+I am writing this down so the next person does not have to have the argument
+from the beginning, and so that nobody quotes this document in 2022 as though
+it settled something.
+
+    A signed term on machines that are ours.  Those machines, under Chef, the
+    same month.  This one has a name on it and it may be April.
+    A managed customer who pays for a rebuild.  A rebuilt machine gets it with
+    the rebuild; I am not converging a 2009 machine and I would build a 2019
+    one no other way.
+    Managed work at a scale where nine hosts becomes fifty.
+    Somebody besides me who can change a script.
+
+Any one of those and this is worth asking again.  Two of them and I would
+expect to be told to do it rather than asked.
+
+    I do not think we should adopt a tool because the industry has.  I also do
+    not think "we manage nine hosts with shell scripts in 2019" is a sentence
+    I would enjoy saying to somebody I was trying to hire.  The one I would
+    enjoy less is "we said it could not run, and nobody checked."
+
+    -- WO
+
+
+ALICE'S NOTE
+
+    I asked for this because I noticed I was about to say no for the third time
+    and could not remember what my reasons had been.
+
+    The first reason, in 2013, was that we had four customers and nine machines
+    and it would have been a tool looking for a job.  The second, in 2015, was
+    that we were losing money and it was not the month.  Neither of those is an
+    argument now and I would have used them anyway.
+
+    Wes's first draft said it could not run on our machines, and I would have
+    signed that, which is the thing I was actually afraid of: a reason that
+    sounds like an engineer's and is a calendar's.  Where he has landed is
+    smaller than a yes and more useful than a no -- nothing we run for other
+    people, everything we build for ourselves, starting when somebody signs.
+
+    The part I want kept is the table.  The day somebody tells me a machine
+    cannot run something, I want to be able to find this and ask whether they
+    checked.
+
+    -- AC

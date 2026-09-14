@@ -1,0 +1,100 @@
+NORTHWIND TECHNOLOGIES
+The January assumptions, checked
+
+Prepared by:  Alice Chen
+Date:         20 October 2014
+Status:       Internal
+
+I wrote five assumptions in January and said they were the document we would be
+judged against.  Marcus has written where the suite actually is.  This is me
+going through my own list rather than waiting for somebody else to do it.
+
+I am doing it now, at nine months, because at nine months I still remember what
+I meant.
+
+
+**1.  The customers' commitments outlast ours.**
+
+Holding.  Halvard is three years and pays.  Crestone and Vail are two years and
+pay, and both are using less than they contracted, which is the assumption
+working rather than failing -- that is what a commitment is for.
+
+The thing I did not think about: a customer who pays for more than they use is
+a customer who is unhappy while paying.  Crestone is current on 60 kW and using
+24 and will remember that at renewal.  My assumption was about whether they
+could pay.  It should also have been about whether they would want to again.
+
+**2.  The space is lettable to somebody else.**
+
+Untested, and I am the reason.
+
+I argued in January that a power-dense suite in an established Denver facility
+would be wanted by somebody -- a rendering shop, a research group, anybody with
+dense compute.  We have thirteen empty racks.
+
+Nobody has asked us.  We have also not asked anybody.  In nine months we have
+not made one approach to a non-mining tenant, because John has been selling
+mining and I have been running the company and neither of us did the thing I
+said in January was the whole reason this was safe.
+
+    That is not the assumption failing.  That is us not testing it.  It is
+    worse, because a failed assumption teaches you something and this teaches
+    us nothing until somebody picks up a telephone.
+
+**3.  Hardware replacement does not make the room the wrong shape.**
+
+**Failed.**  Marcus has the detail and it is exactly what he said in October
+last year.
+
+We have power we cannot sell and floor we cannot fill, because the machines
+people buy now want 17 to 20 kW a rack and we built for 12.
+
+What I said in January was that he was more right than I was and that I should
+weight him accordingly.  I would like to think I did.  In practice, weighting
+him accordingly in February would have meant spending money on density we could
+not demonstrate a need for, and I do not believe I would have signed that and I
+do not think I would have been wrong not to.
+
+    So the honest version is: he identified the risk, we bought one generation
+    against it, and one generation was not enough.  That is a bad outcome from
+    a reasonable process, and I would rather record it that way than pretend
+    either that we were blindsided or that we blundered.
+
+**4.  The money survives a gap.**
+
+Holding, comfortably.  Four thousand a month of exposure against a worst case
+of eleven.
+
+I notice I am pleased about this and I should not be too pleased.  The reason
+the number is four and not eleven is that Crestone and Vail are paying for
+capacity they are not using.  When those contracts come up, the number moves.
+
+**5.  We can operate it.**
+
+Holding, and it is the one that frightens me.
+
+Marcus wrote in February that somebody would need to be in that suite most days
+and that it could not always be him, and asked that we hire before we were
+desperate.  It is October.  We have not hired.
+
+    He has not complained.  He has been there most days.
+
+    I am putting this at the top of the list for the next quarter, and I am
+    recording that he asked in writing in February and that the delay is mine.
+
+
+WHAT I CONCLUDE
+
+We are not in trouble.  We are in the uncomfortable middle, which is where most
+decisions actually end up and where nobody writes anything down because there
+is no story in it.
+
+One assumption failed, one is holding for a reason that will expire, one is
+untested because we did not test it, and one is holding because a man is doing
+too much and not saying so.
+
+    Stupid or unlucky: unlucky on three, and on two -- the lettability -- we
+    have not earned the right to say, because we have not tried.
+
+The next thing I do is not about the suite.  It is picking up a telephone and
+finding out whether anybody in Denver wants thirteen racks.

@@ -1,0 +1,71 @@
+NORTHWIND TECHNOLOGIES
+The mining question
+
+Prepared by:  John Mercer
+Date:         16 September 2013
+Status:       Internal
+
+
+WHERE THIS HAS GOT TO
+
+Since June I have had nine enquiries about hosting mining hardware.  Two were
+people Gary knows.  The rest found us some other way, and one of them said we
+were recommended on a forum, which is not a sentence anyone has ever said to me
+about Northwind before.
+
+Of the nine:
+
+    four    small, four to fifteen machines, Lindqvist-shaped
+    three   serious enough to want terms and dates
+    one     did not know what he wanted
+    one     Halvard Mining
+
+Halvard is the one that changes the question.  Petra Ganz runs it.  She spent
+fifteen years running IT for a grocery chain and left last year, and she sends
+an agenda before a telephone call.  She asked me about contract term, remedies
+and what happens on default before she asked me anything technical.
+
+She wants somewhere in the region of a hundred kilowatts.
+
+That is ten Lindqvists.  It is about sixteen times everything else Northwind
+manages put together.
+
+
+WHAT I WANT TO DO
+
+Stop answering these one at a time.
+
+Every one of these conversations ends the same way: Marcus works out what it
+would take, we find out we cannot do it inside our current arrangements, and
+either the number is small enough to fit in a cabinet or it is not.  That is a
+fortnight of our time per enquiry to say no to most of them.
+
+If we had space — our own cage, our own power feed, room to put people in — we
+could say yes in an afternoon and we would have said yes to three of these nine.
+
+I am not asking to bet the company.  I am asking whether the thing Alice said in
+March is available: a room that would still be worth having if every one of
+these machines went in a skip.
+
+Because if it is available, the argument against is only that we might not fill
+it, and we have nine enquiries in three months.
+
+
+WHAT I KNOW I DO NOT KNOW
+
+Bitcoin was about ninety dollars in July and it is about a hundred and thirty
+now.  Every one of these people is more confident than they were in the spring
+and I cannot tell how much of that is the price.
+
+The hardware is changing.  All four of the serious enquiries mentioned the new
+machines that do only mining.  Two of them are waiting on orders they placed
+months ago and have not received.  Gary says the whole thing is full of people
+taking money for hardware that does not exist yet.
+
+I do not know what that means for us.  It might mean nothing — a rack is a rack
+and a kilowatt is a kilowatt, and if their machines change we are still selling
+the same room.  It might mean the people who are paying us now cannot pay us in
+a year.
+
+Alice will have views and I would rather have them in writing before I talk to
+Petra again.

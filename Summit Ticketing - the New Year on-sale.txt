@@ -1,0 +1,89 @@
+NORTHWIND TECHNOLOGIES
+Summit Ticketing -- the New Year on-sale, 7 December 2012
+
+Prepared by:  Priya Raghunathan
+Date:         10 December 2012
+Status:       Internal
+
+
+WHAT HAPPENED
+
+Summit put four New Year's Eve events on sale at 10:00 on Friday the 7th.
+
+Nothing went down.  Every machine stayed up, every check stayed green, and the
+site kept serving.  Purchases took between thirty and ninety seconds to
+complete, for about two and a half hours.
+
+Laura says roughly a third of the people who started a purchase did not finish
+one.  She has that from her own reports, not from us.  We have no way to know
+how many people gave up, which is the second thing I want to talk about.
+
+
+WHY IT WAS SLOW
+
+The orders table on web1.summit has 4.1 million rows.  In July 2010 it had 1.9
+million.
+
+It is MyISAM.  Every insert takes a lock on the whole table.  Under an ordinary
+event that is invisible.  Under four simultaneous on-sales it is not: inserts
+queue, the queue makes each purchase slower, slower purchases mean more of them
+overlapping, and the thing feeds itself until demand drops.
+
+It did not fall over because it never quite ran out of connections.  It got to
+71 of 100 and stayed there.  Which is why nothing alerted -- mysql_threads
+warns at 60 and criticals at 85.  It warned.  It warned for two and a half
+hours.
+
+Alice wrote in May 2010 that MySQL on that box is configured for a machine with
+less memory than it has, and that it would be the first thing she looked at if
+anyone asked why the site was slow under load.  Somebody has now asked.
+
+
+THE PART THAT IS OUR FAULT
+
+There is no index on orders.email.
+
+We found that in July 2010, during the first incident.  We decided not to add it
+because adding an index to a large MyISAM table locks it, and it was July, and
+Summit was selling.  We wrote "after the season".
+
+That was two and a half years ago.  There have been four seasons since.  Nobody
+was wrong on any single day -- every individual decision to wait was reasonable
+-- and the thing still did not get done, because "after the season" is not a date
+and nobody owned it.
+
+I went back through the mail archive.  mysql_threads has fired a warning on
+web1.summit eleven times since it was added in July 2010.  Every one of them
+self-resolved within the hour and every one of them was ignored, including four
+by me.  The eleven are in chronological order and they are not evenly spaced.
+They cluster, and the clusters are getting closer together.
+
+We had the data.  It arrived in our mail, one message at a time, for two years,
+and there was no point at which anyone looked at all of it at once.
+
+
+WHAT WE DID
+
+    7 Dec, 12:40   Demand dropped on its own.  Nothing we did fixed it.
+    8 Dec          Alice and I agreed we are not touching a production table
+                   during Summit's December.
+    17 Dec         Told Laura what it was, what we should have done in 2010,
+                   and when we are going to do it.
+    14 Jan         Index added, 03:00, agreed maintenance window, 41 seconds
+                   of table lock.  First maintenance window we have ever
+                   agreed with a customer.
+
+Three years and we had never once arranged to do a thing at a time that suited
+the customer.  We have always either done it immediately or not done it.
+
+
+WHAT I TOLD LAURA
+
+That we found this in 2010, wrote it down, decided to wait, and then did not
+have a way of coming back to it.
+
+She asked whether there were other things like that.  I said I did not know and
+that I would find out, which was the only honest answer and not a comfortable
+one.
+
+There are eleven.  See the deferred list.

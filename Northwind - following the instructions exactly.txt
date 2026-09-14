@@ -1,0 +1,69 @@
+NORTHWIND TECHNOLOGIES
+Following the instructions exactly
+
+Prepared by:  Wes Okafor
+Date:         2 November 2012
+Status:       Internal
+
+Priya asked me to work through the alerts file and the customer records and do
+exactly what they say, and to write down everywhere that doing exactly what they
+say does not work.  She said it was the most useful thing a new person can do
+and that it stops being possible after about six weeks.
+
+I think she meant I would stop noticing.  This is week seven so I may already
+have.
+
+
+THINGS THE INSTRUCTIONS SAY THAT ARE NOT TRUE
+
+1.  alerts, under disk, says "Logs and old backups are usually it.  Rotate or
+    remove."  On ccdata1 and ccdata2 the thing that fills up is /data, which is
+    the array, and you must not remove anything from it.  The Clear Creek
+    record says this.  The alerts file does not, and the alerts file is the one
+    you read at 2am.
+
+2.  alerts, under backup, says the check "cannot tell whether the dump is any
+    good.  Only a restore does that."  True.  It does not say how to do a
+    restore.  I asked Priya and she talked me through it in about four minutes.
+    It is not written down anywhere.
+
+3.  The Summit record says to telephone Laura out of hours.  It gives her
+    mobile.  It does not say that you should not telephone Mark, and I did,
+    because he is the developer and it looked like an application problem.  He
+    was polite about it.  Priya said afterwards that we never telephone the
+    customer's developer directly, we telephone the customer.  That is not
+    written anywhere I could find.
+
+4.  Three of the records say "same as everybody" under ROUTINE.  I did not know
+    what everybody was.  It is in the README and I had not read the README
+    because nothing told me to.
+
+5.  nwpush -n on brightwater prints DIFFERS for nw-cleanup on bw-web1.  I
+    thought I had broken something.  It is because Brightwater's copy was
+    pushed in July and somebody edited it on the machine in August.  Nobody
+    knows who.  I have left it alone and told Priya.
+
+
+THINGS I GOT WRONG THAT WERE MY FAULT
+
+I restarted Apache on hr-www at 11 in the morning because the disk check had
+fired and I wanted a clean log.  Nothing broke.  Priya pointed out that if
+anything had, it would have been me, in business hours, on a customer's
+production web server, for tidiness.
+
+She was not cross about it.  She said the rule is that you do not restart a
+thing to make a symptom go away, and that the rule is not written down either.
+
+
+WHAT I THINK THIS MEANS
+
+Most of what stopped me was not missing documentation.  It was documentation
+that was correct for the person who wrote it.
+
+The alerts file is Priya's, and everything she knows without thinking is
+missing from it, because she does not know she knows it.  The records are
+Alice's and the same is true.
+
+I do not think the answer is more files.  I think somebody who has just arrived
+should read them and write down what does not work, and that person is me until
+about Christmas.

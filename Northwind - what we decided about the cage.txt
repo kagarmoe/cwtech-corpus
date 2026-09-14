@@ -1,0 +1,94 @@
+NORTHWIND TECHNOLOGIES
+What we decided about the cage
+
+Prepared by:  John Mercer
+Reviewed by:  Alice Chen, Marcus Reyes
+Date:         18 November 2013
+Status:       Internal
+
+
+THE DECISION
+
+We are taking a cage at Alder Street.  Not a building.  Not a hundred kilowatts.
+
+    40 kW, contracted.  Room in the cage for about 70 if the facility will
+    sell us more power later, which they say they will and which is not in
+    writing.
+
+    Two years, with a one-year break at our option.
+
+    We do not sign a term longer than the customers behind it.  That was
+    Alice's condition and it is now the rule.
+
+Against that we have signed Halvard for 30 kW on two years, which is the
+customer commitment that pays for the room, and Lindqvist moves in from his
+cabinet at 9 kW.  That is 39 of 40 on day one.
+
+Petra negotiated hard.  She has a remedy if we fail to deliver power, which is
+the first time anyone has had a remedy against us for anything, and she is
+right to have it.
+
+
+WHY NOT MORE
+
+Petra asked for a hundred.  I wanted to say yes.
+
+Marcus's arithmetic: at a hundred kilowatts we would be committing to power we
+could not fill from anyone else if Halvard left, in a facility that would have
+to upgrade a room for us, on a five year term because that is what pays for
+their upgrade.
+
+Alice: "If we sign five years of power against two years of customers, we have
+not taken a business risk.  We have taken a bet, with a landlord as the
+counterparty."
+
+So we told Petra forty now and more later if she extends.  She was not offended.
+She said she had expected us to say a hundred and had been prepared to argue us
+down, and that our version was more sensible than hers.
+
+I am recording that because it is the second time this year that being honest
+about what we cannot do has won us work.
+
+
+WHY A CAGE AND NOT A BUILDING
+
+Alice's test from March: a room that is still worth having if every one of these
+machines goes in a skip.
+
+A cage at Alder Street passes.  It is a facility we would put Summit in.  If
+mining goes away we have 40 kW of ordinary colocation in a building we already
+use, which is an asset and not an albatross.
+
+A shed on a ranch with a substation would be cheaper per kilowatt and would fail
+that test completely.  Two of the people I spoke to this autumn are doing
+exactly that.
+
+
+WHAT WE HAVE NOT SETTLED
+
+**Concentration.**  Alice asked what percentage of revenue we are willing to
+have in mining, and asked it before we are it rather than after.
+
+I did not want to answer and she made me.  We agreed no number.  What we agreed
+instead: we look at it every quarter, and if mining passes half of revenue we
+stop taking mining customers until it does not, regardless of what is on offer.
+
+I do not like it.  I agreed to it because I could not explain why I did not
+like it in any way that survived being said out loud.
+
+**Density.**  Marcus's objection stands and is unresolved.  We are building for
+what exists now.  If the machines get much denser, 40 kW of power in this cage
+becomes the wrong shape rather than the wrong size.  He wants that written down
+so nobody is surprised.  It is now written down.
+
+**What happens if Halvard leaves at two years.**  We have a year of break
+clause and a facility we can fill with ordinary customers slowly.  That is not
+a plan.  It is a cushion.
+
+
+WHAT I SAID IN MARCH
+
+That I was keen, and that somebody should tell me if I was keen again.
+
+Alice told me.  Then she said she was for it anyway, with conditions, and the
+conditions are what made this a decision rather than an enthusiasm.

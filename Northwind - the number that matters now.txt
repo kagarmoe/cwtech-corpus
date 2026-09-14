@@ -1,0 +1,96 @@
+NORTHWIND TECHNOLOGIES
+The number that matters now
+
+Prepared by:  John Mercer
+Date:         16 March 2015
+Status:       Internal
+
+
+WHERE WE ARE
+
+    Committed floor, Alder Street       180 kW
+    Billing as of 1 March               101 kW
+    Drawing                              88 kW
+
+We are paying for seventy-nine kilowatts nobody is buying.  That is a little
+over eleven thousand dollars a month and it is Alice's January 2014 worst case,
+arriving fourteen months late and looking exactly like she said it would.
+
+We have twenty-three months left on the lease.
+
+
+HOW WE GOT FROM 152 TO 101
+
+**Crestone.**  Stopped paying in January.  They contracted sixty and used
+twenty-four and never got the hardware they ordered in early 2014.  Their
+position is that they were sold capacity for machines that a vendor took their
+money for and never shipped, and that it is unreasonable to hold them to it.
+
+Our position is that we built a room on the strength of their signature.
+
+Both of those are true.  I have a contract and I do not have a company worth
+suing, and I have now spent enough time with their books to know that.
+
+Settled on 10 March: they pay eighteen thousand over nine months and walk.  It
+is about a fifth of what the contract says.  I took it because the alternative
+was a lawyer, eighteen months and probably nothing.
+
+**Vail.**  Did not renew in February.  No drama, no default.  They said the
+economics do not work at this price and thanked us.  Their machines came out in
+a weekend and Toby had them boxed and gone by the Tuesday.
+
+**Lindqvist.**  Gary gave notice in December.  His last rigs left in January.
+He is out of it entirely and back to the web shop.  He sent Alice a bottle of
+something and a note saying it had been the most interesting three years of his
+working life, which I have kept.
+
+**Halvard.**  Unchanged.  Ninety-six kilowatts, pays on the first, two years
+left.  Petra has been the only good news in this document.
+
+
+WHAT I HAVE DONE ABOUT IT
+
+**Alder Street.**  Asked to reduce the floor.  They said no, and they were
+pleasant about it, and they were right to say no — the floor is what paid for
+their buildout.
+
+Asked instead whether they would take a longer term at a lower floor.  Five
+years at 120 kW instead of two more at 180.  They are considering it.  I do not
+know whether I want them to say yes, and I have told Alice that I do not know,
+which is not a sentence I enjoy.
+
+**The line.**  Sixty thousand against receivables.  Receivables are smaller, so
+the line is smaller.  Thirty-eight available, twenty-two drawn.  The bank has
+not done anything unreasonable and I would rather they never have to.
+
+**Everything else.**  The managed business — Summit, Clear Creek, Brightwater,
+Hartwell, Larkspur, Cortez — has not moved.  Same customers, same invoices,
+paid the same as ever.  In the middle of all this it has been the only part of
+the company that behaves like a business.
+
+I want that noticed, because for eighteen months I have treated it as the thing
+we did before the interesting thing.
+
+
+WHAT I HAVE NOT DONE
+
+Let anybody go.
+
+I raised it.  Toby is the newest and the cheapest and I said so out loud in
+February, and I want it written down that I said it because I do not want to be
+remembered as the one who did not think of it.
+
+Alice's answer: that if we cut the person whose job is the room, we are deciding
+the room has no future, and that we should decide that on purpose if we are
+going to decide it.
+
+She is right.  We have not decided that.  So he stays and I find the money
+elsewhere.
+
+
+WHAT I AM ASKING FOR
+
+Alice and Marcus to tell me what we have that is worth something to somebody who
+has never heard of Bitcoin.
+
+Not what we could build.  What we have.

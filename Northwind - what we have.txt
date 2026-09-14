@@ -1,0 +1,101 @@
+NORTHWIND TECHNOLOGIES
+What we have
+
+Prepared by:  Alice Chen
+Contributions from: Marcus Reyes, Priya Raghunathan
+Date:         15 June 2015
+Status:       Internal
+
+John asked what we have that is worth something to somebody who has never heard
+of Bitcoin.  Not what we could build.  What we have.
+
+This is a list and not a plan.  I have deliberately not drawn a conclusion from
+it, because the four times this company has got into difficulty it has been
+because somebody had the answer before they had the list.
+
+
+THE PHYSICAL THINGS
+
+**A compliant 300 kW suite with hot aisle containment, twenty-three months left,
+in a facility people want to be in.**
+
+Marcus built it deliberately general.  It is not a mining room.  It is a room.
+It is currently 88 kW used and 44 racks of which 19 are occupied.
+
+    What is wrong with it: it is provisioned at 12 kW a rack.  Anything wanting
+    more than that needs distribution work Marcus has priced at nineteen
+    thousand for a twelve-rack block.
+
+    What is right with it: containment, metering, code-compliant, inspected,
+    and somebody else's building to maintain.
+
+**Nothing else physical.**  mon1 is a virtual server costing twenty-eight
+dollars a month.  We own no hardware of consequence.  We never did.  That was
+deliberate and it is the reason we are having an uncomfortable year instead of
+a fatal one.
+
+
+THE THINGS WE KNOW HOW TO DO
+
+Marcus and Toby wrote this part and I have not softened it.
+
+    **Running a dense room.**  Power, cooling, containment, airflow, thermal
+    monitoring, capacity against a committed floor.  Two years of doing it
+    without an incident.  Northwind did not know any of this in 2013.
+
+    **Remote hands at speed.**  Toby has done about four hundred and fifty
+    physical interventions in eighteen months.  Racking, cabling, swaps,
+    escorting, boxing a customer's machines when they leave.  We are good at
+    this and we were not good at it in 2013 because we had never done it.
+
+    **Dealing with providers as an equal.**  Marcus can get an answer out of a
+    facility in an afternoon.  We could not do that in 2012 — the Clear Creek
+    hardware route sat untested for two years because nobody knew how.
+
+    **Operating machines we do not understand and are not responsible for.**
+    This one is Priya's and I think it is the most interesting on the list.
+    Mining taught us to watch a machine's liveness and power and temperature
+    while knowing nothing about what it computes and having no opinion about
+    whether it is doing well.  Every other customer we have, we understand
+    their software.  For three years we have run a business line where we
+    deliberately did not.
+
+**And the thing we have always had:** six managed customers who have paid every
+month through all of this, some since 2010.  Records, runbooks, a deferred
+list, thirty-odd checks and the discipline to keep them current.  That business
+did not move an inch while the interesting one fell over.
+
+
+THE THINGS WE THOUGHT WE HAD AND DO NOT
+
+    **A 300 kW ceiling.**  Practically about 200 for anything modern.  We have
+    stopped quoting the big number.
+
+    **A reputation in mining.**  We have one, and it is worth exactly what a
+    good reputation is worth in an industry that is contracting.  Petra would
+    recommend us.  There is nobody to recommend us to.
+
+    **Assumption two.**  In October I wrote that we had never tested whether
+    anyone else wants the room.  Since then Priya and I have made eleven
+    approaches — rendering, a genomics group at the university, two engineering
+    firms, a video post house, a backup provider.
+
+    Nine said no.  Two are talking to us.  Neither is large.
+
+    That is not a market.  It is also not nothing, and it is the first real
+    information we have had on a question I said in January 2014 was the whole
+    reason this was safe.  I should have made those calls eighteen months ago.
+
+
+WHAT I AM NOT DOING IN THIS DOCUMENT
+
+Recommending anything.
+
+There is an obvious-sounding sentence available about how the capability might
+outlast the market, and I am not writing it, because I have watched John and
+myself reach for obvious-sounding sentences twice in three years and I would
+like us to look at the list for a fortnight first.
+
+The one thing I will say: **none of the five things on the capability list
+depends on Bitcoin existing.**  Whether any of them is worth money to anybody is
+a separate question and this document does not answer it.

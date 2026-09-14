@@ -1,0 +1,145 @@
+NORTHWIND TECHNOLOGIES
+Services -- working draft
+
+Prepared by:  John Mercer
+Reviewed by:  Alice Chen
+Date:         March 22, 2010
+Status:       Working draft. Not for customer distribution.
+
+
+PURPOSE
+
+Notes for conversations with prospects. I will be using this when I start
+calling contacts over the next several weeks. It is not a proposal, a price
+list, or a contract, and nothing in it should be handed to anyone outside
+the company.
+
+
+WHO WE ARE
+
+Northwind Technologies. Denver, Colorado. Founded this month by John Mercer
+and Alice Chen.
+
+Two people. We lease space and buy equipment as customer work justifies it.
+We do not own a datacenter and are not trying to.
+
+
+WHO WE THINK WE ARE FOR
+
+Companies that need dedicated infrastructure and real operational support
+but are too small, or too busy, to build an infrastructure team of their
+own.
+
+They have outgrown shared hosting or a single server in a closet. They are
+not big enough to hire two or three systems administrators. They have
+production systems that matter to the business and nobody whose actual job
+is keeping those systems running.
+
+In my experience these companies are usually already paying somebody for
+rack space, bandwidth, or servers, and finding that nobody is responsible
+for whether the whole thing works.
+
+
+WHAT WE DO
+
+Alice and I went back and forth on how to say this.
+
+Short version, for a first conversation:
+
+    We run your infrastructure so you don't have to hire someone to do it.
+
+Work we expect to take on:
+
+    - Dedicated server hosting
+    - Linux systems administration
+    - Network configuration and management
+    - Storage and backup
+    - Monitoring and incident response
+    - System provisioning and deployment
+    - Colocation support
+    - Migrations and infrastructure projects
+
+That list is broad on purpose. What any particular customer buys is going to
+depend on what they already have and what they actually need.
+
+
+WHERE OUR RESPONSIBILITY ENDS
+
+Alice's concern, and she is right about it: if we tell customers we take
+responsibility for "the whole environment," we will end up owning problems
+we did not price, cannot see, and cannot fix.
+
+What we can be responsible for:
+
+    - Systems we built, or systems we have inventoried and understand
+    - Infrastructure: hardware, operating system, network, storage, backup
+    - Monitoring the things we have agreed to monitor
+
+What we are not taking responsibility for, unless we agree to it
+specifically and in writing:
+
+    - Customer application code
+    - Databases we did not build and have not been given time to understand
+    - Third-party vendors and services we do not control
+    - Anything on a system we have not been given full access to
+
+Before we take on an environment somebody else built, we look at it first.
+We are not quoting sight unseen. Alice was firm about this and I don't think
+it costs us anything in a first conversation.
+
+
+HOW WE ARE DIFFERENT
+
+Most providers sell rack space, bandwidth, servers, or a fixed managed
+services package. When something breaks in the gaps between those things it
+is the customer's problem to figure out.
+
+We are proposing to be the people who care whether the whole thing works.
+
+Whether customers will pay a premium for that is what I am going to find out
+over the next few months.
+
+
+WHAT WE HAVE NOT DECIDED
+
+These came up while writing this and we did not settle them. I should avoid
+committing to any of them in a first conversation.
+
+    Pricing. Monthly per server, hourly, retainer, or some mix. We do not
+    have a rate. I can talk about what we do without talking about what it
+    costs, at least for the first call.
+
+    Response times and availability. We have not agreed on what we will
+    promise. Two people cannot promise what a large provider promises.
+    Alice does not want a number written down until we know what we can
+    actually staff, and I think that is correct even though it is going to
+    come up early.
+
+    After hours. Related to the above. Right now this means "call Alice,"
+    which is not a plan.
+
+    Contract terms. We do not have a services agreement. We will need one
+    before we sign anybody.
+
+    Colocation. We have not picked a facility. We should get quotes from
+    the Denver providers so I can talk about pricing intelligently, but we
+    are not leasing space before there is a customer to put in it.
+
+    Hardware. Whether customers buy their own, or we buy and they lease, or
+    some mix. Affects pricing and affects what we can say about replacement.
+
+    Geography. How far outside Denver we are willing to go for work that
+    needs hands on site.
+
+    Whether we take on environments we would not have built. We probably
+    have to, at first. See the look-first rule above.
+
+
+NEXT
+
+Me: start calling. Report back what people actually ask about, especially
+on price and on what they expect us to be responsible for.
+
+Alice: colo quotes, so we have real numbers to work from.
+
+Revisit this after a dozen conversations.

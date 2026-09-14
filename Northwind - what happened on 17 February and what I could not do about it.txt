@@ -1,0 +1,132 @@
+NORTHWIND TECHNOLOGIES
+What happened on 17 February and what I could not do about it
+
+Prepared by:  Marcus Reyes
+Date:         19 February 2018
+Status:       Internal
+
+
+I do not usually write these.  Priya asked for it and she is right to.
+
+
+TIMELINE
+
+    Fri 16 Feb, 18:40   Racked gc-node09 through gc-node14 in Suite C.  Six
+                        nodes, Dr Ma's second grant.  Power, cross-connects,
+                        burn-in started.  Photographs in the suite folder.
+
+    Fri 16 Feb, 21:15   Added the six to nwcheck.conf, one rig_alive line
+                        each, because a machine that is racked and not
+                        watched is a machine nobody finds out about.  This
+                        is what we have always done and I would do it again.
+
+    Sat 17 Feb, 02:40   Six PROBLEM mails.  The out-of-hours number rang.
+
+    Sat 17 Feb, 02:52   Read the mails.  Every one of them says:
+
+                            check said OK and wrote to stderr: Warning:
+                            Permanently added 'gc-node09' (ECDSA) to the
+                            list of known hosts.
+
+    Sat 17 Feb, 02:55   Logged in, looked at all six.  Every node up, every
+                        node mining nothing and rendering nothing because
+                        they are in burn-in, every check returning what it
+                        should return.  Nothing is wrong with the hardware.
+
+    Sat 17 Feb, 03:10   Established what it is.  ssh says that line the
+                        first time it sees a host.  It says it on stderr.
+                        Since November, nwcheck treats a check that exits
+                        zero and writes to stderr as a failure.
+
+                        The check was right.  The node is fine.  ssh made a
+                        remark and we turned it into a critical.
+
+    Sat 17 Feb, 03:20   Here is the part I want on the record.
+
+                        I knew what it was inside thirty minutes and there
+                        was nothing I was able to do about it.
+
+                        The fix is nine lines in nwcheck.  nwcheck is Wes's.
+                        It was a quarter past three on a Saturday.  I was
+                        not going to telephone him to have him edit a file
+                        so I could go back to bed, and I was not going to
+                        edit it myself at that hour in a language I do not
+                        write, on the machine that watches everything else.
+
+    Sat 17 Feb, 03:25   So I did the only thing available to me, which was
+                        the wrong one.  Commented the six lines out of
+                        nwcheck.conf.  The mails stopped.
+
+    Sat 17 Feb, 03:30   Wrote the note below and went to bed.
+
+    Mon 19 Feb, 08:05   Told Wes.  He had them running again by ten, with
+                        the fix, and the six nodes were watched from then.
+
+    Mon 19 Feb, 08:30   Told Priya, who found out from me on Monday about
+                        a customer of hers being unmonitored since Saturday,
+                        which is not how she should find that out.
+
+
+THE NOTE I LEFT
+
+    gc-node09..14 commented out of nwcheck.conf 03:25 17 Feb.
+    NOT because anything is wrong with them.
+    Because ssh's first-contact warning now criticals and I cannot stop it.
+    THESE SIX MACHINES ARE NOT WATCHED UNTIL SOMEBODY UNCOMMENTS THEM.
+    -- MR
+
+
+WHAT THIS COST
+
+Six machines unmonitored from 03:25 on the Saturday until ten on the Monday.
+Fifty-four and a half hours.  Nothing happened to them.  That is luck and I
+have used that word here before.
+
+Four people's Saturday morning, if you count Wes and Priya finding out about it
+afterwards, which you should.
+
+And the thing I did at 03:25 is the thing we wrote a document about in November.
+We went twenty-two days blind because a check could not fail.  Three months
+later the only tool the man on watch had was to switch six checks off.
+
+
+WHAT I AM NOT SAYING
+
+I am not saying the November change was wrong.  It caught a real class of thing
+and I would keep it.  Wes ran it past everybody, ran his new nwtry, and pasted
+the output in the commit, and none of that was ever going to find this, because
+this needs a host ssh has not seen before and every host in his test had been
+seen a thousand times.
+
+I am not saying anybody should have foreseen it.  I racked six machines on a
+Friday night.  That is the first time we have added six hosts at once since
+Gary's rigs in 2013, and in 2013 nwcheck did not care about stderr.
+
+I am saying that the person holding the telephone at three in the morning could
+see the problem, could name the problem, and had no legal move except the one
+that makes us blind.
+
+
+WHAT I WOULD LIKE
+
+Not a process.  I have been at two places that answered this with a process and
+both of them are slower than us and neither of them is better.
+
+Two things.
+
+One: something the man on watch can edit.  If the fix is "ignore this exact
+sentence from ssh", that should be a line in a file, with a date on it and a
+reason, not nine lines in somebody's shell script.  I can write a line in a
+file at three in the morning.  I should not be editing nwcheck at three in the
+morning and I am not going to.
+
+Two: whoever wrote the change should be on the telephone rota.  I have said
+this before in a different context and I will keep saying it.  It is not a
+punishment and it is not about fairness.  It is that you find out what you have
+built when it wakes you up.
+
+    Wes is the only person here who writes the things that wake the rest of us
+    up and has never been woken by one.
+
+    That is not his fault.  Alice took him off the list in 2012 because he was
+    new.  He has not been new for six years and nobody moved him back.

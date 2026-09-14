@@ -1,0 +1,96 @@
+NORTHWIND TECHNOLOGIES
+The answer to Lindqvist
+
+Prepared by:  John Mercer
+Reviewed by:  Alice Chen, Marcus Reyes
+Date:         11 March 2013
+Status:       Internal
+
+
+WHAT WE TOLD HIM
+
+No, for now, with the reasons.
+
+I telephoned Gary on the 8th and told him we cannot host thirty-one machines at
+28 kilowatts inside the arrangements we have, that doing it properly means our
+own space and our own power contract, and that we are not going to sign a lease
+on the strength of one customer.
+
+He took it well.  He said two other people had told him no without explaining
+anything, and that the explanation was worth the fortnight.
+
+I asked him to keep us informed about what he ends up doing.  He will.
+
+
+WHAT ALICE SAID, WHICH I AM RECORDING IN FULL
+
+She has no objection to the infrastructure problem.  Her words: "It is the most
+interesting thing anyone has asked us to do and I would like to do it."
+
+Her objection is to the shape of the commitment.
+
+    The customer's ability to pay depends on the price of a thing neither he
+    nor we control.  We have never had that before.  Every customer we have
+    sells tickets or plumbing or drawings, and if the price of those moves ten
+    per cent it does not change whether they can pay us.
+
+    The hardware is changing underneath him.  Gary himself says there are
+    machines coming that do only this and do it far faster, and that nobody
+    knows when they arrive or what they cost.  The rigs we would be cooling
+    might be worthless before a lease is a year old.
+
+    What we would be building -- a room with power and cooling -- is useful
+    for exactly one thing if it is built for exactly this.  Built for general
+    purposes it is expensive.  Built for mining it is a bet.
+
+    "I am not saying no.  I am saying that if we do this, we do it with a room
+    that would still be worth having if every one of these machines went in a
+    skip."
+
+That last sentence is the useful one and I have written it on the whiteboard.
+
+For the avoidance of doubt: she is not predicting the machines go in a skip.
+She said explicitly that she has no idea and neither does anyone else.
+
+
+WHAT MARCUS SAID THAT I HAD NOT CONSIDERED
+
+That if all the customer wants is power and floor, the only thing we would be
+selling is the building -- and we would be competing on price per kilowatt with
+people who own theirs.  He has worked for two of them.  His view is we would
+lose.
+
+I think he is right and it is the argument that actually decided this, more
+than the money.
+
+Everything we are good at is worth nothing to Gary.  He does not need us to
+know what is on his machines, because there is nothing on them.
+
+
+WHAT WE ARE DOING ANYWAY
+
+Not nothing.  Three things, all cheap.
+
+    Marcus prices space and power.  Not to sign anything -- so that the next
+    time somebody asks, we can answer in an afternoon instead of a fortnight.
+    He says he can do it inside a month and knows who to telephone.
+
+    We find out whether there are really four more of these in Colorado or
+    whether Gary knows four people who know each other.  One customer is a
+    customer.  Five is a market and a different conversation.
+
+    Marcus writes down what we would need to watch a room rather than a
+    server -- power draw, temperature, whether a machine is on.  We have
+    nothing that does any of that.  Every check we own watches software.
+
+None of this costs more than his time and my telephone calls.
+
+
+WHAT I WANT ON THE RECORD
+
+I was keen and I am still keen.  Alice and Marcus both told me things I did not
+know, and what changed my mind was Marcus's point about selling the building,
+which is not an objection I would have reached on my own.
+
+I have written down that I was keen, so that if this comes back and I am keen
+again, somebody can tell me I was keen the first time too.

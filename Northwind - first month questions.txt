@@ -1,0 +1,139 @@
+QUESTIONS, WEEK ONE TO FOUR
+
+Priya Raghunathan
+Started 11 April 2011.  Written up 6 May.
+
+Alice told me to keep a list instead of asking the same thing twice.  This is
+the list.  Answers are hers unless it says otherwise.
+
+Some of these have no answer yet.  I have left those in.
+
+
+ABOUT THE ESTATE
+
+1.  How many machines do we manage?
+    Eight, across four customers.  Nine if you count mon1, and you should.
+
+2.  Where is the authoritative list?
+    mon1:/usr/local/nwcheck/records, one file per customer.  Read the README
+    first.
+
+3.  The records say what a machine is.  Where do I find out what to do when
+    one of them alerts?
+    Nowhere.  Alice knows.  That is the problem she hired me to have.
+
+4.  Which customers can I log into?
+    All of them.  My key went on everything in week one.  Alice did it while
+    I watched, which I appreciated more than she probably realised.
+
+5.  Is there anywhere that says what we promised each customer?
+    The OURS / NOT OURS / RESPONSE sections of each record.  Read them before
+    you tell a customer anything.  Alice was emphatic about this and I now
+    know why -- see 21.
+
+
+ABOUT ALERTS
+
+6.  How many checks are there?
+    Thirty-one across the four customers.
+
+7.  How many have ever fired?
+    Alice could name four.  I went through the mail archive.  Eleven have
+    fired at least once since May 2010.  Twenty have never fired.
+
+8.  So do the other twenty work?
+    Unknown.  They passed their tests when they were written.  Nothing has
+    exercised them against a real failure.  Alice's words: "that is a fair
+    question and I do not have a good answer."
+
+9.  What happens if a check is wrong and reports OK forever?
+    Nothing.  We would not know.
+
+10. What wakes somebody up?
+    Mail to Alice.  There is no paging.  Out of hours the customer telephones
+    and that is the actual alerting mechanism.
+
+11. Which alerts are worth waking Alice for at 2am?
+    This is what I am writing the alerts file for.  Her answer was a
+    twenty-minute conversation and it needs to be four lines per check.
+
+
+THE ONE THAT WORRIED ME
+
+12. What alerts us if mon1 stops?
+    Nothing.
+
+13. Nothing at all?
+    Nothing at all.  mon1 runs every check for every customer, holds the
+    customer records, and receives Hartwell & Reed's nightly backups.  If it
+    stops, all monitoring stops silently, we lose the records except for the
+    copy on Alice's workstation, and Hartwell's backups stop without anybody
+    noticing.
+
+14. How long has that been true?
+    Since May 2010.  Alice knew.  She wrote "mon1 is becoming load bearing and
+    it is a $28 virtual server" in the Hartwell record in January and then
+    carried on.
+
+15. Why did nobody fix it?
+    Her answer: because she would have noticed.  Which was true when she was
+    the only person and is the kind of true that stops being true quietly.
+
+    We fixed part of it on 3 May.  See the alerts file.  It is a partial fix
+    and it is written down as one.
+
+
+ABOUT WHAT I AM ALLOWED TO DO
+
+16. Can I restart a service on a customer machine without asking?
+    Yes, if it is one of ours and it is down.  Tell Alice afterward.  Write
+    it in the record.
+
+17. Can I make a configuration change?
+    Not on your own, not yet.  Ask.  This will change.
+
+18. Can I tell a customer what is wrong?
+    You can tell them what you are doing.  Do not tell them what caused it
+    until we know.  John was specific about this and pointed me at something
+    he wrote in July about the difference.
+
+19. When do I escalate?
+    Alice's first answer was "use your judgment", which is not usable at 2am
+    in month two.  Her second answer, after I said that, is in the alerts
+    file per check.
+
+20. Who do I call at each customer out of hours?
+    This was not written down anywhere.  It is now, in each record, under
+    CONTACT.  Hartwell & Reed did not have an out-of-hours contact at all;
+    Cheryl gave me her mobile on 28 April and was slightly alarmed to be
+    asked.
+
+
+THE ONE I GOT WRONG
+
+21. Brightwater rang on 26 April about the catalogue being slow.  I said we
+    would look at their database backup while we were in there.  Dale said
+    "you don't do our backups."  He was right.  I had read Summit's record
+    that morning and Brightwater's a week earlier.
+
+    Nobody was harmed and Dale was decent about it.  But this is the same
+    mistake John made in December with the same customer about the same
+    thing, four months apart, by two different people, for the same reason.
+
+    Alice's note when I told her: "Then it is not a John problem."
+
+
+STILL OPEN
+
+22. Nothing tests that a check can detect the failure it is for.
+
+23. Twenty checks have never fired.
+
+24. The partial fix for mon1 depends on Alice's workstation being switched on.
+
+25. We have no way to reach a customer's provider out of hours except by
+    telephoning the customer and asking them to do it.  Clear Creek is the
+    live example.  Untested.
+
+26. I do not know what we would do if two customers had an incident at the
+    same time.  Nobody has said, and I do not think anybody knows.

@@ -1,0 +1,107 @@
+NORTHWIND TECHNOLOGIES
+Fourmile want seventy kilowatts
+
+Prepared by:  John Mercer
+Date:         5 November 2018
+Status:       Internal
+
+
+One of the ten from August has come back and it is serious.
+
+
+WHO
+
+Fourmile Geoscience, Lakewood.  About sixty people.  They do subsurface
+analysis, engineering computation and visualisation for energy companies --
+their clients are operators, and Fourmile are the people those operators pay to
+tell them what is under the ground and what it is worth doing about it.
+
+Their principal is Ellen Voss.  Their machines are run by a man called Dinesh
+Rajagopalan, whose title is IT manager and who plainly does a good deal more
+than that.  I have met them both twice.
+
+They can pay.  They offered me two years of statements before I asked, which I
+have not often seen, and I have spoken to their bank.
+
+That is as much as I know about their business and as much as I need to know.
+Dinesh was clear that the work itself is not ours and I did not press him on it.
+
+
+WHAT THEY HAVE, AND WHY THEY ARE MOVING
+
+Fourteen machines with GPUs in them, bought over four years.  Nine sit in a
+converted storeroom at their office.  Five are in a half cabinet at a facility
+in Denver.
+
+They want them in one place.  Dinesh has wanted the storeroom emptied for a
+long time and something has now made it urgent enough to act on.
+
+They are buying more.  That is the part that matters to us.
+
+
+WHAT THEY ARE ASKING FOR
+
+    About seventy kilowatts to start with
+    Their hardware, not ours
+    Racking it, powering it, cooling it, replacing it when it dies
+    A connection in and out that is ours and not a broadband line
+    Power and temperature monitoring
+    Hands, including at night
+    Room to add more during the term
+
+    A term of years, not a rolling arrangement
+    And -- this is the one -- they want us to tell them how much MORE we can
+    give them, on what schedule, under what responsibilities, and at what price
+
+They are not asking us to run anything.  Dinesh runs the machines and the
+software and does not want us near either.  He said that twice and I liked him
+for it.
+
+
+WHY THIS IS NOT LIKE THE OTHERS
+
+Seventy is more than the fifty Marcus told me in August we can do today.
+
+And they are not asking for seventy.  They are asking for seventy AND a number
+for later, in writing, in a contract, for years.
+
+I have sold infrastructure for twenty-six years and I have never been asked to
+put future capacity in a contract by a company this size.  Ellen has been on
+the other end of a supplier who could not deliver what he promised and she was
+explicit that she is not doing that again.
+
+    This is the most money anybody has ever offered us in one conversation.
+
+I want to be careful about that sentence.  I wrote in August that I am the wrong
+person to say whether the market has changed, and I am equally the wrong person
+to say whether this particular deal is a good one.
+
+I will say one thing that is not about them.  Dev's render nodes, Dr Ma's
+machines and these fourteen do not have one thing in common as businesses --
+one makes films, one sequences, one looks under Wyoming -- and they want almost
+exactly the same thing from us.  I do not know what to make of that and I am
+recording it rather than concluding from it.
+
+
+WHAT I HAVE NOT PROMISED
+
+Anything.
+
+I said fifty today, that more is possible and costs money, and that I would come
+back with a number and a date.  Same as August.  No year, no price.
+
+
+WHAT I NEED
+
+From Marcus: what it costs to go past fifty, and how long it takes.  He said in
+August he could price it and nobody had asked.  I am asking.
+
+From Alice: whether we can sign a term with anybody at all.  Ellen wants three
+years and would take five.
+
+    I do not know how long we have got Suite C for.  I went to look and could
+    not find it, which I was not expecting.  The 2014 document says three years
+    from April 2014.  That ran out eighteen months ago and we are plainly still
+    in the room.
+
+    Somebody knows.  I do not.

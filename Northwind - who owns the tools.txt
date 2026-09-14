@@ -1,0 +1,95 @@
+NORTHWIND TECHNOLOGIES
+Who owns the tools
+
+Prepared by:  Alice Chen
+Reviewed by:  Priya Raghunathan, Wes Okafor
+Date:         19 June 2017
+Status:       Internal
+
+
+WHAT MADE ME WRITE THIS
+
+mon1 filled up in February and nothing was monitored for three hours.
+
+We fixed it in a morning and the fix was correct and small.  What has bothered me
+since is the answer to a question nobody asked at the time, which is: whose job
+was it to notice that a file had been growing for four years?
+
+It was nobody's.  It was everybody's, which is the same thing.
+
+Priya wrote nwcheck in 2010 because we needed it.  She wrote the history file in
+2012 because of Summit.  Alice wrote nwhosts in 2011.  Toby wrote the rotation
+this February.  Marcus wrote the temperature checks in 2014.  Five people, seven
+years, one directory, and not one of them was ever given the job.
+
+That worked when there were three of us.  There are six of us and eight
+customers and a suite, and the thing those five people built by accident is now
+the only reason we know anything.
+
+
+THE SPLIT
+
+Two jobs that have been one job.
+
+**Running the customers.**  The rota, escalations, whether we are meeting what
+we promised, onboarding, being the person a customer speaks to.
+
+**Keeping the tools.**  nwcheck, the checks, nwhosts, nwpush, nwtrend, mon1
+itself, and knowing when one of them is quietly becoming a problem.
+
+Priya has done both since 2011.  She has done both well and she has been telling
+me for a year, in the mild way she tells me things, that the second one only
+gets done when the first one is quiet.
+
+
+WHO DOES WHICH
+
+Priya takes running the customers.  That is where she is best and it is what she
+was hired to do, and she said so plainly when I asked rather than letting me
+decide it for her.
+
+**Wes takes the tools.**
+
+He started in 2012 doing exactly what he was told and writing down every place
+the instructions were wrong.  He is now the person who has read all of it most
+recently and most carefully, which turns out to be the qualification.
+
+    I asked him whether he wanted it.  He said he did, and then he said the
+    thing that decided it for me: "I did not write any of it, so I will have to
+    read it before I change it.  That is probably better."
+
+Priya's condition, which is fair: he does not touch a check that is currently
+catching something without telling her first.
+
+
+WHAT WE ARE NOT DOING
+
+**Not making teams.**  Six people do not have teams.  Wes still racks machines
+when the suite is busy and Priya still writes a check when she needs one.  This
+is about who is accountable when nobody is looking, not about who is allowed to
+do what.
+
+**Not separating the repository.**  The checks, the records, the customer
+scripts and the customer pages all live in one place on mon1 because they all
+lived on mon1.  Splitting them is a day of work and an ongoing tax and we have
+no reason yet.
+
+What we are doing instead is writing down who owns what path, in a file, so
+that a question like February's has an answer.
+
+**Not writing job titles.**  Nobody's card changes.  Marcus asked whether his
+said anything and I had to tell him we have never printed cards.
+
+
+THE THING I HAVE NOT SOLVED
+
+Marcus is still one person and the only one who understands the facilities.  He
+asked for a second in February 2014 and I recorded the delay as mine in October
+of that year, and it is now 2017 and he is still the only one.
+
+Toby can do the hands.  Toby cannot negotiate a power contract or tell me
+whether a room will take another forty kilowatts.
+
+I am not going to pretend this document addresses that.  It does not.  It is on
+the deferred list with my name on it and a date, which is better than it was and
+is not the same as fixed.

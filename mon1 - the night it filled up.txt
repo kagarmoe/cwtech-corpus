@@ -1,0 +1,130 @@
+NORTHWIND TECHNOLOGIES
+mon1 -- the night it filled up
+
+Prepared by:  Toby Whelan
+Reviewed by:  Priya Raghunathan
+Date:         20 February 2017
+Status:       Internal
+
+
+WHAT HAPPENED
+
+Alice's workstation mailed her at 04:51 on Saturday saying mon1 had not reported
+in for twenty minutes.  She rang me at 05:10 and I was on it by half past.
+
+mon1's disk was full.  nwcheck could not write its state files, could not write
+the heartbeat, and had been failing quietly since about 02:00.
+
+    For roughly three hours nothing was monitoring anything, for any customer,
+    and the only reason we found out is a check Alice wrote in May 2011 that
+    runs on her own workstation and that she has described twice in writing as
+    a partial fix.
+
+It caught it.  I want that said before the rest of this, because everything else
+in here is about things we got wrong and that one we got right six years ago.
+
+
+WHAT FILLED IT
+
+/var/lib/nwcheck/history.
+
+Priya added it in December 2012 after the Summit on-sale, when eleven warnings
+had arrived one at a time over two years and nobody had ever seen them together.
+One line per check per run.  She wrote in the code that it is not a graph and
+not a platform, it is a file you can grep.
+
+It was right then and it is still the right idea.  The arithmetic has just moved
+underneath it.
+
+    Checks in nwcheck.conf, December 2012      31
+    Checks in nwcheck.conf, this morning       67
+    Runs per day                              288
+    Days since December 2012                1,536
+
+I did the obvious multiplication first and got twenty-nine and a half million,
+and then remembered that we did not have sixty-seven checks in 2013.  We had
+thirty-one until Gary's rigs arrived, forty-two until the suite, and we lost
+eleven again when Gary left.  Sixty-seven is five months old.
+
+So I stopped calculating and counted.
+
+    wc -l                              18,412,006
+    du                                       1.6 GB
+
+That is eighteen million lines and 1.6 gigabytes on a virtual server with a
+twenty gigabyte disk that also holds every customer record, the customer-scripts
+repository and Hartwell & Reed's nightly backups.
+
+    A note on the thirty-one, because I got it wrong twice before I got it
+    right.  Counting the lines above the Suite C block gives thirty-two, not
+    thirty-one.  The extra one is the /checkout check on bw-web1, which Priya
+    added in November 2016 after the vendor broke Brightwater's checkout page,
+    and which lives inside the Brightwater block because that is where
+    Brightwater's checks go.
+
+    The config is grouped by customer and not by date, so you cannot count
+    backwards through it.  I only noticed because the arithmetic came out wrong
+    against Priya's own note from May 2011, which says thirty-one.
+
+Nobody did anything wrong.  The file has been growing for four years, faster
+each time we took a customer, and it crossed the line at two o'clock on a
+Saturday morning.
+
+
+THE PART THAT IS EMBARRASSING
+
+mon1 is not in nwcheck.conf.
+
+It watches sixty-seven things across eight customers and a suite, and it does not
+watch itself.  There is no disk check on mon1.  We have had a disk check since
+May 2010 and it has fired on six different customer machines and it has never
+once been pointed at the machine that runs it.
+
+    Priya asked in April 2011 what alerts us if mon1 stops.  The answer then was
+    nothing, and we built the heartbeat.  The heartbeat tells us mon1 has
+    stopped.  It does not tell us mon1 is about to.
+
+
+WHAT I DID AT SIX IN THE MORNING
+
+Compressed the history in place, which bought 1.6 gigabytes and took eleven
+minutes.  Started nwcheck.  Everything came back.  No customer noticed and
+nobody rang us.
+
+I did not delete anything.  Priya's rule about not deleting things you do not
+understand has been on the wall since before I started.
+
+
+WHAT WE HAVE DONE SINCE
+
+**Rotation.**  history rotates monthly and gzips.  nwtrend reads the current
+file and, if you ask it to, the archives as well.  It is slower against the
+archives and that is fine because nobody looks at 2014 in a hurry.
+
+    The old file is not being converted to anything.  The archives are the
+    same format they always were.  If somebody wants a proper time series in
+    five years they can have this argument then.
+
+**A bigger mon1.**  Forty dollars a month instead of twenty-eight, and eighty
+gigabytes instead of twenty.  Marcus's comment: "We have been running the thing
+that watches four hundred thousand dollars of customer commitment on a virtual
+server that costs less than my telephone."
+
+He is right and it has been true since 2010 and none of us noticed because it
+kept working.
+
+**mon1 watches mon1.**  Disk, and the heartbeat stays.  Six years late.
+
+
+WHAT WE ARE NOT DOING
+
+Replacing nwcheck.  Priya was clear about this and I agree with her.
+
+It runs sixty-seven checks across eight customers, it has caught real failures
+including one that had been silently broken for four nights, and the only thing
+wrong with it this week was a disk.  Rewriting it because the company is bigger
+is how you spend three months and end up with something that does the same thing
+and is new.
+
+Not touching the records, not touching nwpush, not moving anything to a
+database.  One file rotated, one machine resized, one check added.

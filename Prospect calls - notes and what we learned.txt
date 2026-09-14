@@ -1,0 +1,255 @@
+NORTHWIND TECHNOLOGIES
+Prospect calls -- notes and what we learned
+
+Prepared by:  John Mercer
+Date:         April 12, 2010
+Status:       Internal
+
+I said I would make a dozen calls before we revisited the services
+draft. I have talked to 14 people, including three people who are not
+prospects but know the market well enough that I wanted their reaction.
+
+The short version: I think there is a business here.
+
+I also think Alice was right that "we run your infrastructure" means
+something different to everybody who hears it.
+
+WHAT PEOPLE RESPONDED TO
+
+Nobody cares that we can install Linux. Everybody assumes somebody can
+install Linux.
+
+What gets attention is having one company responsible for the boring
+operational work that currently falls between their hosting company,
+whoever built the application, and whoever in the office knows the root
+password.
+
+Several people described some version of:
+
+    Hosting company says the server is up.
+    Developer says the application works.
+    Customer says the site is broken.
+
+Nobody owns the problem in the middle.
+
+That is the part of the pitch that works.
+
+"Don't hire a sysadmin" also gets attention, although I need to be
+careful with it. Companies with a good systems person do not want to
+hear that they don't need one. Companies without one know perfectly well
+that they don't have one.
+
+WHAT PEOPLE ACTUALLY HAVE
+
+This is messier than the services draft makes it sound.
+
+Very few of these companies have an "environment" that somebody designed
+all at once.
+
+Things I heard about:
+
+    - One or two dedicated servers at a hosting company
+    - A database on the same machine as the application
+    - A second server added when the first one got too slow
+    - Backups that somebody believes are running
+    - A server in the office that still does something important
+    - Developers with production passwords
+    - DNS registered by whoever built the first web site
+    - A firewall nobody wants to change because nobody remembers why
+    - Old machines nobody is sure can be turned off
+    - Monitoring that means a customer calls when the site is down
+
+Alice's "look first" rule is going to matter more than I thought.
+
+We are not going to get many clean environments handed to us.
+
+PRICE
+
+Everybody asked.
+
+Nobody wants hourly administration as the main arrangement. They hear
+"consultant" and start worrying about whether they can afford to call us
+when something goes wrong.
+
+A predictable monthly number gets a much better reaction.
+
+That does not mean one flat price for everything. The environments are
+too different.
+
+My current thought, not a decision:
+
+    Monthly management fee based on what we agree to manage.
+
+    Projects and major changes quoted separately.
+
+    Hardware, colo and other direct costs passed through or separately
+    itemized.
+
+We need to figure out what the management fee is based on. Number of
+servers is easy to explain but may be a bad measure of work.
+
+WHAT THEY EXPECT US TO BE RESPONSIBLE FOR
+
+This is the hard part.
+
+If we say we manage the servers, customers hear:
+
+    "When something is broken, I call Northwind."
+
+They do not care very much whether the cause turns out to be Apache, a
+switch, a disk, a database query, somebody's application release, or the
+hosting provider.
+
+I still think this is the opportunity.
+
+Alice points out that it is also how two people end up responsible for
+everything anybody has ever plugged into a network.
+
+We need language that lets us own the investigation without
+automatically owning the cause.
+
+That may be the most important thing we have to settle before we sign
+anybody.
+
+RESPONSE TIME
+
+Everyone asked some version of "What happens when it breaks at 2am?"
+
+Nobody demanded a five-nines SLA from a two-person company.
+
+They did want to know that somebody would answer.
+
+There is probably a difference between:
+
+    We received the alert and are looking at it.
+
+and:
+
+    We guarantee it will be fixed in 30 minutes.
+
+We can probably promise the first before we can promise the second.
+
+Alice and I need to work out what is physically possible before I put
+numbers around this.
+
+COLOCATION
+
+Alice got preliminary numbers from three Denver-area facilities.
+
+No reason to sign for space yet.
+
+Several prospects already have hosting arrangements and would rather
+have us manage what they have than move immediately. That may be good
+for us financially, although it means inheriting more strange
+environments.
+
+For customers who need new equipment, we will need a preferred facility
+and a repeatable way to buy and install hardware. Not yet.
+
+PROMISING CONVERSATIONS
+
+Three worth following up.
+
+1. HARTWELL & REED
+
+About 35 employees. Architecture and engineering firm.
+
+They have a Windows-heavy office environment and a small public-facing
+Linux system maintained by the consultant who built their web site.
+
+They mostly want somebody local they can call.
+
+I don't think this is our first customer. Too much desktop and office IT
+in what they mean by "infrastructure." Could be business later if we
+decide we want that work.
+
+2. SUMMIT TICKETING
+
+Online registration and ticket sales for small events and regional
+venues.
+
+Seven employees plus contractors.
+
+They have two leased Linux servers with a hosting provider. One runs the
+web application and database. The other was added last year for reasons
+I do not completely understand yet. Their primary developer has been
+handling deployments, server maintenance and outages.
+
+They are growing and he does not want to be the operations person
+anymore.
+
+They had an outage last month that lasted several hours. Their hosting
+provider said both servers were reachable. The developer was
+unavailable. The owner ended up calling everybody she knew who might
+understand Linux.
+
+She understood our pitch immediately.
+
+She wants us to come look at what they have before we talk about moving
+anything.
+
+This is the strongest lead.
+
+3. CLEAR CREEK ANALYTICS
+
+Small environmental data company.
+
+They have several Linux workstations and servers doing data processing,
+plus customer-facing systems at a hosting provider.
+
+Interesting technical work and probably a good fit eventually.
+
+Right now they mostly want help with a storage problem and a server
+migration. Sounds more like a project than an ongoing managed
+relationship.
+
+Still worth talking to.
+
+WHAT I WAS WRONG ABOUT
+
+I thought the first sale would probably include new servers and colo
+because that is what I am used to selling.
+
+It may not.
+
+The more immediate market may be companies that already have
+infrastructure and need somebody to take operational responsibility for
+it.
+
+That is less revenue up front but also means we do not have to spend
+money on equipment or space before we have customers.
+
+I also underestimated how little these companies know about what they
+already have.
+
+If we take over an existing environment, inventory is not administrative
+paperwork. It is part of the work.
+
+WHAT I THINK WE SHOULD DO NEXT
+
+Follow up with Summit Ticketing.
+
+Do not propose a migration yet.
+
+Alice and I should meet with them, get access, and inspect the two
+servers and whatever documentation they have.
+
+Then we can answer three questions:
+
+    1. What is actually there?
+    2. What would we be willing to take responsibility for?
+    3. What would it cost us to do that responsibly?
+
+If we cannot answer those questions on a two-server environment, we are
+not ready to sell this service.
+
+Separately, Alice and I need to settle:
+
+    - what an initial environment review consists of
+    - what we record about systems we manage
+    - what "we respond" actually means after hours
+    - how a monthly management price relates to the work involved
+
+I am not changing the services draft yet. Fourteen conversations are
+enough to tell me where the problems are, not enough to pretend we have
+solved them.

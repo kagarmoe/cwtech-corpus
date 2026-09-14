@@ -1,0 +1,93 @@
+NORTHWIND TECHNOLOGIES
+The suite -- what we signed
+
+Prepared by:  Marcus Reyes
+Reviewed by:  John Mercer, Alice Chen
+Date:         17 February 2014
+Status:       Internal
+
+
+SIGNED
+
+Alder Street, Suite C.  300 kW.  Three years from 1 April 2014.
+
+    Electrical buildout       $94,000, paid outright.  Not amortised.  Alice
+                              wanted it owned rather than rented and I agree
+                              -- amortised into the rent it becomes a reason
+                              we cannot leave.
+    Rent and power            metered, with a demand charge.  Committed floor
+                              of 180 kW whether we use it or not.
+    Term                      three years, no break.
+
+Against it:
+
+    Halvard Mining            100 kW, three years, signed 4 February
+    Crestone Compute           60 kW, two years, deposit paid
+    Vail Hashworks             40 kW, two years, signed
+    Lindqvist                   9 kW, rolling, moves across in April
+    (one verbal withdrew)
+
+209 kW committed against a 180 kW floor.  The gap between 209 and 300 is ours
+to fill or ours to carry.
+
+Financed from deposits and $60,000 on a line against receivables.  We are not
+mortgaged to this.  If it goes wrong it is bad and it is survivable, which is
+the only kind of aggressive I am willing to sign my name under.
+
+
+WHAT I BUILT, AND WHY IT IS NOT MINING-SPECIFIC
+
+Alice's second assumption is that somebody else would take this room.  My job
+was to make that true, and here is what it cost.
+
+    12 kW a rack, not 8.  We need 8 today.  Twelve buys one generation of
+    density and not two, and I want that written down as a limit and not a
+    boast.
+
+    Hot aisle containment, not in-row units per cabinet.  More expensive up
+    front, and it does not care what is in the racks.  Per-cabinet cooling
+    tuned to mining rigs would have been cheaper and would have made the room
+    worth less to anybody else.
+
+    PDUs are the only mining-specific part and they are movable.  A suite is a
+    suite.
+
+    Everything to code, by a licensed contractor, inspected, with the
+    paperwork in the file.  I have watched two people run rooms on extension
+    leads and a prayer.  Both of them were fine right up until they were not.
+
+If every mining customer disappeared tomorrow, what we own is a compliant
+300 kW suite with containment in a facility people want to be in.  That is the
+asset Alice is betting on and I have built it so she is not wrong about it.
+
+
+WHAT THIS MEANS OPERATIONALLY
+
+    Temperature.  We now have a room and not a cabinet.  I have put sensors on
+    the hot and cold aisles and Priya has a check reading them.  We have never
+    monitored a temperature in four years.
+
+    Power.  Per-cabinet draw from the PDUs, plus suite total against the
+    180 kW floor and the 300 kW ceiling.  I want to know before the facility
+    tells me.
+
+    Remote hands is now a service and not a favour.  Four customers, four
+    hundred and something machines by summer.  Somebody is going to be in that
+    suite most days.
+
+    That somebody cannot always be me.  This is assumption five in Alice's
+    document and it is the one I would fix first.  We should hire before we
+    are desperate, and I have said that in writing now so that it is not a
+    surprise in July.
+
+
+WHAT I WANT ON THE RECORD
+
+I raised density in October.  Alice said it did not change the decision.  She
+has written in the January document that I was more right than she was and that
+she should weight me accordingly.
+
+I do not need the credit and I am recording it for a different reason: she
+changed her mind in writing, with a date, where anyone can read it.  In fifteen
+years nobody senior has done that where I could see it, and I would like the
+habit to survive us.

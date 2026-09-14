@@ -1,0 +1,167 @@
+NORTHWIND TECHNOLOGIES
+Summit Ticketing -- terms we agreed
+
+Prepared by:  John Mercer
+Reviewed by:  Alice Chen
+Date:         April 22, 2010
+Status:       Internal
+
+
+PURPOSE
+
+Alice sent five questions with her environment review on the 19th and told me
+not to promise Laura anything until we had answered them. We went through them
+Tuesday and Wednesday.
+
+This is what we agreed, written down so that what I put in front of Laura and
+what Alice has to deliver afterward are the same thing.
+
+
+1. THE INITIAL WORK IS SEPARATE, AND IT COMES FIRST
+
+Alice will not take responsibility for servers she has not inventoried, for
+backups nobody has restored, or for services nobody is watching. I am not going
+to argue her out of that, and I would not want to sell against it.
+
+My concern was commercial. I do not want to hand Laura a monthly agreement with
+three weeks of setup work buried inside it. If something breaks in week two we
+will have spent the margin before we have earned any of it.
+
+Agreed: we quote the initial work separately, at a fixed price, and monthly
+management does not start until it is done.
+
+    Initial environment engagement -- $2,400, fixed
+
+    - inventory both servers and everything running on them
+    - identify every user account and establish who still needs access
+    - record the accounts, providers and credentials we would need during
+      an outage, including DNS and the Mile High account
+    - put monitoring on the services we are agreeing to manage
+    - restore the database from a backup and confirm it works
+
+The restore is the part I would have been tempted to skip and the part Alice
+says is not optional. Her words: until somebody restores one, they have backup
+files, not a backup.
+
+Two things this also does for us. Laura gets a small, bounded, finite piece of
+work to say yes to instead of an open-ended monthly commitment from a company
+that is six weeks old. And if the environment turns out to be worse than Alice
+thinks, we find out while we are being paid to look, not after we have promised
+to run it.
+
+
+2. WHAT "WE RESPOND" MEANS
+
+    Monday to Friday, 8:00 to 18:00 Mountain -- we respond within one hour.
+
+    Outside those hours -- there is a number that reaches us. We will answer
+    it when we can. We are not putting a time against it.
+
+    At no hour do we promise when something will be fixed.
+
+Alice's reasoning, which I am recording because I expect to be tempted to
+soften it in front of a customer: we can tell Laura when we have picked the
+problem up. We cannot tell her when it will be fixed, because that depends
+entirely on what broke. Promising a repair time is how two people end up
+failing an agreement they signed.
+
+The after-hours number is Alice's mobile. We both know that is not a rota and
+it is not a plan. It is what we have. If Summit signs and we sign anybody else,
+this is the first thing that breaks.
+
+
+3. APPLICATION FAILURES
+
+Agreed, as Alice proposed it on the 19th:
+
+    We do not take responsibility for whether the application is correct. If
+    it is running and it charges the wrong price for a ticket, that is Mark's.
+
+    If customers cannot use the service and nobody knows why, that is ours
+    until we have established whether the failure is infrastructure or
+    application. Then it goes where it belongs.
+
+We cannot ask Laura to work out which kind of problem she has before she is
+allowed to call us. She does not know, and if she did she would not need us.
+
+This is the thing I have been trying to sell since March and could not say
+cleanly. It is now the sentence I use.
+
+
+4. WHAT THE MONTHLY FEE COVERS
+
+Routine work is included. Anything that is not routine, we quote before we
+start.
+
+We could not find a clean definition, so we are using time:
+
+    Work under an hour -- included.
+
+    Work over an hour -- we tell Laura first and quote it.
+
+    Never included regardless of time: new server builds, migrations,
+    application deployments, anything that changes what the environment is
+    rather than keeping it running.
+
+I am not confident this holds. An hour is easy to explain and easy to argue
+about, and I can already think of a half-hour job I would not want to do ten
+times a month for nothing. But we do not have enough history to draw the line
+anywhere better, and I would rather have a crude line we can revisit than a
+clever one we cannot explain to Laura.
+
+
+5. MARK
+
+We cannot stop Mark changing production. He has root, he built the
+application, and he is Laura's contractor, not ours. Asking Laura to take his
+access away would make us the problem.
+
+Agreed:
+
+    We ask Mark to send a note to a Northwind address before he changes
+    anything on either server. Not approval. Notice.
+
+    If he does not, and we spend time chasing a failure he caused, that time
+    is billable outside the monthly fee.
+
+    We say this to Laura in the proposal rather than discovering it during
+    the first argument.
+
+Alice wanted it in writing because she expects it to happen. I think she is
+right. Mark has been the only person touching those machines for two years and
+he is not going to change that habit because we sent him an email.
+
+
+6. PRICE
+
+    Initial engagement -- $2,400, fixed
+    Monthly management -- $1,200
+
+The monthly number is for Summit. It is not a rate card.
+
+We still have not answered the question I raised on the 12th: what the
+management fee should actually be based on. Per server is easy to say and I am
+not convinced it measures anything. Summit has two servers, and WEB1 is most of
+the work while WEB2 is mostly a nuisance. Charging the same for both would be
+wrong in one direction or the other.
+
+For now this is a number that reflects what Alice thinks the work is, plus
+enough that we are not doing it for nothing. We will have a better answer after
+we have run it for a few months. We should not turn this figure into a model
+before then.
+
+
+7. WHAT WE STILL DO NOT HAVE
+
+A services agreement. We cannot sign Summit without one and I do not want to
+use something I found on the internet. I am getting one drawn up this week. The
+terms above are what it has to say.
+
+
+WHAT I AM SENDING LAURA
+
+A proposal covering the initial engagement and the monthly management, written
+in the language above. She gets the boundary and the after-hours limits in
+writing, up front, rather than finding them out in an incident.
+
+Alice has read this and agrees it matches what she will actually deliver.

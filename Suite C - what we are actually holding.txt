@@ -1,0 +1,122 @@
+NORTHWIND TECHNOLOGIES
+Suite C -- what we are actually holding
+
+Prepared by:  Marcus Reyes
+Date:         15 September 2014
+Status:       Internal
+
+Six months in.  Alice's January document said somebody would want to know
+whether this was stupid or unlucky.  It is early to answer that and I am going
+to write down where we are instead, because I would rather do it now than in
+December when it will be tidier and less true.
+
+
+THE MONEY
+
+    Committed floor          180 kW, payable regardless
+    Drawing today            141 kW
+    Billing today            152 kW of customer commitment
+
+So we are covering the floor on paper and under it in reality, and the gap
+between 152 and 300 is the thing we are carrying.
+
+Cash out of pocket against the floor: about four thousand a month at the
+moment.  Alice's January worst case was eleven.  We are inside her number,
+which is the first thing to say and I want it said before the rest of this.
+
+
+WHAT HAPPENED TO THE CUSTOMERS
+
+**Halvard.**  Fine.  Better than fine.  They moved to ASIC hardware in the
+spring and their draw went up, not down.  Petra renegotiated nothing and pays
+on time.  They are 96 of our 141.
+
+**Crestone.**  This is the one that did not happen.  They contracted 60 kW on
+two years and took 24.  Their expansion depended on hardware they ordered in
+February from a vendor who took the money and has delivered, as of this week,
+about a third of it, eight months late.  They are not unusual.  Everybody I
+talk to has a story about a preorder.
+
+    They are paying for 60 and using 24.  That is good for us this year and
+    it is a customer with a grievance, which is not good for us next year.
+
+**Vail Hashworks.**  Paying, using about 21 of 40.  Quieter than they were.
+
+**Lindqvist.**  Gary's GPUs stopped being worth running for Bitcoin.  That has
+been true for a while and got true faster this year.  He moved them to mining
+something else in March, which worked until about June, and last month he
+asked to reduce from 9 kW to 3.
+
+    I said yes.  He has been our customer since before the suite existed and
+    the three kilowatts costs us nothing we are not already paying for.
+
+    He also asked whether we would buy his rigs.  We said no.
+
+
+THE PART I WANT WRITTEN DOWN PROPERLY
+
+The suite is not empty.  The suite is the wrong shape, and it is the wrong
+shape in exactly the way I said it might be in October last year.
+
+I designed for 12 kW a rack when we needed 8.  I wrote at the time that this
+buys one generation and not two, and I meant it as a limit rather than a
+worry.
+
+The ASIC machines Halvard runs want 17 to 20 kW a rack.  They are not bigger
+machines; they are the same size and they eat more.  So Halvard's 96 kW sits
+in eleven racks that should be six, and we have floor we cannot fill with
+power and power we cannot fill with floor.
+
+    Racks in the suite         44
+    Racks occupied             31
+    Power drawn                141 kW
+    Power we could draw if
+    every rack were ASIC-dense  around 200 kW, and we would need PDU and
+                                distribution work to get there
+
+None of this is a disaster.  It means the 300 kW ceiling is theoretical for
+the hardware people now buy, and our practical ceiling is closer to 200 unless
+we spend money.  We have not lost the power.  We cannot currently sell it.
+
+
+WHAT I AM NOT GOING TO SAY
+
+That we should have known.
+
+I raised density in October, Alice recorded in January that I was more right
+than she was, and none of that means any of us knew what was coming.  What I
+said in October was that if machines got denser we would have built the wrong
+room.  I did not know whether they would.  I thought it was worth designing
+against and we designed against it to the tune of one generation, which is
+what we could afford.
+
+If I had asked for 20 kW a rack in February 2014 I would have been asking for
+a lot of money against a thing nobody could demonstrate, and Alice would have
+been right to ask me what evidence I had, and I did not have any.
+
+**We were not wrong. We were early, and we bought one generation of headroom
+when two would have been better and nobody could have justified two.**
+
+That is a different sentence from "we should have known" and I want the
+difference in the file.
+
+
+WHAT I THINK WE DO
+
+Nothing dramatic this quarter.
+
+    Find out what the distribution work costs to take a block of the suite to
+    20 kW a rack.  Price it, do not do it.  Same as I did with space and power
+    in March 2013, and that is the only reason we could answer Petra in two
+    days.
+
+    Talk to Crestone before their renewal and not at it.  They have a
+    grievance that is not with us and they will bring it to us anyway.
+
+    Stop selling on the 300 number.  Our practical capacity is about 200 for
+    what people are buying and I would rather quote what we can deliver.
+
+    Fill the floor we have with something that is not mining.  We have 13
+    empty racks in a compliant suite in a facility people want to be in.  That
+    was the whole argument in January.  Alice said somebody would want this
+    room.  Nobody has asked yet, and nobody has been asked.

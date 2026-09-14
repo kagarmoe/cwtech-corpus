@@ -1,0 +1,74 @@
+NORTHWIND TECHNOLOGIES
+Brightwater Supply -- incident, Tuesday 15 November 2011
+
+Prepared by:  Priya Raghunathan
+Date:         16 November 2011
+Status:       Internal
+
+Dale telephoned at 09:14.  What he said, in full:
+
+    "Catalogue's down, we can't take orders."
+
+That is not a complaint about Dale.  It is the whole of what he knows and it is
+accurate.
+
+
+WHAT I CAN ESTABLISH
+
+    09:14   Dale telephones.
+    09:16   I load the catalogue.  It loads.  Product pages load.  Adding to
+            a basket works.  Checkout returns a blank page.
+    09:19   No alerts.  Both machines green.  bw-web1 and bw-db1 up, disk
+            fine, mysql answering, http check passing -- it checks /catalog,
+            which is fine, and not /checkout, which is not.
+    09:31   Apache error log on bw-web1: PHP fatal error in the checkout
+            module, calling a function that does not exist.
+    09:48   The file containing that call has an mtime of 02:10 that morning.
+    10:05   Dale confirms the vendor told him last week they would be
+            "pushing an update overnight sometime this month".  He did not
+            tell us.  He did not know he should.
+    10:20   I telephone the vendor.  They will not talk to me.  I am not
+            their customer.
+    10:52   Dale telephones the vendor.
+    13:30   Vendor pushes a fix.
+    13:41   Checkout works.
+
+Four and a half hours.  Roughly three of them mine.
+
+
+WHOSE PROBLEM WAS IT
+
+The vendor's.  It was their code, their update, and their fix.
+
+Northwind spent three hours establishing that.  We could not have skipped the
+three hours, because at 09:14 nobody on earth knew it was the vendor, and
+finding out is the thing we sell.
+
+That is the arrangement working exactly as John described it in April 2010 and
+I do not think anybody should change it.
+
+But we did three hours of unpaid work on somebody else's software, we cannot
+bill the vendor because we have no relationship with them, and the monthly fee
+is for running two Linux servers.
+
+
+WHAT I WOULD HAVE WANTED
+
+Not a different boundary.  The same boundary with a bill attached to the far
+side of it.
+
+Also: the http check watches /catalog because that is where I pointed it in
+November 2010.  It should watch the thing the customer is trying to do.  I have
+said this before about Summit -- it is in the alerts file under http, in my own
+handwriting, since May.  I wrote it down and then did not do it.
+
+
+WHAT I DID AFTERWARD
+
+Added a checkout check on bw-web1 that fetches the checkout page and looks for
+the submit button rather than the word "Brightwater".  It would have alerted at
+02:14 instead of Dale at 09:14.
+
+Did not add one at Summit.  Same problem, and the same reason as May: I have no
+safe way to exercise a real purchase against production and Mark has still not
+answered about a test event.  Asked him again.

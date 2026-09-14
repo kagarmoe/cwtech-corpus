@@ -1,0 +1,242 @@
+NORTHWIND TECHNOLOGIES
+Summit Ticketing -- environment inventory
+
+Prepared by:  Alice Chen
+Date:         May 14, 2010
+Status:       Internal. Working record, kept current.
+
+Work performed May 10 to May 14 under the initial engagement.
+
+This replaces nothing. Before this there was no inventory.
+
+
+WHERE THE MONITORING RUNS
+
+We needed somewhere to run checks from and we had nowhere.
+
+I did not want it at Mile High. If Mile High has a network problem, monitoring
+that lives at Mile High goes blind at exactly the moment we need it, and we
+would be relying on the provider to tell us the provider is broken. That is the
+situation Summit was already in.
+
+We are renting a small virtual server from Front Range Systems. $28 a month.
+Hostname mon1. It runs the checks and nothing else.
+
+This is the first machine Northwind pays for. It is a cost against Summit but
+it is not Summit's machine, and if we take a second customer the checks for
+that customer run here too.
+
+
+WEB1
+
+Leased dedicated server, Mile High Hosting.
+
+    CentOS 5.4
+    2 x Xeon, 4 GB RAM
+    2 x 250 GB SATA, software RAID 1
+    single public address
+
+Running:
+
+    Apache 2.2 with mod_php
+    PHP 5.1.6 (stock for this release of CentOS)
+    MySQL 5.0.77
+    postfix, local delivery only
+    sshd
+    cron
+
+Application lives in /var/www/summit. Database is local. Both on the same
+machine, as recorded in April.
+
+Disk is not a problem. / is 34% full, /var is 51%.
+
+Memory. 4 GB, with MySQL configured for a machine with rather less. The
+key_buffer and InnoDB pool are both small enough that the database is doing
+more disk work than it needs to. It is not currently failing and I am not going
+to change it during the selling season, but it is the first thing I would look
+at if we are asked why the site is slow under load.
+
+
+WEB2
+
+Leased dedicated server, Mile High Hosting. Added August 2009.
+
+    CentOS 5.3 -- one minor release behind WEB1
+    1 x Xeon, 2 GB RAM
+    1 x 500 GB SATA, no RAID
+
+Running:
+
+    Apache 2.2 with mod_php
+    a second copy of the application in /var/www/summit
+    static content in /var/www/static
+    three reporting scripts in /home/mark/reports, run from cron
+    /var/backups/mysql, which is where WEB1's nightly dump is copied
+
+The four jobs Laura asked about, now that I can answer it:
+
+    1. Overflow web capacity. Used manually, during large events.
+    2. Static content. Serving images and stylesheets. Small.
+    3. Reporting. Three scripts, run nightly, producing sales summaries that
+       are emailed to Laura.
+    4. Backup destination.
+
+Summit needs 3 and 4. Summit uses 1 a few times a year. Nobody could tell me
+what depends on 2, and it turns out the answer is the application on WEB1 --
+it links to static content on WEB2 by hostname. So WEB2 is not a spare. If it
+goes down during an event, WEB1 serves pages with no images.
+
+That is worth knowing and it is not what anybody believed in April. I am not
+proposing to change it now.
+
+No RAID on this machine. A disk failure takes the reporting, the static content
+and the only off-machine copy of the database backups at the same time.
+
+
+THE APPLICATION
+
+Custom PHP. Mark Ellis is the only current developer.
+
+The copies on WEB1 and WEB2 are not identical. WEB2 is eleven files behind,
+all of them in the reporting area. Mark says this is expected and that he only
+updates WEB2 when he intends to use it for an event.
+
+No source control. As agreed in April, this is Summit's problem to solve and
+not ours, but it does mean that "what is running" can only be answered by
+looking at the servers, which is what I have done.
+
+Deployments are by scp, by hand, by Mark.
+
+
+THE DATABASE
+
+MySQL 5.0.77 on WEB1. One database, summit_prod.
+
+    41 tables
+    MyISAM throughout, except two InnoDB tables added later
+    2.4 GB on disk
+
+Mixed storage engines matter for the backup, below.
+
+
+BACKUPS -- AND THE RESTORE
+
+This is the part of the engagement Laura should read.
+
+What exists: a cron job on WEB1 at 02:30, running mysqldump into
+/var/backups/mysql, then scp to WEB2. Nineteen days of files present. Older
+ones are deleted by a find in the same script.
+
+I restored the May 11 dump onto mon1 on May 13. It worked. The data is there
+and the application schema is complete.
+
+Three things came out of doing it.
+
+First, the dump is taken with no locking and no --single-transaction, against a
+database that is mostly MyISAM, while the site is live. For most of the night
+that does not matter because nothing is being written. It matters if we ever
+take a dump during selling. A dump taken at 02:30 in August, when Summit is
+selling for a show in another timezone, can contain an order in one table and
+not in another. Nobody has been bitten by this. It is a real exposure and it is
+cheap to fix.
+
+Second, the dump does not include the grants. Restoring gives you the data and
+no users. In a real recovery, somebody would restore successfully and then
+discover the application cannot log in to its own database, at the worst
+possible moment, with no record of what the credentials were. This is the
+finding I would have missed if I had checked that the files existed instead of
+restoring one.
+
+Third, the restore took 38 minutes on mon1. mon1 is slower than WEB1, so the
+real figure is better than that, but it is the first honest number anybody has
+for how long Summit is down in a full recovery. It is not nothing and Laura
+should know it.
+
+The application files are not backed up at all. Mark's development copy is the
+only source, on his machine. I have said this in April and I am saying it again
+because it has not changed.
+
+
+ACCOUNTS
+
+Eleven accounts across the two machines. Mark reviewed the list on May 12.
+
+    root                    both machines. Mark, and now Alice.
+    mark                    both machines, sudo.
+    apache, mysql, postfix  service accounts, stock.
+    deploy                  WEB1. Used by a script of Mark's that syncs
+                            /var/www from his machine. He had forgotten it
+                            existed. It has a key with no passphrase. Keep --
+                            removing it breaks his deployments -- but it is on
+                            the list of things to talk about later.
+    jgreer                  both machines, sudo, last login March 2009.
+                            Contractor who worked on the payment integration.
+                            No longer engaged. Disabled May 12 with Laura's
+                            agreement. Not deleted; home directory retained.
+    backup                  WEB2. Receives the scp from WEB1. Legitimate.
+    oracle                  WEB2. Stock account from Mile High's CentOS image.
+                            Nothing uses it. No shell. Left alone.
+    summitftp               WEB1. Created 2008. Nobody knows what for. Shell
+                            is /sbin/nologin and there are no files in the home
+                            directory. Left in place and noted rather than
+                            removed, because "nobody knows" is not the same as
+                            "nothing uses it."
+
+Two of those I would have deleted in April on the strength of the name. The
+deploy account would have broken Mark's deployments and jgreer turned out to be
+the only one that actually needed removing.
+
+
+ACCOUNTS AND PROVIDERS WE WOULD NEED IN AN OUTAGE
+
+Recorded, with holders. Not the credentials themselves.
+
+    Mile High Hosting       account in Laura's name. Support line and account
+                            number recorded. Mark and Laura can both raise a
+                            ticket. Alice added as an authorised contact on
+                            May 12.
+    Registrar               account in Laura's name. Laura has the credentials.
+                            She located them.
+    DNS host                separate from the registrar. Mark had these. Now
+                            recorded and held by Laura as well.
+    Front Range Systems     mon1. Northwind's own account.
+    summit_prod database    application credentials live in the application
+                            config on WEB1. Now also recorded off the machine,
+                            which as of the restore test turns out to matter.
+
+
+MONITORING NOW IN PLACE
+
+Running from mon1 since May 13, every five minutes.
+
+    web1    disk / and /var, at 90%
+    web1    mysql answers a query
+    web1    home page returns expected content
+    web1    last night's dump exists, is recent, and is not suspiciously small
+    web2    disk /, at 90%
+    web2    home page returns expected content
+
+Alerts go to me by mail and only on a change of state, because a check that
+mails every five minutes until somebody fixes it is a check nobody reads.
+
+The backup check watches that a dump was produced. It cannot tell whether the
+dump is any good. Only a restore does that, and restores stay manual and on a
+schedule for now.
+
+Not monitored yet, and deliberately: Mark's three reporting scripts. They run
+nightly and nobody has said what happens if one fails. I will ask.
+
+
+WHAT I WOULD DO NEXT, IF ASKED
+
+Not proposed, not quoted. Written down so it is not rediscovered.
+
+    Add --single-transaction, or lock, to the backup. Cheap.
+    Include the grants in the dump, or record them separately. Cheaper.
+    Get the application files into the backup, or get Mark to accept that his
+    laptop is the only copy and say so out loud.
+    WEB2 has no RAID and holds the only off-machine backup copy. Those two
+    facts should not both be true.
+
+None of this is urgent this week. All of it is cheaper than the outage it
+prevents.

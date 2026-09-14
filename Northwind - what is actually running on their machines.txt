@@ -1,0 +1,106 @@
+NORTHWIND TECHNOLOGIES
+What is actually running on their machines
+
+Prepared by:  Alice Chen
+Date:         9 July 2012
+Status:       Internal
+
+
+WHY I LOOKED
+
+Priya mentioned in passing that she had fixed the log cleanup on hr-www "a
+while ago".  I asked which version was the good one and neither of us could
+answer.
+
+So I went and looked at all of them.  It took two afternoons and I wish I had
+done it a year ago.
+
+
+WHAT IS THERE
+
+Scripts we have put on customer machines, not counting anything the customer or
+their developer wrote:
+
+    nw-cleanup      log and temp cleanup            on 7 of 10 machines
+    nw-backup       database dump and rotate        on 4
+    nw-diskreport   weekly mail of df output        on 3
+    (unnamed)       various one-off fixes           at least 5
+
+mon1's repository has none of these in it.  I versioned /usr/local/nwcheck last
+June and stopped there, because at the time the thing that kept getting lost was
+nwcheck.conf.  Everything we put on a customer machine has been copied there by
+hand ever since and lives nowhere else.
+
+
+nw-cleanup, WHICH IS THE ONE THAT MATTERS
+
+Seven copies.  Four distinct versions.
+
+    web1.summit     the original, March 2011
+    web2.summit     the original
+    ccweb1          the original plus a line Ruth asked for in 2011
+    ccdata1         the original plus the same line
+    ccdata2         the original plus the same line
+    hr-www          PRIYA'S FIXED VERSION, March 2012
+    bw-web1         the original
+
+Priya's fix is real and the bug is real.  The original matches rotated logs
+with a glob that also matches the live file, so on a machine where the log is
+named without a suffix -- which is most of them -- it can delete the log Apache
+is currently writing to.  Apache keeps writing to a deleted file until it is
+restarted, so the symptom is that logs silently stop appearing and nothing
+else happens.
+
+She found it on hr-www in March because she went looking for a log that was not
+there.  She fixed it on hr-www.  She did not know it was on six other machines,
+because nothing says where we have put things.
+
+I checked.  It has fired on web1.summit twice, in November 2011 and April 2012,
+and both times we lost a day of access logs and did not notice.  There is
+nothing else wrong on those machines.  We simply have two days of gaps in
+Summit's access logs and I found out by reading a cleanup script.
+
+
+WHAT ELSE THE CENSUS FOUND
+
+    nw-backup on ccweb1 has a retention of 30 days.  Everywhere else it is 19.
+    Nobody decided that.  I think I typed it.
+
+    nw-diskreport mails to alice@ on two machines and to my old IBM address on
+    the third, which has not existed since 2010.  That report has been going
+    nowhere for two years and nobody missed it, which is its own finding.
+
+    One of the unnamed one-offs on bw-db1 is a mysqldump that runs at 03:00 and
+    writes to /tmp.  I do not know who wrote it or when.  It is not ours and it
+    is not the customer's job either.  Left alone, noted, asked Dale.
+
+
+WHAT WE ARE DOING ABOUT IT
+
+The scripts go into mon1's repository, in customer-scripts/, one directory per
+customer, and we push from there.  We stop editing them in place.
+
+    nwpush <customer>        copy this customer's scripts to their machines
+    nwpush -n <customer>     show what would change and do nothing
+
+That is the whole of it.  It is scp in a loop with a diff first, and the diff
+first is the part that matters -- I want to see what is on the machine before I
+overwrite it, because today I have no idea.
+
+I am not importing history that does not exist.  The first commit of these
+files says March 2011 in the message and July 2012 in the date, because that is
+the truth: they were written in March 2011 and this is the day they entered the
+repository.
+
+I am not writing a configuration manager.  We have ten machines and three
+people and the thing that went wrong was not knowing where a file was.
+
+
+WHAT I AM NOT FIXING TODAY
+
+Whether a machine has drifted from what we pushed.  nwpush -n tells you when
+you ask.  Nothing tells you when you do not ask.
+
+That is the same shape as the problem I found last July on Summit's web2 and
+the same shape as the one Priya found in March, and I am aware that I keep
+writing that sentence.

@@ -1,0 +1,121 @@
+NORTHWIND TECHNOLOGIES
+The second person for the room
+
+Prepared by:  Marcus Reyes
+Date:         21 November 2014
+Status:       Internal
+
+
+I asked for this in February.  Alice wrote in October that we had not done it
+and that the delay was hers.  It is done.  Toby Whelan started on the 17th.
+
+This is what I wrote before we advertised, so that the answer to "why him" is on
+paper and not in my head.
+
+
+WHAT THE JOB ACTUALLY IS
+
+Not an engineer.  Not a second me.  I want to be exact about that because John
+asked twice whether we were hiring somebody who could take over from me, and the
+answer is no, and pretending otherwise would have got us the wrong person.
+
+    Hands in the suite.  Racking, cabling, cross-connects, PDU work, swapping
+    a drive or a PSU at two in the morning without being talked through it.
+
+    Escorting.  Customers come into our suite now.  Somebody has to walk them
+    in, watch what they do, and know when to say no.
+
+    Reading the room.  Airflow, blanking panels, containment left open, a
+    cabinet drawing more than its neighbours.  This is learnable and it is not
+    obvious and it is the thing that keeps a dense room from cooking itself.
+
+    Being there when I am not.  Since February there has been exactly one
+    person who can stand in that room and know what he is looking at, and I
+    have said in writing that it could not always be him.
+
+That is a real job for one person and it is not half of mine.
+
+
+WHAT I DID NOT ASK FOR
+
+A degree.  Nobody in that room has ever needed one.
+
+Scripting.  Priya and Wes cover that.  If he picks it up, good; if he does not,
+the job still gets done.  I would rather have somebody who has been on a night
+shift.
+
+Somebody who wants my job.  We are six people.  There is nowhere for him to be
+promoted to and I am not going to pretend there is.
+
+
+WHO WE HIRED
+
+Twenty-six.  Four years at a wholesale colocation provider in Colorado Springs
+-- remote hands, cross-connects, escorting, hardware replacement.  Night shift
+twice.  A CompTIA certificate his employer paid for.  No degree.
+
+I counted, roughly, from what he described: something like ten thousand
+cross-connects.  He has done more cabling than I have.
+
+Two things decided it.
+
+    He said he came because we were smaller and he thought he would be allowed
+    to think.  Everybody says a version of that.  He then described a thing he
+    had noticed at the last place and been told not to worry about, which was
+    correct and which nobody had asked him for.
+
+    I asked him what he would do if he found a cabinet at fourteen kilowatts.
+    He said he would not touch it, he would find out who put it there and what
+    the cabinet was rated for, and he would tell somebody before he did
+    anything.  That is the right answer and it is not the answer somebody gives
+    to sound careful.  It is what you say when you have been in a room where
+    somebody did touch it.
+
+
+WHAT THIS DOES NOT FIX
+
+It does not fix the single point of failure and I do not want anybody reading
+this in a year and thinking it did.
+
+Toby can do the hands.  Toby cannot negotiate a power contract, cannot tell you
+whether Alder Street will sell us another forty kilowatts or is bluffing, and
+cannot look at a room and say what it will hold in two years.  That is still
+one person and that person is me.
+
+I asked in February for a second pair of hands, which is what I have got and
+what I asked for.  The other thing is a different hire, it costs more than this
+one, and I am not asking for it in the same month we hired.
+
+
+WHAT HE IS INHERITING
+
+Suite C, nine months old, drawing somewhere around a hundred and forty against
+a floor of a hundred and eighty.  Four customers: Halvard, Crestone, Vail, and
+Gary Lindqvist's three kilowatts in the corner, which he cut down to from nine
+in August and which costs us nothing we were not already paying for.  A
+containment arrangement that works and that nobody has written down.  The
+temperature and draw checks I put in in February, which fire correctly and
+which nobody but me has ever acted on.
+
+He will be the second person who has ever seen that room properly.  I am going
+to walk him round it every day for a fortnight, and then I am going to leave him
+in it for a week while I am at Alder Street, which is the only way I will find
+out whether this worked.
+
+
+ALICE'S NOTE
+
+    Agreed, and recorded.
+
+    Marcus asked in February.  I wrote in October that we had not hired and
+    that the delay was mine, and it was: I kept it behind the suite decision,
+    then behind the January assumptions, then behind checking the January
+    assumptions.  Nine months is not a scheduling accident, it is a priority I
+    did not want to look at.
+
+    On the last section: he is right and I want it in the same document rather
+    than a kinder one of my own. We have hired a pair of hands. The person who
+    can tell us what a room will hold is still one man, and he is the one who
+    just spent a page telling us so.
+
+    -- AC, 21 November 2014

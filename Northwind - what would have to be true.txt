@@ -1,0 +1,123 @@
+NORTHWIND TECHNOLOGIES
+What would have to be true
+
+Prepared by:  Alice Chen
+Reviewed by:  Marcus Reyes
+Date:         13 January 2014
+Status:       Internal.  This is the document we will be judged against.
+
+
+WHY THIS EXISTS
+
+John asked me in December what would have to be true for three hundred
+kilowatts to be a reasonable decision.  That was the right question and better
+than the one I would have asked, which was whether I liked it.
+
+I am writing the assumptions down, dated, in the order of how much they matter,
+because in two years somebody — probably one of us — is going to want to know
+whether this was stupid or unlucky, and those are different things.
+
+
+WHAT I AM NOT DOING
+
+Predicting the price of Bitcoin.  I have no idea.  Neither does John, neither
+does Petra, and I have now read enough of what the loudest people in this field
+write to be confident that they are guessing with more conviction than data.
+
+Anybody reading this later should not take my caution as foresight.  I am not
+cautious because I know something.  I am cautious because I do not.
+
+
+THE ASSUMPTIONS, IN ORDER
+
+**1.  The customers' commitments outlast ours.**
+
+Three-year lease against three-year customer contracts.  That is the rule from
+November and it is still the rule.
+
+    What makes it false: a customer contract that is unenforceable in practice
+    because the customer has no assets.  Halvard has money from a sold
+    business and Petra has personal exposure.  Crestone I do not know.  We
+    should know before we sign.
+
+**2.  The space is lettable to somebody else.**
+
+This is my March test and I have had to change it, and I want to be honest
+that I have changed it rather than pretend it still says what it said.
+
+    March: a room we would still want if the machines went in a skip.
+    Now:   a room somebody would still want.
+
+Three hundred kilowatts is more than Northwind's managed business will ever
+use.  I cannot claim otherwise.  What I can claim is that a power-dense suite
+in an established Denver facility, built to code, is a thing another tenant
+will take — a rendering shop, a research group, anybody with dense compute.
+There will not be nothing that wants power in Denver in 2017.
+
+That is a weaker claim than the one I made in March.  It is still a claim I
+believe.
+
+    What makes it false: if the buildout is so specific to mining that it is
+    unattractive to anyone else.  Marcus's job is to make sure it is not.  He
+    says a suite is a suite and the specific part is the PDUs, which are
+    movable.
+
+**3.  The hardware being replaced does not make the room wrong.**
+
+Marcus's objection from October, which I said did not change the decision and
+which now might.
+
+These people are buying machines that do only mining and they are denser.  If
+the next generation is denser again, three hundred kilowatts spread over a
+suite designed for today's density is the wrong shape — too much floor, not
+enough power per rack, or the other way round.
+
+    What makes it false: density doubling faster than we can re-provision.
+    Marcus has designed for 12 kW a rack where we need 8 today, which he says
+    buys us one generation and not two.
+
+I want it recorded that Marcus raised this in October, that I dismissed it as
+not changing the decision, and that he was more right than I was.  He has been
+right about every facilities question since he arrived and I should weight him
+accordingly.
+
+**4.  The money survives a gap.**
+
+If the suite is half full for six months we pay for it anyway.  I have asked
+John for the number and it is about eleven thousand a month of exposure at
+worst.
+
+    What makes it false: less cash than we think, or a customer defaulting in
+    the same quarter as a gap.  These are correlated, which is the part that
+    worries me — they all depend on the same number, and I said that in
+    October and it is still true and we are doing this anyway.
+
+**5.  We can operate it.**
+
+Not a business assumption, an honest one.  We are five people, one of whom
+knows facilities, and we are about to have a suite that needs somebody in it.
+
+    What makes it false: Marcus leaves, or gets ill, or we simply cannot
+    recruit. This is a single point of failure with a name and a mortgage and
+    we should say so.
+
+
+WHAT I ACTUALLY THINK
+
+I am for it.
+
+Not because I believe in Bitcoin.  I have no opinion on Bitcoin and I would
+rather not have one.
+
+I am for it because the terms are matched, the asset is ordinary, and the
+downside is eleven thousand a month for a year rather than the company.  If I
+am wrong about assumption two I am wrong expensively, and if I am wrong about
+assumption one I am wrong fatally, and I think assumption one is the one to
+spend our lawyer on.
+
+John and I are agreeing to the same thing for different reasons.  He thinks the
+demand is real.  I think the building is real.  Both of us could be right, or
+he could be right and I could be wrong, and the one that kills us is if I am
+right and he is wrong, because then we have a lovely empty suite.
+
+I would rather that were funny.

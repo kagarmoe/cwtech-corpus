@@ -1,0 +1,83 @@
+NORTHWIND TECHNOLOGIES
+A different kind of enquiry
+
+Prepared by:  John Mercer
+Date:         19 February 2013
+Status:       Internal
+
+
+THE CALL
+
+Gary Lindqvist telephoned on the 14th.  He came through Ed Sasaki, who was a
+colocation customer of mine at FrontRange in about 2007.
+
+Gary runs a small web shop in Boulder.  That is not what he wants to talk about.
+
+He has thirty-one machines mining Bitcoin in a nine-hundred-square-foot
+industrial unit and he wants somebody else to host them.  He has tripped the
+building's supply twice.  His landlord has started asking what he is doing in
+there.
+
+I had to have most of it explained to me twice and I am recording what I
+understood rather than what he said, so that Alice can correct the parts I have
+wrong.
+
+    The machines do one arithmetic problem, continuously, forever.  There is
+    no idle.  A web server is busy in bursts; these are busy always.
+
+    They are bought for how fast they compute and they are run until they are
+    not worth the electricity, at which point they are switched off.  Gary
+    talks about his machines the way somebody talks about a truck they intend
+    to run into the ground.
+
+    What he pays for is power.  Not space, not bandwidth -- he says his
+    bandwidth is trivial, which surprised me.  Power, and getting the heat out.
+
+    He has a spreadsheet with a column called "$/MH/day" which he knows to
+    four decimal places.  He could not tell me his web shop's gross margin.
+
+Bandwidth being trivial is the part I keep returning to.  Every customer we
+have ever had bought a server so that other people could reach it.  His
+machines do not need to be reached.  They need to be powered and cooled and
+otherwise left alone.
+
+That is not a variation on our business.  That is a different business that
+happens to involve racks.
+
+
+WHY I AM INTERESTED
+
+Because he is not the only one.  He mentioned four other people in Colorado
+doing the same thing at the same scale and said the mailing lists are full of
+people asking where to put machines.  I have not verified any of that.
+
+Because the thing he actually wants -- somebody competent to take the
+electrical and thermal problem off him so he can get on with the part he cares
+about -- is a sentence away from the one I have been selling since 2010.
+
+And because he is paying somebody for power right now, and it is not us.
+
+
+WHAT I DO NOT KNOW
+
+Whether any of this lasts.  I said that to him and he was not offended; he said
+it is the first question everybody asks and that he does not know either.
+
+I remember Bitcoin being in the news in 2011 and then not being in the news.
+Alice looked it up: it went from about thirty dollars to about two dollars in
+five months that year.  It is around thirty again now.
+
+I am not putting that in front of Gary as an argument.  I am putting it here
+because if we build something for this and it goes away, we will have built it
+with money we do not have.
+
+
+WHAT I HAVE ASKED FOR
+
+Marcus to tell me what it would actually take.  Not whether we should.  What it
+would take.
+
+Alice to tell me what I have got wrong in the four points above.
+
+I have told Gary we will come back to him in a fortnight and that I do not yet
+know whether the answer is yes.

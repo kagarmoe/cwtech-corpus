@@ -1,0 +1,176 @@
+NORTHWIND TECHNOLOGIES
+Denver, Colorado
+
+
+April 26, 2010
+
+Laura Bennett
+Owner, Summit Ticketing
+
+
+Laura,
+
+Thank you for the time on the 15th, and for letting Alice have access to both
+servers the following week. Her review is the basis for everything below.
+
+This proposal has two parts, and the first has to happen before the second.
+
+
+WHAT WE UNDERSTAND ABOUT YOUR SITUATION
+
+You have two leased Linux servers at Mile High Hosting. One of them runs your
+application and your database. The second was added last year and is doing
+several unrelated jobs.
+
+Mile High supplies the hardware, the network and the addresses. They will
+replace a failed server and reboot one on request. They do not administer the
+operating system and they do not look after your application. Nobody currently
+does that on a defined basis.
+
+Mark has been doing it because there was nobody else, and he has told you he
+would rather go back to development.
+
+In March, customers could not complete purchases for several hours. Mile High
+reported both servers reachable. Mark was unavailable. Nobody has established
+what actually went wrong, and there are no records from that day that would let
+anyone establish it now.
+
+That last point matters more than the outage itself. We do not want to be in
+that position again, and neither do you.
+
+
+PART ONE -- INITIAL ENVIRONMENT ENGAGEMENT
+
+Fixed price: $2,400
+
+Before we can take responsibility for your systems, we need to know what they
+are. This part is a finite piece of work with an end.
+
+    We inventory both servers and everything running on them, and write it
+    down.
+
+    We identify every user account on both machines and establish with you and
+    Mark who still needs access. We do not remove anything without Mark
+    reviewing the list first -- some of those accounts may belong to scripts.
+
+    We record the accounts, providers and credentials we would need in an
+    outage, including your registrar, your DNS host and your Mile High
+    account. Right now some of that exists only in Mark's memory.
+
+    We put monitoring on the services we are agreeing to manage. Today the
+    only monitoring is a check that the servers answer a ping and a check that
+    the home page loads, and the alerts go to Mark's personal email. Nothing
+    watches your database, your disk space, your scheduled jobs, or whether
+    last night's backup actually ran.
+
+    We restore your database from a backup onto a separate machine and confirm
+    it works.
+
+That last item is the one I would ask you not to cut. Your nightly backups are
+running and the files are there. Nobody has ever restored one. Until somebody
+does, you have backup files rather than a backup, and there is no way to know
+which until the day it matters.
+
+If we find something during this work that changes what ongoing management
+should cost, we will tell you before Part Two starts rather than afterward.
+
+
+PART TWO -- ONGOING MANAGEMENT
+
+$1,200 per month, beginning when Part One is complete.
+
+We take operational responsibility for:
+
+    the operating system on both servers
+    Apache
+    MySQL availability and routine database administration
+    disk space and storage
+    backups, including a restore test on a regular basis
+    monitoring of the services above
+    coordinating hardware problems with Mile High
+    first response when Summit reports that the service is not working
+
+Routine work is included. Work that takes more than an hour, we will tell you
+about and quote before we start it. New server builds, migrations and
+application deployments are quoted separately regardless of how long they take.
+
+
+WHEN SOMETHING BREAKS
+
+    Monday to Friday, 8:00 to 18:00 Mountain, we will respond within one hour.
+
+    Outside those hours you will have a number that reaches us directly. We
+    will answer it when we can. We are not going to put a time against that,
+    because we would be making it up.
+
+    We do not promise how long a repair will take, at any hour. What takes ten
+    minutes and what takes six hours look identical when the phone rings.
+
+I would rather tell you this now than have you discover it during an incident.
+We are two people. A larger provider can promise you a rota. We can promise
+that when you call, you are talking to somebody who knows your systems.
+
+
+THE LINE BETWEEN US AND MARK
+
+This is the part I want to be clearest about, because it is where these
+arrangements usually go wrong.
+
+We do not take responsibility for whether your application is correct. If it is
+running and it charges the wrong price for a ticket, that is a development
+problem and it belongs to Mark.
+
+But if your customers cannot buy tickets and nobody knows why, that is ours
+until we have established whether the problem is infrastructure or application.
+Then it goes where it belongs.
+
+You should not have to work out which kind of problem you have before you are
+allowed to call us. In March you could not have. That is exactly the gap we
+intend to cover.
+
+
+WHAT WE NEED FROM SUMMIT
+
+    Administrative access to both servers for Alice.
+
+    Your registrar, DNS and Mile High account details recorded somewhere we
+    can reach during an outage.
+
+    Mark to send a short note to a Northwind address before he changes
+    anything on either server. Not approval -- notice. If we spend time
+    chasing a failure caused by a change we did not know about, that time is
+    billable outside the monthly fee.
+
+    A decision from you and Mark on the several user accounts Alice found that
+    nobody could identify.
+
+
+WHAT THIS PROPOSAL DOES NOT INCLUDE
+
+    Moving your servers. We see no reason to move them and are not proposing
+    it.
+
+    Rebuilding or redesigning your application.
+
+    Fixing WEB2. Alice's view is that it is doing four unrelated jobs and
+    doing them badly, but it is working and it is not urgent. We would like to
+    understand which of those jobs you actually need before anyone changes it.
+    We are not proposing that work now.
+
+    Anything to do with your office network or desktops.
+
+
+SUMMARY
+
+    Initial environment engagement    $2,400 one time
+    Ongoing management                $1,200 per month
+
+We will have a services agreement for you to review before anything is signed.
+
+If this looks right in principle, Alice can begin the initial engagement within
+two weeks. If any of it does not, tell me which part and I will come back to
+you rather than talk you into it.
+
+
+John Mercer
+Northwind Technologies

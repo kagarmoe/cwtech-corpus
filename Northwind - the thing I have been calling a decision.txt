@@ -1,0 +1,163 @@
+NORTHWIND TECHNOLOGIES
+The thing I have been calling a decision
+
+Prepared by:  Priya Raghunathan
+Date:         12 March 2018
+Status:       Internal
+Read by:      Alice, Wes, Marcus, John
+
+
+Marcus wrote up 17 February and asked for two things.  I agree with both.  This
+is about a third one that is mine and that nobody asked for.
+
+
+WHAT WE AGREED IN JUNE
+
+When Wes took the tools and I took the customers, I set two conditions.
+
+    He does not change a check that is currently catching something without
+    telling me first.
+
+    A change to a customer's scripts does not go out until I say it goes out.
+
+Both were reasonable.  I would set them again.  I want to be exact about what
+has happened to the second one in nine months.
+
+
+THE NUMBERS
+
+Between 19 June 2017 and 28 February 2018, Wes asked me forty-one times whether
+a change to a customer script could go out.
+
+I said no four times.
+
+Of those four: two were Summit inside a selling window, one was Hartwell in the
+week Cheryl was on leave and there was nobody there to telephone if it went
+wrong, and one was Brightwater, where the change was fine and the timing was
+not because they were closing the quarter.
+
+    Median time from Wes asking to me answering: four hours.
+    Longest: three days.  I was in Colorado Springs with Ruth.
+    Thirty-seven of the forty-one answers were yes.
+
+
+WHAT I SAID NO ABOUT
+
+Read the four again.  Not one of them is a technical judgement.  Not one of
+them is a judgement at all.
+
+They are four facts about four customers.
+
+    Summit does not take changes during a selling window.
+    Hartwell does not take changes when Cheryl is away.
+    Brightwater does not take changes in the last week of a quarter.
+    Clear Creek takes changes whenever, and Ruth wants to be told after.
+
+I know those four facts.  I have known them for years.  They are not written
+anywhere.
+
+
+THE PART THAT IS MINE
+
+I have been calling this a decision.
+
+It is not a decision.  It is a lookup, and I am the table.
+
+Wes has waited a median of four hours, forty-one times, for me to read a
+sentence off a table that exists only in my head.  That is something close to a
+week of his time and none of it bought anybody anything, because I said yes
+thirty-seven times and the four noes were facts he could have read himself if
+anyone had written them down.
+
+I want to be honest about why they were not written down, because "we were busy"
+is not the reason and I have had five years.
+
+    The records I keep are the best thing I have made here.  I built them so
+    that nobody would have to hold a company in their head.  And I left the one
+    part out that was holding me in it.
+
+    I do not think I did that deliberately.  I am fairly sure I did not do it
+    accidentally either.
+
+That is the thing I am telling you.  Not that I am overloaded -- I am, and that
+is ordinary and it is not interesting.  That we built a role out of a bottleneck
+and I let everybody call it ownership, including me, and it has been that way
+since about 2013.
+
+
+WHAT CHANGES
+
+1.  Every customer record gets a CHANGES heading.  What that customer will and
+    will not take, when, and who has to be told after.  The four facts above and
+    whatever else comes out when I write the other two.
+
+    Same rules as every other heading.  Dated when it was last actually checked
+    with the customer, not when somebody read it.  Empty means we have not
+    established it, and empty means ask me, which is where we are now.
+
+    Adding a heading means touching all the records, which I did on Saturday,
+    and there are five of them: Summit, Brightwater, Hartwell, Clear Creek,
+    Lindqvist.  That is an afternoon and it should have been an afternoon in
+    2013.
+
+    It is also five records and seven customers.  Dev Arora and Dr Ma have been
+    with us since 2016 and neither of them has a record.  I found that out on
+    Saturday by counting, having written the README in 2011 that says we keep
+    one file per customer.  It is on the deferred list with my name on it and
+    an April date, which is better than it was and is not the same as fixed.
+
+2.  A customer-scripts change goes out when the record says it can.  Nobody
+    asks me.  If the record is empty or the change is outside what it says,
+    then ask, and the answer gets written into the record so that the next
+    person does not have to.
+
+    I would rather be told afterwards than asked beforehand.  nwpush now writes
+    a line saying who pushed what and when, so being told afterwards is not a
+    thing anybody has to remember to do.
+
+3.  The June review condition stays, with one change: it does not have to be
+    me.  It has to be somebody who is not the author, and they have to run
+    nwtry and put the output in the commit, which is already the rule.
+
+    February and October both say the same thing about this.  Two people from
+    the same small company reading the same change find the same things and
+    miss the same things.  The review is worth having and it is worth having
+    from whoever is nearest.  Making it me made it slow without making it
+    better.
+
+4.  Wes goes on the telephone rota from 1 April.
+
+    Alice took him off the list in November 2012 because he was new.  He has
+    not been new since about 2014 and nobody moved him back, including me, and
+    I was the one keeping the rota.
+
+    Marcus has now said this twice in writing, in 2016 and again last month,
+    and I did not act on it either time.  He put it better than I will:
+    you find out what you have built when it wakes you up.
+
+
+WHAT DOES NOT CHANGE
+
+I am still the person a customer telephones.  That is not a bottleneck, that is
+the job, and Laura has had my number for seven years.
+
+I am still the person who decides what a record says.  A CHANGES line is not a
+note anybody can add; it is a claim about a customer and it gets checked with
+the customer.
+
+And nobody sends anything to Summit in a selling window, ever, for any reason,
+including me.
+
+
+ALICE'S NOTE
+
+    Agreed, all four.  Wes on the rota from 1 April, with Marcus or me on the
+    first three weeks with him.
+
+    On the third paragraph from the end of "the part that is mine": Priya, I
+    read that four times.  You are right and I want it noted that I have run
+    this company for eight years and I never once looked at that table and
+    asked where it was kept.  Two of us built the same habit and only one of us
+    has written it down.
+
+    -- AC, 12 March 2018

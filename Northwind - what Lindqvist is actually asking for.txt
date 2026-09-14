@@ -1,0 +1,100 @@
+NORTHWIND TECHNOLOGIES
+What Lindqvist is actually asking for
+
+Prepared by:  Marcus Reyes
+Date:         4 March 2013
+Status:       Internal
+
+John asked what it would take.  Here is what it would take.
+
+
+THE NUMBER THAT MATTERS
+
+Thirty-one rigs, call it 900 watts each under load.  Say 28 kW continuous,
+and continuous means continuous -- these things do not have a night.
+
+Add cooling.  In this climate, in a room you do not own, budget 30 to 40 per
+cent on top.  Call the whole thing 38 kW, drawn 24 hours a day, 8,760 hours a
+year.
+
+That is about 333,000 kilowatt-hours a year for one customer with thirty-one
+machines in a garage.
+
+Every customer we currently have, all six, all ten machines, comes to something
+like 6 kW.
+
+
+WHAT OUR PROVIDERS WOULD SAY
+
+I have not asked them.  I do not need to, and I want to be clear that this is
+from seven years inside facilities and not from a quote.
+
+Mile High and Alder Street sell cabinets.  A cabinet comes with a power budget
+-- commonly 3 to 5 kW, sometimes 8 if you pay for it and the room can carry it.
+They price that way because the building was designed around an average, and
+the average assumed servers that idle.
+
+Gary wants 28 kW in the footprint of maybe two cabinets.  That is not a
+cabinet you can buy from them.  It is six to nine cabinets' worth of power
+delivered into two cabinets' worth of floor, which means different circuits,
+different PDUs, and a cooling plan for that aisle specifically.
+
+A facility will either say no, or say yes at a price that reflects the fact
+that you are now the reason they are upgrading a room.
+
+**Neither of those is a rejection of the idea.  Both mean the same thing: we
+cannot do this inside the arrangements we have.**
+
+
+WHAT WE WOULD NEED
+
+If Northwind wanted to serve this customer properly:
+
+    Our own space.  Not a cabinet in somebody's room.  A room, or a cage with
+    its own power feed, with a landlord who has agreed in writing what we may
+    draw.
+
+    A power contract we understand.  Not "power is included".  Metered, with a
+    demand charge, and we would need to know what the demand charge is before
+    we quote anybody, because in a load like this it is most of the bill.
+
+    Cooling that somebody has actually calculated.  Not a portable unit and a
+    prayer.  I have watched two people try that and both of them ended up
+    running the room with the door open in February.
+
+    Electrical work by a licensed contractor, inspected.  This is where people
+    get hurt and it is where a small company gets sued.
+
+    A way to tell Gary his machines are off.  We have nothing that watches
+    power.  Every check we own watches software.
+
+I can price the first three inside a month.  I know who to telephone.
+
+
+WHAT I WOULD SAY ABOUT THE CUSTOMER
+
+Not my area and I am saying it anyway.
+
+He is a good customer for a facility and a bad customer for us as we are
+currently shaped.  He wants power, floor and silence.  He does not want
+managed infrastructure and he would not pay us for it.
+
+Everything Northwind is good at -- knowing what is on a machine, noticing a
+backup failed, answering the telephone at eleven at night -- is worth nothing
+to him.  His machines have no data on them.  If one dies he unplugs it.
+
+So this would not be an extension of what we do.  It would be a second
+business, sharing a name and some people.
+
+That may well be worth doing.  It is not what John thinks he is buying.
+
+
+ONE THING I WILL NOT LET PASS
+
+John's note says Gary's bandwidth requirement is trivial and he was surprised.
+
+He should be.  It means the only thing we would be selling is the building.
+Everything that makes us hard to replace goes away, and we would be competing
+on price per kilowatt with people who own their buildings.
+
+I have worked for two of those people.  We would lose.

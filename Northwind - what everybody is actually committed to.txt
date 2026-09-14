@@ -1,0 +1,125 @@
+NORTHWIND TECHNOLOGIES
+What everybody is actually committed to
+
+Prepared by:  Priya Raghunathan
+Date:         11 February 2019
+Status:       Internal
+
+
+Alice asked me what is behind the floor.
+
+The question is simple.  Alder Street want five years and 180 kilowatts a month
+whether we sell it or not.  What have our customers committed to, and until
+when?
+
+It took me nine days and I could not answer it from the records, which are
+mine.
+
+
+WHAT I FOUND
+
+    Summit          $1,200/mo managed          30 days notice either way
+    Clear Creek     $1,450/mo managed          30 days notice either way
+    Brightwater     $1,600/mo managed          30 days notice either way
+    Hartwell        $650/mo managed            30 days notice either way
+
+    Halvard         94 kW in Suite C           see below
+    Crestone        23 kW in Suite C           see below
+    Sightline       11 kW, Dev's machines      see below
+    Genomics core   13 kW, our machines        see below
+
+The managed four I knew.  Thirty days either way, which is what we have sold
+since 2010, and which means that against a five-year commitment they are worth
+one month.
+
+The other four are the room, and the room is the floor, and here is where I
+had to go outside the records.
+
+HALVARD.  Renewed 1 March 2017 for three years.  **Expires 29 February 2020.**
+
+    One month before the lease we are being asked to sign starts.
+
+    This is not in any record.  It is in a contract folder in the cabinet,
+    which is where the Alder Street renewal was, and I found it the same way
+    Marcus found that one -- by going and looking because somebody asked.
+
+    Ninety-four of our hundred and forty-seven kilowatts.
+
+CRESTONE.  No current term.
+
+    They stopped paying in January 2015, we settled in the summer at a reduced
+    commitment, and since then they have paid monthly against nothing.  Twenty-
+    three kilowatts on no notice at all.
+
+    I had to ask John what the settlement said because I could not find it.  He
+    thinks thirty days.  He is not certain.
+
+SIGHTLINE.  Dev's twelve-machine autumn commitment, 2016, no end date written
+anywhere I can find.  He has paid every month for thirty-one months and I do not
+believe he thinks he is under a term.
+
+GENOMICS CORE.  Dr Ma's grant funded to September 2018.  **It ended five months
+ago.**
+
+    She has continued to pay and nobody has asked her what happens next.  We own
+    fourteen nodes, thirteen kilowatts, bought against a commitment that has
+    expired.  I did not know that until Tuesday.
+
+
+SO: WHAT IS BEHIND THE FLOOR
+
+    Committed beyond 1 April 2020, in writing, today          0 kW
+
+Not a small number.  Zero.
+
+Halvard expires a month before it starts.  Crestone are monthly.  Sightline is
+undated.  Dr Ma is past the end of what funded her.  The managed four are thirty
+days.
+
+We are being asked to commit a hundred and eighty kilowatts a month for five
+years against nothing that runs past March 2020.
+
+    I want to be careful not to make that sound worse than it is.  Every one of
+    those customers is paying, none of them has given notice, and most of them
+    would probably renew.  "Probably" is the word doing the work and it is the
+    word Alice has spent nine years taking out of documents.
+
+
+WHAT I AM DOING ABOUT THE RECORDS
+
+Every customer record gets a TERM heading.  What they are committed to, until
+when, what notice, and where the paper is.
+
+Same as CHANGES in March 2018 and for the same reason: I was holding something
+in my head and in a filing cabinet that other people needed in order to do their
+jobs, and when John needed it in November he could not get it.
+
+    Where the paper is, specifically.  Twice in four months somebody has gone
+    to the cabinet to find a term and the second time it was me.  A record that
+    says "three years, expires 29 February 2020, contract in the 2017 folder"
+    is worth more than one that says the first half.
+
+That is an afternoon and it should have been an afternoon in 2014.
+
+
+WHAT I AM NOT DOING
+
+A contracts database.  A renewal calendar.  A system.
+
+I have written four documents in nine years explaining why the records are flat
+files and I am not going to argue with myself.  The TERM line has a date in it.
+Reading the dates once a month is my job and it takes ten minutes.
+
+
+THE THING I KEEP FINDING
+
+This is the third time since November that somebody has gone looking for
+something only one person knew, and found it in a cabinet.
+
+    The lease, which Marcus had negotiated and not written down.
+    What the room contains, which Marcus had measured and not summed.
+    Now four customer terms, which are mine.
+
+I do not think we have a filing problem.  I think we have six people who each
+know something the company depends on, and a habit of writing down what we
+decide and not what we are holding.

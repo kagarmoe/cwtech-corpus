@@ -1,0 +1,197 @@
+NORTHWIND TECHNOLOGIES
+Suite C -- what it will actually take
+
+Prepared by:  Marcus Reyes
+Date:         29 August 2018
+Status:       Internal
+
+John asked for a number and a date.  I went and looked, because we do not have
+either written down anywhere I would trust.
+
+Four and a half years since we signed the room.  Last time I wrote this down
+was September 2014.
+
+
+WHAT I DID
+
+Walked the room with a clamp meter and read every PDU by hand.  Counted racks.
+Counted machines.  Two days, mostly the counting.
+
+
+WHAT IS IN IT
+
+    Racks in the suite                  44
+    Racks occupied                      29
+    Racks occupied by something that
+      is still a customer               26
+
+    Halvard                 ASIC, 11 racks          94 kW
+    Crestone                mixed, 6 racks          23 kW
+    Sightline (Dev)         12 render nodes,
+                            2 racks                 11 kW
+    Genomics core (Dr Ma)   14 nodes, 3 racks       13 kW
+    Ours -- mon1, spares,
+      network, staging      4 racks                  6 kW
+
+    Measured total                                 147 kW
+
+Three racks hold machines that belong to nobody.  Two are Vail's, boxed by Toby
+in February 2015 and never collected, and I have telephoned them twice.  One is
+ours and is full of things we have not thrown away.
+
+
+WHAT WE SAID WE WOULD WATCH, AND WHAT WE WATCH
+
+This is the part I did not enjoy.
+
+In February 2014 I wrote: "Per-cabinet draw from the PDUs, plus suite total
+against the 180 kW floor and the 300 kW ceiling.  I want to know before the
+facility tells me."
+
+What we have is one line in nwcheck.conf:
+
+    suite-c-pdu         cabinet_draw   209.0  15
+
+One number for the whole room.  The per-cabinet half was never done.  I wrote
+the requirement, Priya put in the check I asked for, and I never went back and
+noticed that I had asked for half of it.
+
+    209 is what the room was committed to draw in February 2014.  It has been
+    209 since the day the suite opened and nobody has changed it, including me.
+
+    The room draws 147.
+
+    The check allows fifteen per cent either way, which is 178 to 240.  So it
+    has been saying the room is wrong since some time in 2014, and because
+    nwcheck only mails when a check changes state, it said so once and has been
+    quiet ever since.
+
+I asked Wes how long.  He ran `nwtrend -a suite-c-pdu cabinet_draw` and read it
+back to me.  The last time that check passed was **11 July 2014**.
+
+Four years and one month of a red check that nobody has seen, in the room I
+said I wanted to know about before the facility told me.
+
+Nothing bad came of it.  The facility has never rung me about the floor,
+because we have been under it, not over it -- which is its own problem and is
+the next section.  But if we had gone over, that check would not have been the
+thing that told us.  It had already stopped being able to tell us anything.
+
+
+THE TEN RIGS
+
+While I was comparing what is in the room against what nwcheck.conf says is in
+the room, ten of Gary Lindqvist's rigs are still in the file.  gl-rig01 to
+gl-rig10, under the compute-hosting section, below a comment about Sightline's
+scratch disks.
+
+The header that says "Gary left in January 2015.  Nothing under it now" is a
+hundred lines further up in the same file.
+
+They are checks against machines that left the building in January 2015.  Same
+story: red since then, mailed once, quiet since.  Wes has taken them out.
+
+I am not going to make more of this than it is.  It is three lines of
+housekeeping and it took him a minute.  It is in here because it is how I found
+the first thing.
+
+
+THE ANSWER TO JOHN'S QUESTION
+
+Three numbers, and he should use the third.
+
+    300 kW      The ceiling in the lease.  Not real.
+
+    200 kW      What the room will take if the racks are dense, which
+                I put at about that in 2014 and have not changed my mind
+                about.  We designed for 12 kW a rack.  What people are
+                buying now still wants 17 to 20.
+
+    50 kW       What we can take today, in racks that are ready, without
+                spending anything or moving anybody.
+
+The gap between 200 and 147+50 is not free.  Getting the rest means PDU work
+and distribution work in racks that are currently fed for 12 kW, and it means
+doing it in a live room around customers who are paying.  I can price it.  I
+have not, because nobody has asked me to and because it is not the answer to
+the question John was asked.
+
+    So: **about fifty kilowatts, and six to eight weeks for anything that needs
+    a rack we have not already got power to.**  Less if it is one cabinet and
+    they are not fussy where it goes.
+
+Say fifty.  If we are wrong it is wrong in our favour, and I would rather tell
+somebody the number went up.
+
+
+WHAT I AM DOING ABOUT THE MONITORING
+
+The small half, and only the small half.
+
+Per-cabinet draw, which is what I asked for in 2014.  The check already takes a
+PDU and an expected number; there was never any code to write.  Five lines, one
+per customer group plus one for ours, with the numbers I measured this week.
+The suite total stays and gets a figure that is true.
+
+    The bands are not all the same and that is deliberate.  Halvard is ASIC and
+    draws the same at four in the morning as at four in the afternoon, so a tight
+    band catches a dead rack.  Dev's render nodes idle
+    between jobs and Dr Ma's run in bursts when somebody submits, so those want
+    forty per cent or they will cry wolf every evening.  A forty per cent band
+    is worth less than a ten per cent band.  It is worth more than a check
+    everybody has learned to ignore, which is what we had.
+
+    This does not tell me what the room will hold.  I still have to walk it.
+    What it does is tell me when a number I wrote down stops being true, which
+    is the thing that did not happen for four years.
+
+I am not building a capacity model.  I am not putting the room in a database.
+If somebody wants to know the numbers they can read the config, which is the
+thing that runs, and Alice settled that argument in 2011.
+
+
+WHAT THIS DOES NOT FIX
+
+The same thing it did not fix in 2014, and I will keep writing it down until it
+is not true.
+
+I am the only person here who can walk that room and tell you what it will
+hold.  Toby can read a PDU, and he counted with me, and he is better at the
+physical work than I am.  He cannot tell you whether a rack fed for twelve will
+take twenty, or what it costs to change that, or whether the facility is
+telling the truth about what it will sell us.
+
+    I took two days to answer a question John needed answered in an afternoon,
+    and one of his four had already been quoted by somebody else.
+
+That is not a monitoring problem and no amount of config fixes it.
+
+
+WHAT WES FOUND WHEN HE WROTE THE TEST
+                                                    3 September 2018
+
+I said ten per cent on Halvard was tight enough to catch a dead rack.  It is
+not, and Wes proved it before he committed it.
+
+Halvard is ninety-four kilowatts across eleven racks.  One rack is eight and a
+half.  Ten per cent of ninety-four is nine and a half.  So a rack can fail and
+the check stays green, which is the number I was most confident about in this
+document and it was wrong by arithmetic I could have done on the way to the car.
+
+    He wrote a test that drops the cabinet by one rack and asserts the check
+    fires.  It did not fire.  That is the test doing its job on the day it was
+    written, which is the first time that has happened here.
+
+Halvard is on five per cent now.  Five is defensible because ASIC draw really is
+flat -- it is the whole reason the cabinet_draw check exists and the reason it
+was written for Gary's rigs in 2013.  A five per cent band on a bursty cabinet
+would be useless; on this one it is the correct answer.
+
+The general form of my mistake, which is worth more than the fix: **a band is a
+percentage of the group, and the bigger the group the less a band can see.**
+Eleven racks under one number cannot show me one rack.  Five per cent gets me
+one rack of eleven.  It would not get me one node of fourteen in Dr Ma's
+cabinets, and nothing short of per-rack metering will, and we are not buying
+per-rack metering to watch fourteen nodes.
+
+I have written that down rather than fixed it.  -- MR

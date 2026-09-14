@@ -1,0 +1,115 @@
+NORTHWIND TECHNOLOGIES
+Twenty-two calls and what they wanted
+
+Prepared by:  John Mercer
+Date:         6 August 2018
+Status:       Internal
+
+
+In April 2010 I made fourteen calls before we had a services draft and wrote up
+what I heard.  I have not done it since.  I am doing it again because the calls
+have stopped sounding the same as each other and I want the change written down
+by somebody who is not guessing at it afterwards.
+
+Twenty-two conversations since the start of April.  Eleven came to me, eleven I
+went after.
+
+
+THE SPLIT
+
+    Ordinary managed infrastructure          9
+    Machines, power, hands, capacity        10
+    Neither, or I could not tell             3
+
+Nine and ten.  In 2013 it would have been eighteen and one.
+
+
+THE ORDINARY NINE
+
+Small Linux estates.  Somebody's web application, a database, backups nobody
+has tested, monitoring that means a customer telephones.  This is our business
+and I know how to sell it.
+
+Six of the nine asked me, unprompted, why they would use us instead of Amazon.
+
+I did not have a good answer.
+
+I have been selling infrastructure for twenty-six years and I have always had
+an answer to "why you."  This time I said things that were true -- that we
+answer the telephone, that we will look at their whole environment and not just
+the part we sold them, that nobody at Amazon knows their application is called
+confirm.php.  Two of them found that persuasive.  Four were polite.
+
+    I want to be careful here, because I am the wrong person to ask whether
+    this is a market change or a sales problem.  I have a direct interest in
+    it being a market change.
+
+Three of the nine are worth following up.  Two of those three are smaller than
+Hartwell, which is the smallest customer we have ever taken.
+
+
+THE OTHER TEN
+
+These did not sound like our business.  They sounded like Suite C.
+
+What they had in common, roughly:
+
+    They already own machines, or are about to buy them
+    The machines are dense -- more power per rack than anything
+        we ran before 2014
+    They want somebody to rack them, power them, cool them, and
+        put hands on them
+    They are not asking us to run an operating system
+    Several were explicit that we should not look inside the work
+
+Four of the ten asked what our capacity is.
+
+I could not tell them.
+
+I said I would find out and come back.  That is the honest answer and it is
+also not an answer, and one of the four had already been quoted by somebody
+else by the time I came back to him.
+
+    Marcus, this is the ask.  Not "how much room is there" in general.  Four
+    people asked me a number and a date and I had neither.
+
+
+THE THREE I COULD NOT PLACE
+
+One wants us to run something on a public cloud on his behalf, which is a
+different business from either of the above and which I told him we do not do.
+
+One is a hardware reseller who wants to put his customers in our room, which
+would make us somebody's subcontractor and which I have not thought about
+properly.
+
+One I genuinely did not understand and he did not either.
+
+
+WHAT I AM NOT SAYING
+
+I am not saying we should become a hosting company.  I have watched this
+company decide one thing at a time for eight years and it has worked.
+
+I am not saying the managed business is finished.  Four customers who have been
+with us since 2010 and 2011 pay us every month and nothing about them has
+changed.
+
+I am not saying the ten calls are a market.  Ten calls is ten calls.  In
+September 2013 I wrote up four mining conversations and said they might be
+nothing, and Alice wrote back that we should find out what we would need to be
+true.  That was the right answer then and I expect it is the right answer now.
+
+What I am saying is that I could not answer a question four people asked me,
+and that is mine to raise and not mine to solve.
+
+
+WHAT I WOULD LIKE
+
+A number I can say out loud.
+
+How much can we take, of the dense kind, and how quickly.  Not a study.  A
+number and a date, of the sort I can put in a sentence on a telephone without
+telling somebody something that turns out not to be true.
+
+I would rather have a small honest number than a large one I have to walk back.

@@ -1,0 +1,39 @@
+From: Mark Ellis <mark.ellisdev@gmail.com>
+To: Alice Chen <alice@cairnwelltech.com>
+Date: Wed, 12 May 2010 14:23:55 -0600
+Subject: Re: accounts on WEB1 and WEB2 -- need your read on a few of these
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+
+Alice,
+
+Went through your list. Here's what I've got.
+
+jgreer -- that's Jamie, did the payment gateway integration back in
+'08/'09. Hasn't touched anything since. I checked with Laura and she's
+fine with you disabling it, she didn't even remember he still had
+access. Don't need the home directory but no objection to you keeping
+it around either.
+
+deploy -- that's mine, the sync script I mentioned when I gave you root.
+Still using it most weeks. Please don't touch this one, I'll break my
+own workflow. I know the no-passphrase thing bugs you, I'll deal with
+it when I have a free afternoon, just not this month.
+
+summitftp -- no idea. Genuinely don't remember creating it and it's not
+in anything I still run. If it's been sitting there with no shell and
+nothing in the home directory since 2008 I'd guess whatever it was for
+is long dead, but "I don't remember" isn't the same as "safe to
+delete" so up to you whether that's good enough to act on.
+
+oracle -- that came with the CentOS image on WEB2 when Mile High set it
+up, never touched it, no idea why it's even there. Not mine.
+
+backup -- yes, that's legitimate, that's the account the nightly copy
+from WEB1 lands under on WEB2. Leave that alone obviously.
+
+Let me know if you need anything else from me on this. Kind of nice
+having someone else own the list for once.
+
+Mark

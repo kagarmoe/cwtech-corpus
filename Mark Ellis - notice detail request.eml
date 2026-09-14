@@ -1,0 +1,27 @@
+From: Alice Chen <alice@cairnwelltech.com>
+To: Mark Ellis <mark.ellisdev@gmail.com>
+Date: Fri, 16 Jul 2010 10:02:31 -0600
+Subject: last night's notice
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+
+Mark,
+
+Not a complaint -- you did tell us before you pushed last night, which is
+more than we had in March. But "pushing a change to the confirmation page
+tonight, nothing big" didn't tell me which files changed, and by the time
+I was on the box I was reading diffs against my own memory of what
+confirm.php looked like instead of just being told.
+
+Going forward, if you could name the file or files in the notice, that
+alone would save me time when something goes wrong. You don't need to
+describe what the change does or why -- I know that's Laura's business
+and yours, not mine. Just the filenames.
+
+If it's easier, reply-all to ops@ with "touched: confirm.php" or similar
+and I won't ask for anything more than that.
+
+Thanks for jumping on the rollback as fast as you did last night.
+
+Alice

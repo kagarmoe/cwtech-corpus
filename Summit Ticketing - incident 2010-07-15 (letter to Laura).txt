@@ -1,0 +1,75 @@
+CAIRNWELL TECHNOLOGIES
+Denver, Colorado
+
+
+July 16, 2010
+
+Laura Bennett
+Owner, Summit Ticketing
+
+
+Laura,
+
+Thank you for your patience last night, and for the twenty minutes on the
+phone when I did not have much to tell you. Here is the fuller answer, and
+what we have already changed.
+
+
+WHAT HAPPENED
+
+Between about 7:20 and 8:34 last night, during the Boulder Theater on-sale,
+some customers trying to buy tickets got an error instead of a confirmation.
+Both servers were up the entire time, which is part of why it took us a
+few minutes to find.
+
+The cause was a specific query on the confirmation page -- the part that
+looks up a customer's recent orders -- running slowly against a large table
+under load, which briefly queued up other people's purchases behind it. Mark
+had made a small change to that page earlier in the evening; he identified
+it, rolled it back, and purchases were completing normally again by 8:34.
+
+We do not have a record of every purchase that failed. We are looking at
+whether there is a way to get one.
+
+
+WHAT WE CHANGED THIS MORNING
+
+We added a check that watches how many database connections are in use, so
+we hear about a problem like this minutes earlier next time, before it
+affects customers rather than after.
+
+We also turned on more detailed database logging, so if something like this
+happens again we can tell you what query was involved without having to
+reconstruct it from memory the next morning.
+
+We fixed a flaw in our own alerting: during the incident it sent us more
+than twenty emails in an hour instead of one, which is not useful to anyone
+and has been corrected.
+
+
+WHAT WE HAVEN'T DONE
+
+We are not adding an index to fix the underlying query during your selling
+season, because doing that locks the table it is on for the time it takes to
+build, and we are not willing to cause a second outage to prevent this one
+from happening again. It is on the list for after the season.
+
+We also don't yet have a way to test the actual purchase path from outside,
+the way a customer would experience it, without generating real orders.
+Alice is working out a safe way to do that with Mark.
+
+
+ONE THING WORTH REPEATING
+
+You asked me in April how we would tell the difference between our problem
+and Mark's. Last night is the clearest example we have had. We investigated,
+found the cause, and it turned out to be an application change -- so it went
+to Mark, and he fixed it. Nobody argued about whose job it was. That is what
+we told you we would do.
+
+Call me if you want to talk through any of this, or if your venues are
+asking questions I can help you answer.
+
+
+John Mercer
+Cairnwell Technologies
